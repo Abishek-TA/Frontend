@@ -1,3 +1,4 @@
+/*Navbar (pg-1,step-1)*/
 *{ 
     margin: 0; 
     padding: 0; 
@@ -5,6 +6,7 @@
     text-decoration: none; 
     list-style: none; 
     box-sizing: border-box; 
+
 } 
 body { 
     background: #fff; 
@@ -37,9 +39,9 @@ header nav ul li a {
     text-transform: uppercase; 
     transition: 0.2s; 
 } 
-header nav ul li a:hover, 
-header nav ul li a.active { 
-    border-bottom-color: none; 
+header nav ul li a:hover{ 
+    border-bottom-color: none;
+    color: #fff;
 } 
 .hamburger { 
     cursor: pointer; 
@@ -51,9 +53,13 @@ header nav ul li a.active {
     margin: 5px 0; 
     background: #fff; 
 } 
-/*Code for Button*/
-button{
-    background-color: #Eb9c5c;margin-left: 10px;border-radius: 10px;padding: 10px; width: 90px;
+/*Code for Button (pg-1)*/
+.btnclass1 button{
+    background-color: #Eb9c5c;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px;
+   width: 90px;
     background-image: linear-gradient(to bottom, #fff, #f8eedb);
     border: 0 solid #e5e7eb;
     border-radius: .5rem;
@@ -71,26 +77,50 @@ button{
     touch-action: manipulation;
   box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
 }
-.btn1:active{
-    background-color: #f3f4f6;
+.btnclass2 button{
+   background-color: #Eb9c5c;
+   margin-left: 10px;
+   border-radius: 10px;
+   padding: 10px;
+  width: 90px;
+   background-image: linear-gradient(to bottom, #fff, #f8eedb);
+   border: 0 solid #e5e7eb;
+   border-radius: .5rem;
+   box-sizing: border-box;
+   color: #482307;
+   column-gap: 1rem;
+   cursor: pointer;
+   display:inline; 
+   outline: 2px solid transparent;
+   text-align: center;
+   text-transform: none;
+   transition: all .1s cubic-bezier(.4, 0, .2, 1);
+   user-select: none;
+   text-decoration: none;
+   touch-action: manipulation;
+ box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+}
+
+.btnclass1:active{
+    background-color: none;
     box-shadow: -1px 2px 5px rgba(81,41,10,0.15),0px 1px 1px rgba(81,41,10,0.15);
     transform: translateY(0.125rem);
 }
-.btn2:active{
-    background-color: #f3f4f6;
+.btnclass2:active{
+    background-color:none;
     box-shadow: -1px 2px 5px rgba(81,41,10,0.15),0px 1px 1px rgba(81,41,10,0.15);
     transform: translateY(0.125rem);
 }
-.btn1:focus{
+.btnclass1:focus{
     box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
 }
-.btn2:focus{
+.btnclass2:focus{
     box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
 }
 button a{
     color: black;font-weight: bold;font-size: 15px; text-decoration: none;
 }
-/*Code for responsive navbar function*/
+/*---------------------------------------*/
 @media only screen and (max-width: 800px) { 
     header { 
         padding: 0 30px; 
@@ -106,7 +136,14 @@ button a{
         left: -100%; 
         top: 70px; 
         width: 100%; 
-        background: #000; 
+        color: #000;
+        /* From https://css.glass */
+        background: rgba(0, 0, 0, 0.76);
+        border-radius: 0;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(3.5px);
+        border: 1px solid rgba(8, 202, 34, 0.3);
         padding: 30px; 
         transition: 0.3s; 
     } 
@@ -119,4 +156,54 @@ button a{
     header nav ul li a { 
         margin: 5px 0; 
     } 
+}
+/*Code for Slider (pg-1,step-3)*/
+.items {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   padding: 30px 20px;
+   grid-column-gap: 20px;
+   grid-row-gap: 30px;
+}
+.item img{
+   width: 100%;
+   height: 300px;
+   border-radius: 15px;
+   object-fit: cover;
+   cursor: pointer;
+   transition: 0.2s ease;
+}
+.item img:hover{
+   transform: scale(1.03);
+}
+.item h4{
+   padding: 5px;
+   text-align: center;
+}
+.item button{
+   padding: 5px 30px;
+   border: solid;
+   outline: none;
+   border-color: #000000;
+   background-color: rgba(80, 241, 5, 0.8);
+   color: #000;
+   cursor: pointer;
+   border-radius: 4px;
+   font-size: 20px;
+   display: block;
+   margin: 0 auto;
+   transition: 0.2s;
+}
+.item button:hover{
+   transform: scale(1.04);
+}
+@media screen and (max-width: 900px ){
+   .items{
+      grid-template-columns: repeat(2,1fr);
+   }   
+}
+@media screen and (max-width: 750px ){
+   .items{
+      grid-template-columns: repeat(1,1fr);
+   }   
 }
