@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArrowGrub</title>
-    <link rel="stylesheet" href="ArrowGrub1.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/lathier-trial" rel="stylesheet">
 </head>
 <body>
@@ -19,9 +19,6 @@
             <ul> 
                 <li> 
                     <a href="" class="active">Home</a> 
-                </li> 
-                <li> 
-                    <a href="">Profile</a> 
                 </li> 
                 <li> 
                     <a href="">Contact</a> 
@@ -49,38 +46,45 @@
     </center>
     <hr>
 <!--Code for Slider (Page-1,step-3)-->
-<section class="items">
-    <div class="item">
-            <img src="images/R1.jpg" alt="img-2">
-            <h4>Restaurant1</h4>
-            <button class="v1">Visit</button>
+<div class="items">
+    <div class="carousel-view">
+        <!-- Left Button -->
+        <button id="prev-btn" class="prev-btn">
+            <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left"><path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" /></svg>
+           </button>
+            <!--List container-->
+            <div id="item-list"  class="item-list">
+                <img id="item" class="item" src="images/R1.jpg" alt="no_image">
+                <img id="item" class="item" src="images/R2.jpg" alt="no_image">
+                <img id="item" class="item" src="images/R3.jpg" alt="no_image">
+                <img id="item" class="item" src="images/R4.jpg" alt="no_image">
+                <img id="item" class="item" src="images/R5.jpg" alt="no_image">
+                <img id="item" class="item" src="images/R6.jpg" alt="no_image">
+                <img id="item" class="item" src="images/R7.jpg" alt="no_image">
+            </div>
+        <!-- Right Button -->
+        <button id="next-btn" class="next-btn">
+            <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" /></svg>
+        </button>
     </div>
-    <div class="item">
-        <img src="images/R2.jpg" alt="img-2">
-        <h4>Restaurant2</h4>
-        <button class="v2">Visit</button>
+</div>
+<!--Radio button(page-1,step-4)>
+<div id="radio_container" name="rd1" class="Options">
+    <h2 class="labelish">Choose Table:</h2>
+    <div id="2_seat" class="floatBlock">
+        <label for="2_seat"> <input id="2-seat" name="seattype" type="radio"/>2-SEATED</label>
     </div>
-    <div class="item">
-        <img src="images/R3.jpg" alt="img-2">
-        <h4>Restaurant3</h4>
-        <button class="v3">Visit</button>
+
+    <div id="4_seat" class="floatBlock">
+        <label for="4_seat"> <input id="4_seat" name="seattype" type="radio"/>4-SEATED</label>
     </div>
-    <div class="item">
-        <img src="images/R4.jpg" alt="img-2">
-        <h4>Restaurant4</h4>
-        <button class="v4">Visit</button>
+
+    <div id="6_seat" class="floatBlock">
+        <label for="6_seat"> <input id="6_seat" name="seattype" type="radio" />6-SEATED</label>
     </div>
-    <div class="item">
-        <img src="images/R5.jpg" alt="img-2">
-        <h4>Restaurant5</h4>
-        <button class="v5">Visit</button>
-    </div>
-    <div class="item">
-        <img src="images/R6.jpg" alt="img-2">
-        <h4>Restaurant6</h4>
-        <button class="v6">Visit</button>
-    </div>
-</section>
-<!--Radio button(page-1,step-4)-->     
+
+</div-->
+<script src="/index.js"></script>
+
 </body>
 </html>
