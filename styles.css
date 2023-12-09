@@ -166,6 +166,7 @@ button{
     transition: all .3s ease-in-out;
 }
 .container {
+  height: 20vw;
   width: 100%;
   display: flex;
   justify-content: center;
