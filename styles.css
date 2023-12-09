@@ -206,7 +206,7 @@ button{
 .item {
   scroll-snap-align: center;
   min-width: 200px;
-  height: 200px;
+  height: 210px;
   background-color: deeppink;
   border-radius:8px;
 }
