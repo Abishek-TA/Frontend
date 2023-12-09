@@ -9,7 +9,7 @@
     <title>ArrowGrub</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/lathier-trial" rel="stylesheet">
-    <script src="index.js"></script>
+    <script src="index.js" async></script>
 </head>
 <body>
 <!--Code for NAVBAR (Page-1,step-1)-->
@@ -47,23 +47,28 @@
     </center>
     <hr>
 <!--Code for Slider (Page-1,step-3)-->
-<div class="items">
+<div class="container">
     <div class="carousel-view">
-        <!-- Left Button -->
-        <button id="prev-btn" class="prev-btn"><svg viewBox="0 0 512 512" width="20" title="chevron-circle-left"><path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" /></svg></button>
-        <!--List container-->
-            <div id="item-list"  class="item-list">
-                <img id="item" class="item" src="./Images/R1.jpg" alt="no_image">
-                <img id="item" class="item" src="./Images/R2.jpg" alt="no_image">
-                <img id="item" class="item" src="./Images/R3.jpg" alt="no_image">
-                <img id="item" class="item" src="./Images/R4.jpg" alt="no_image">
-                <img id="item" class="item" src="./Images/R5.jpg" alt="no_image">
-                <img id="item" class="item" src="./Images/R6.jpg" alt="no_image">
-                <img id="item" class="item" src="./Images/R7.jpg" alt="no_image">
-            </div>
-        <!-- Right Button -->
-        <button id="next-btn" class="next-btn"><svg viewBox="0 0 512 512" width="20" title="chevron-circle-right"><path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" /></svg></button>
-    </div>
-</div>
+      <button id="prev-btn" class="prev-btn">
+       <svg viewBox="0 0 512 512" width="20" title="chevron-circle-left">
+    <path d="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zM142.1 273l135.5 135.5c9.4 9.4 24.6 9.4 33.9 0l17-17c9.4-9.4 9.4-24.6 0-33.9L226.9 256l101.6-101.6c9.4-9.4 9.4-24.6 0-33.9l-17-17c-9.4-9.4-24.6-9.4-33.9 0L142.1 239c-9.4 9.4-9.4 24.6 0 34z" />
+  </svg>
+      </button>
+      <div id="item-list" class="item-list">
+           <img id="item" class="item" src="./Images/R1.jpg">
+            <img id="item" class="item" src="./Images/R2.jpg">
+            <img id="item" class="item" src="./Images/R3.jpg">
+            <img id="item" class="item" src="./Images/R4.jpg">
+            <img id="item" class="item" src="./Images/R5.jpg">
+            <img id="item" class="item" src="./Images/R6.jpg">
+            <img id="item" class="item" src="./Images/R7.jpg">
+          </div>
+      <button id="next-btn" class="next-btn">
+            <svg viewBox="0 0 512 512" width="20" title="chevron-circle-right">
+    <path d="M256 8c137 0 248 111 248 248S393 504 256 504 8 393 8 256 119 8 256 8zm113.9 231L234.4 103.5c-9.4-9.4-24.6-9.4-33.9 0l-17 17c-9.4 9.4-9.4 24.6 0 33.9L285.1 256 183.5 357.6c-9.4 9.4-9.4 24.6 0 33.9l17 17c9.4 9.4 24.6 9.4 33.9 0L369.9 273c9.4-9.4 9.4-24.6 0-34z" />
+  </svg>
+          </button>
+      </div>
+  </div>
 </body>
 </html>

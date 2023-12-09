@@ -2,7 +2,7 @@ const prev = document.getElementById('prev-btn')
 const next = document.getElementById('next-btn')
 const list = document.getElementById('item-list')
 
-const itemWidth = 200
+const itemWidth = 150
 const padding = 10
 
 prev.addEventListener('click',()=>{
@@ -12,3 +12,5 @@ prev.addEventListener('click',()=>{
 next.addEventListener('click',()=>{
   list.scrollLeft += itemWidth + padding
 })
+
+
