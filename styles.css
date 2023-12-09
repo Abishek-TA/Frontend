@@ -166,7 +166,7 @@ button{
     transition: all .3s ease-in-out;
 }
 .container {
-  height: 20vw;
+  height: 22vw;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -185,7 +185,7 @@ button{
   width: 70vw;
   padding: 50px 10px;
   display: flex;
-  gap: 48px;
+  gap: 40px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
   -ms-overflow-style: none;
@@ -209,4 +209,16 @@ button{
   height: 210px;
   background-color: deeppink;
   border-radius:8px;
+}
+@media screen and (max-width: 950px){
+    .container{
+        width:auto;
+        height: auto;
+    }
+}
+@media screen and (max-width: 700px){
+    .container{
+        width:auto;
+        height: auto;
+    }
 }
