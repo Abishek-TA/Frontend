@@ -196,7 +196,7 @@ button{
   display: none;
 }
 .prev-btn {
-  background = none;
+  background: none;
   cursor: pointer;
 }
 .next-btn {
