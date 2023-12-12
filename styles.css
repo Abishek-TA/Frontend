@@ -179,7 +179,8 @@ button a{
   background: none;
   margin: 0 20px;
   margin-top: 15px;
-  margin-left: 250px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 8px;
   border: solid #1f1818;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
@@ -220,11 +221,12 @@ button a{
   transform: translateY(-50%) scale(0.98);
 }
 /* Responsive */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .input-box {
     margin-top: 30px;
     height: 66px;
-    margin-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .input-box i {
     left: 12px;
@@ -239,7 +241,6 @@ button a{
     padding: 8px 18px;
   }
 }
-
 /*Code for Slider (pg-1,step-4)*/
 button{
     border: none;
