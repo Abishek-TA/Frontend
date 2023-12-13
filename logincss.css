@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: auto;
   font-family: sans-serif;
 }
 .hero {
@@ -16,7 +16,8 @@
   width: 380px;
   height: 480px;
   position: relative;
-  margin: 65 auto;
+  margin: auto;
+  margin-top: 80px;
   background: #fff;
   padding: 5px;
   overflow: hidden;
