@@ -24,7 +24,7 @@
 }
 .button-box {
   width: 220px;
-  margin: auto;
+  margin: auto auto;
   position: relative;
   box-shadow: 0 0 20px 9px #ff61241f;
   border-radius: 30px;
@@ -100,4 +100,19 @@ span {
 }
 #register {
   left: 450px;
+}
+
+/* for tablet mode view */
+@media screen and (max-width: 1275px) {
+	.form-box{
+    margin-top: 60px;
+    object-fit: cover;
+	}
+}
+/* for mobile screen view */
+@media screen and (max-width: 660px) {
+  .hero{
+    margin: auto;
+    object-fit: cover;
+  }
 }
