@@ -1,4 +1,5 @@
-* {
+*{
+  align-items: center;
   margin: auto;
   padding: auto;
   font-family: sans-serif;
@@ -100,11 +101,4 @@ span {
 }
 #register {
   left: 450px;
-}
-/* for mobile screen view */
-@media screen and (max-width: 660px) {
-  .hero{
-    display: flex;
-    place-items: center;
-  }
 }
