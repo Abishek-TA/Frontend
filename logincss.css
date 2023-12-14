@@ -101,18 +101,15 @@ span {
 #register {
   left: 450px;
 }
-
-/* for tablet mode view */
-@media screen and (max-width: 1275px) {
-	.form-box{
-    margin-top: 60px;
-    object-fit: cover;
-	}
-}
 /* for mobile screen view */
 @media screen and (max-width: 660px) {
   .hero{
     margin: auto;
     object-fit: cover;
+  }
+  .form-box{
+    top: 80px;
+    margin: auto;
+    display: block;
   }
 }
