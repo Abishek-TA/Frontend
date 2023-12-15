@@ -91,6 +91,10 @@ span {
 }
 /*responsive*/
 @media screen and (max-width:600px) {
+  .hero{
+    top: 100px;
+    margin-top: 30px;
+  }
   .form-box{
     object-fit: fill;
     top: auto;
