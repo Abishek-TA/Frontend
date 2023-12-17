@@ -96,5 +96,6 @@ span {
   display: flex;
   justify-content: center;
   scroll-behavior: smooth;
+  align-items: center;
 }
 }
