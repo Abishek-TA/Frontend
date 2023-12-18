@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
 .container {
-  height: 100vh;
   width: 100%;
   align-items: center;
   display: flex;
@@ -23,6 +15,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   height: 400px;
   background-color: #FFFFF7;
   padding: 10px 30px;
+  margin-top: 300px;
 }
 
 .card_title {

@@ -15,12 +15,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
       }
     }
   }
-  
+
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   
   .card {
@@ -28,7 +27,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     border: 1px solid #ddd;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
+    margin-top: 300px;
     padding: 20px;
     background-color: #fff;
   
