@@ -1,19 +1,18 @@
 
-.container {
-  height: 100%;
+.form1_container {
   width: 100%;
   align-items: center;
   display: flex;
   justify-content: center;
-}
+  }
 
 .card {
   border-radius: 10px;
   box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  width: 400px;
+  width: 350px;
   background-color: #FFFFF7;
-  padding: 10px 30px;
-  margin-top: 100px;
+  padding: 0px 30px;
+  margin-top: 20px;
 }
 
 .card_title {
@@ -65,14 +64,4 @@
 .card a {
   color: #4796ff;
   text-decoration: none;
-}
-@media screen and (max-width: 660px){
-  .container{
-    width: auto;
-    height: auto;
-    margin: auto;
-  }
-  .card{
-    margin-top: 50px;
-  }
 }

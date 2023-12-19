@@ -1,5 +1,5 @@
 
-  .container {
+  .form2_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +14,7 @@
     padding: 20px;
     background-color:#ccc;
   
-    .card-body {
+    .card-body{
       padding: 20px;
     }
   
@@ -54,12 +54,9 @@
   }
   
 @media screen and (max-width: 660px){
-  .container{
+  .fomr2_container{
     width: auto;
     height: auto;
     margin: auto;
-  }
-  .card{
-    margin-top: 60px;
   }
 }
