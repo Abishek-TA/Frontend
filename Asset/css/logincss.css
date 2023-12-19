@@ -65,3 +65,9 @@
   color: #4796ff;
   text-decoration: none;
 }
+@media screen and (max-width:660px){
+  .form1_container{
+    width: auto;
+    margin: auto;
+  }
+}
