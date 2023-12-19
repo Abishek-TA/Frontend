@@ -20,19 +20,19 @@ body {
 }
 @media screen and (max-width: 660px){
   .arrowimg{
-    margin-top: 50px;
-    margin-bottom: 40px;
+    margin-top: 5px;
+    margin-bottom: 0;
   }
 }
 /*Code for search bar(pg-1,step-3)*/
 .input-box {
   position: relative;
   height: 76px;
-  max-width: 900px;
+max-width: 900px;
   width: 100%;
   background: none;
   margin: 0 20px;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
@@ -77,9 +77,10 @@ body {
 /* Responsive */
 @media screen and (max-width: 600px) {
   .input-box {
-    height: 66px;
     margin-left: auto;
     margin-right: auto;
+    z-index: auto;
+    overflow: hidden;
   }
   .input-box i {
     left: 12px;

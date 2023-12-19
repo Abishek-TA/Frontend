@@ -121,10 +121,11 @@ header {
           z-index: 1;
       }
       header nav { 
+          z-index: 1;
           position: absolute; 
           left: -100%; 
-          margin-top: 289px; 
-          width: 100%; 
+          margin-top: 322px; 
+          width: 100%;
           color: #000;
           /* From https://css.glass */
           background: rgba(0, 0, 0, 0.76);
@@ -132,7 +133,7 @@ header {
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0);
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(3.5px);
-          padding: 10px; 
+          padding: 10px;
           transition: 0.3s; 
       } 
       header #nav_check:checked ~ nav { 
@@ -142,6 +143,6 @@ header {
           display: block; 
       } 
       header nav ul li a { 
-          margin: 5px 0; 
+          margin: 4px 0; 
     }
 }  
