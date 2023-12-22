@@ -1,29 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.container {
-  height: 100vh;
+.form1_container {
   width: 100%;
+  margin: 30px 0px;
   align-items: center;
   display: flex;
   justify-content: center;
-  background-color: #113311;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='262' height='262' viewBox='0 0 20 20'%3E%3Cg fill-opacity='0.86'%3E%3Cpolygon fill='%23242' points='20 10 10 0 0 0 20 20'/%3E%3Cpolygon fill='%23242' points='0 10 0 20 10 20'/%3E%3C/g%3E%3C/svg%3E");
-}
+  }
 
 .card {
-  border-radius: 10px;
-  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-  width: 400px;
-  height: 400px;
+  border: 1px solid #000;
+  border-radius: 2.9px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
   background-color: #FFFFF7;
-  padding: 10px 30px;
+  padding: 0px 30px;
+  margin-top: 20px;
 }
 
 .card_title {
@@ -47,7 +38,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .form button {
-  background-color: #023308;
+  background-color: #4796ff;
   color: #ffffff;
   font-size: 16px;
   outline: none;
@@ -73,6 +64,13 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .card a {
-  color: #ff7300;
+  color: #e74b03;
   text-decoration: none;
+}
+@media screen and (max-width:660px){
+  .form1_container{
+    margin-top: auto;
+    width: auto;
+    margin: auto;
+  }
 }
