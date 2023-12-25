@@ -14,9 +14,7 @@ body {
 /*Code for Image(pg-1,step-2*/
 .arrowimg{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+  margin: 40px auto;
 }
 @media screen and (max-width: 660px){
   .arrowimg{

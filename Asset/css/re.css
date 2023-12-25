@@ -2,3 +2,19 @@ h1{
     display: flex;
     justify-content: center;
 }
+.box1{
+    display: inline-block;
+}
+.boxcard{
+    width: auto;
+    margin: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+}
+.boxa{
+    margin: 0px 100px;
+    font-size: 12px;
+    padding: 10px 100px 8px;
+}
