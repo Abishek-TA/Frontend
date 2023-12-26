@@ -58,7 +58,7 @@
     text-decoration: none;
 }
 
-@media screen and (max-width: 660px){
+@media screen and (max-width: 680px){
 .fomr2_container{
   width: auto;
   height: auto;

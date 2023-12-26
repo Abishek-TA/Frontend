@@ -67,7 +67,7 @@
   color: #e74b03;
   text-decoration: none;
 }
-@media screen and (max-width:660px){
+@media screen and (max-width:680px){
   .form1_container{
     margin-top: auto;
     width: auto;
