@@ -27,6 +27,11 @@ h1{
     padding: 10px 100px 8px;
 }
 @media screen and (max-width:1000px) {
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: large;
+    }
     .btxt1, .btxt2 , .btxt3{
         display: inline-flex;
         margin: 0px auto ;
@@ -37,10 +42,15 @@ h1{
         width: auto;
     }
     .boxa{
-        padding: 10px 70px 8px;
+        padding: 10px 100px 8px;
     }
 }
 @media screen and (max-width:700px) {
+    h1{
+        display: flex;
+        justify-content: center;
+        font-size: large;        
+    }
     .btxt1, .btxt2 , .btxt3{
         display: inline-flex;
         margin: 0px auto;
@@ -51,6 +61,6 @@ h1{
         width: auto;
     }
     .boxa{
-        padding: 8px 50px 4px;
+        padding: 8px 30px 0px;
     }
 }
