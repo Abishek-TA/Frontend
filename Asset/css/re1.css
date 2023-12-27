@@ -3,6 +3,12 @@ h1{
     justify-content: center;
     margin:10px 0px;
 }
+.Dha1{
+    display: inline-flex;
+    justify-content:center;
+    width: 30%;
+    height: 30%;
+}
 .btxt1 , .btxt2 , .btxt3{
     display: inline-flex;
     margin: 0px 100px;
@@ -24,7 +30,7 @@ h1{
     margin-left: auto;
     margin-right: auto; 
     font-size: 17.5px;
-    padding: 10px 100px 8px;
+    padding: 10px 80px 8px;
 }
 @media screen and (max-width:1275px) {
     h1{
