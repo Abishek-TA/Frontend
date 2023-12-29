@@ -1,0 +1,16 @@
+.container_rsrv {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 10px 50px;
+      width: 200px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      box-shadow: 0 10px 8px rgba(0, 0, 0, 0.1);
+      padding: 90px;
+      background-color:#ccc;
+}
+.container_rsrv{
+      position: sticky;
+      top: 150px;
+}
