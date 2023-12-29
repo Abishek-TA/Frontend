@@ -1,3 +1,7 @@
+.img1pg2{
+    width: 500px;
+    height: 500px;
+}
 h1{
     display: flex;
     justify-content: center;
@@ -24,7 +28,7 @@ h1{
     margin-left: auto;
     margin-right: auto; 
     font-size: 17.5px;
-    padding: 10px 60px 8px;
+    padding: 10px 50px 8px;
 }
 @media screen and (max-width:1275px) {
     h1{
