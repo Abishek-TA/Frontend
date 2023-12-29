@@ -121,7 +121,7 @@ button{
   width: 70vw;
   padding: 50px 10px;
   display: flex;
-  gap: 40px;
+  gap: 33px;
   scroll-behavior: smooth;
   transition: all 0.25s ease-in;
   -ms-overflow-style: none;

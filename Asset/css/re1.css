@@ -3,24 +3,18 @@ h1{
     justify-content: center;
     margin:10px 0px;
 }
-.Dha1{
+.btxt{
     display: inline-flex;
-    justify-content:center;
-    width: 30%;
-    height: 30%;
-}
-.btxt1 , .btxt2 , .btxt3{
-    display: inline-flex;
-    margin: 0px 100px;
+    margin: 0px 80px;
     margin-bottom: 12px;
 }
 .boxcard{
+    background-color:snow;
     display: flex;
     justify-content: center;
     align-items: center;
     width: auto;
     margin: 10px;
-    border: 1px solid #000;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -30,7 +24,7 @@ h1{
     margin-left: auto;
     margin-right: auto; 
     font-size: 17.5px;
-    padding: 10px 80px 8px;
+    padding: 10px 60px 8px;
 }
 @media screen and (max-width:1275px) {
     h1{
@@ -38,7 +32,7 @@ h1{
         justify-content: center;
         font-size: large;
     }
-    .btxt1, .btxt2 , .btxt3{
+    .btxt{
         display: inline-flex;
         margin: 0px auto ;
         margin-bottom: 10px;
@@ -48,7 +42,7 @@ h1{
         width: auto;
     }
     .boxa{
-        padding: 10px 100px 8px;
+        padding: 10px 60px 8px;
     }
 }
 @media screen and (max-width:680px) {
@@ -57,7 +51,7 @@ h1{
         justify-content: center;
         font-size: large;        
     }
-    .btxt1, .btxt2 , .btxt3{
+    .btxt{
         display: inline-flex;
         margin: 0px auto;
         margin-bottom: 10px;
@@ -67,6 +61,6 @@ h1{
         width: auto;
     }
     .boxa{
-        padding: 8px 30px 0px;
+        padding: 8px 20px 0px;
     }
 }

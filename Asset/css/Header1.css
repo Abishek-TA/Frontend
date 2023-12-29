@@ -43,6 +43,7 @@ header {
   .btnclass1 button{
       background-color: #Eb9c5c;
       margin-left: 4px;
+      margin-right: 5px;
       margin-top: 5px;
       border-radius: 10px;
       padding: 10px;
