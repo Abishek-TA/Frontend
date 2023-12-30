@@ -1,17 +1,31 @@
+.tablepg2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
 .img1pg2{
+    margin-top: 20px;
+    margin-left: 30px;
+    flex-direction: row;
     width: 500px;
     height: 500px;
+    border-radius: 20px;
 }
-h1{
-    display: flex;
-    justify-content: center;
-    margin:10px 0px;
+.imgcard{
+    display: inline-flex;
+    flex-direction: row;
+}
+.imgcard-right{
+    margin-top: 50px;
+    margin-left: 50px;
 }
 .btxt{
     display: inline-flex;
     margin: 0px 80px;
     margin-bottom: 12px;
 }
+
+/*Overview*/
 .boxcard{
     background-color:whitesmoke;
     display: flex;
