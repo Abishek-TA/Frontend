@@ -4,20 +4,42 @@
         justify-content: center;
 }
 .img1pg2{
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 30px;
     flex-direction: row;
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     border-radius: 20px;
 }
 .imgcard{
+    display:flex;
+    flex-direction: row;
+}
+.card-right{
+    margin-top: 25px;
+    margin-left: 50px;
+    border: 2px solid;
+    width: 800px;
+    height: 250px;
+    border-radius: 20px;
+    border-color:#fff;
+    background-color:whitesmoke;
+}
+.r8-top{
     display: inline-flex;
     flex-direction: row;
 }
-.imgcard-right{
-    margin-top: 50px;
-    margin-left: 50px;
+.r8img{
+    width: 165px;
+    height: 165px;
+}
+.r8text{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+.r8text2{
+    margin-left: 20px;
 }
 .btxt{
     display: inline-flex;
@@ -80,5 +102,64 @@
     }
     .boxa{
         padding: 8px 20px 0px;
+    }
+}
+/*Responsive for right-card*/
+@media screen and (max-width:1275px) {
+    .r8-top{
+        display: inline;
+    }
+    .card-right{
+        margin-top: 25px;
+        margin-left: 50px;
+        border: 2px solid;
+        width: 800px;
+        height: 250px;
+        border-radius: 20px;
+        border-color:#fff;
+        background-color:whitesmoke;
+    }
+    .r8img{
+        width: 165px;
+        height: 165px;
+    }
+    .r8text{
+        position: relative;
+        margin-top: 40px;
+        margin-left: 20px;
+    }
+    .r8text2{
+        margin-left: 20px;
+    }
+}
+@media screen and (max-width:680px) {
+    .img1pg2{
+        margin-top: 25px;
+        width: 350px;
+        height: 350px;
+        border-radius: 20px;
+    }
+    .imgcard{
+        display: grid;
+        place-items: center;
+    }
+    .card-right{
+        margin-top: 0px;
+        border: 2px solid;
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        border-color:#fff;
+        background-color:whitesmoke;
+    }
+    .r8img{
+        display: none;
+    }
+    .r8text{
+        text-align: center;
+    }
+    .r8text2{
+        margin: 5px 0px;
+        text-align: center;
     }
 }
