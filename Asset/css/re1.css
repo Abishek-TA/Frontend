@@ -23,8 +23,9 @@
     height: 250px;
     border-radius: 20px;
     border-color:#fff;
-    background-color:whitesmoke;
+    background-color:rgb(219, 207, 207);
 }
+/*right-top*/
 .r8-top{
     display: inline-flex;
     flex-direction: row;
@@ -46,7 +47,25 @@
     margin: 0px 80px;
     margin-bottom: 12px;
 }
-
+/*right-bottom*/
+.r8-bottom{
+    display: inline-flex;
+    flex-direction: row;
+}
+.r8img2{
+    margin-top: 10px;
+    width: 165px;
+    height: 165px;
+}
+.card-right2{
+    margin-top: 25px;
+    border: 2px solid;
+    width: 800px;
+    height: 190px;
+    border-radius: 20px;
+    border-color:#fff;
+    background-color:rgb(219, 207, 207);    
+}
 /*Overview*/
 .boxcard{
     background-color:whitesmoke;
@@ -135,8 +154,9 @@
 @media screen and (max-width:680px) {
     .img1pg2{
         margin-top: 25px;
-        width: 350px;
-        height: 350px;
+        margin-left: 0px;
+        width: 460px;
+        height: 460px;
         border-radius: 20px;
     }
     .imgcard{
@@ -145,12 +165,13 @@
     }
     .card-right{
         margin-top: 0px;
+        margin-left: 0px;
         border: 2px solid;
         width: auto;
         height: auto;
         border-radius: 20px;
         border-color:#fff;
-        background-color:whitesmoke;
+        background-color:rgb(219, 207, 207);
     }
     .r8img{
         display: none;
@@ -162,4 +183,16 @@
         margin: 5px 0px;
         text-align: center;
     }
+    .r8img2{
+        display: none;
+    }
+    .card-right2{
+        margin-top: 0px;
+        border: 2px solid;
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        border-color:#fff;
+        background-color:rgb(219, 207, 207);    
+    }    
 }
