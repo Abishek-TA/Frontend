@@ -126,7 +126,7 @@
 /*Responsive for right-card*/
 @media screen and (max-width:1275px) {
     .r8-top{
-        display: inline;
+        display: inline-flex;
     }
     .card-right{
         margin-top: 25px;
@@ -143,12 +143,25 @@
         height: 165px;
     }
     .r8text{
-        position: relative;
-        margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 70px;
+        display: inline-flex;
+        flex-direction: column;
     }
     .r8text2{
         margin-left: 20px;
+    }
+    .r8img2{
+        display: none;
+    }
+    .card-right2{
+        margin-top: 0px;
+        margin-left: 0px;
+        border: 2px solid;
+        width: auto;
+        height: auto;
+        border-radius: 20px;
+        border-color:#fff;
+        background-color:rgb(219, 207, 207);    
     }
 }
 @media screen and (max-width:680px) {
