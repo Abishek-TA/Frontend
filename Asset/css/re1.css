@@ -123,6 +123,13 @@
         padding: 8px 20px 0px;
     }
 }
+.r8btmtext{
+    margin-left: 10px;
+    h3{
+        margin-top: 5px;
+        margin-left: 60px;
+    }
+}
 /*Responsive for right-card*/
 @media screen and (max-width:1275px) {
     .r8-top{
@@ -168,8 +175,8 @@
     .img1pg2{
         margin-top: 25px;
         margin-left: 0px;
-        width: 460px;
-        height: 460px;
+        width: 420px;
+        height: 420px;
         border-radius: 20px;
     }
     .imgcard{
@@ -200,13 +207,6 @@
         display: none;
     }
     .card-right2{
-        margin-top: 0px;
-        margin-left: 0px;
-        border: 2px solid;
-        width: auto;
-        height: auto;
-        border-radius: 20px;
-        border-color:#fff;
-        background-color:rgb(219, 207, 207);    
-    }    
+        display: none;
+    }
 }
