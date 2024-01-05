@@ -117,7 +117,7 @@ button{
   transition: all 0.25s ease-in;
 }
 .carousel-view .item-list {
-  max-width: 950px;
+  max-width: auto;
   width: 70vw;
   padding: 50px 10px;
   display: flex;
