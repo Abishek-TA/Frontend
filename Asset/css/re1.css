@@ -133,7 +133,7 @@
     }
 }
 /*Responsive for right-card*/
-@media screen and (max-width:1275px) {
+@media screen and (max-width:1275px){
     .r8-top{
         display: inline-flex;
     }
@@ -165,15 +165,14 @@
     .card-right2{
         margin-top: 0px;
         margin-left: 0px;
-        border: 2px solid;
         width: auto;
         height: auto;
-        border-radius: 20px;
-        border-color:#fff;
-        background-color:rgb(219, 207, 207);    
     }
 }
 @media screen and (max-width:680px) {
+    .r8-top{
+        display: inline-flex;
+    }
     .img1pg2{
         margin-left: auto;
         margin-right: auto;
@@ -188,13 +187,10 @@
         place-items: center;
     }
     .card-right{
-        margin-top: 0px;
-        margin-left: auto;
-        border: 2px solid;
-        width: auto;
+        margin-top: auto;
+        margin-left: 0px;
+        width: 440px;
         height: auto;
-        border-radius: 20px;
-        border-color:#fff;
         background-color:rgb(219, 207, 207);
     }
     .r8img{
@@ -211,6 +207,13 @@
         display: none;
     }
     .card-right2{
+        display:inline-flex;
+        flex-direction: column;
+        top: 30px;
+        width: auto;
+        height: auto;
+    }
+    .map1{
         display: none;
     }
 }

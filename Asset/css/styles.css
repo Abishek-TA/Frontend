@@ -118,7 +118,7 @@ button{
 }
 .carousel-view .item-list {
   max-width: auto;
-  width: 70vw;
+  width: 80vw;
   padding: 50px 10px;
   display: flex;
   gap: 33px;
@@ -146,7 +146,7 @@ button{
   background-color: deeppink;
   border-radius:8px;
 }
-@media screen and (max-width: 1600px){
+@media screen and (max-width: 1280px){
   .input-box{
     position: relative;
   height: 76px;
@@ -161,6 +161,19 @@ button{
   border: solid #1f1818;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   }
+  .carousel-view .item-list {
+  max-width: auto;
+  width: 75vw;
+  padding: 50px 10px;
+  display: flex;
+  gap: 33px;
+  scroll-behavior: smooth;
+  transition: all 0.25s ease-in;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
 }
 @media screen and (max-width: 950px){
     .container{
@@ -185,4 +198,18 @@ button{
         margin-left:50px;
         margin-right: 40px;
     }
+    
+  .carousel-view .item-list {
+    max-width: auto;
+    width: 60vw;
+    padding: 50px 10px;
+    display: flex;
+    gap: 33px;
+    scroll-behavior: smooth;
+    transition: all 0.25s ease-in;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+  }
 }
