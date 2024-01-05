@@ -26,7 +26,7 @@ body {
 .input-box {
   position: relative;
   height: 76px;
-max-width: 900px;
+  max-width: 900px;
   width: 100%;
   background: none;
   margin: 0 20px;
@@ -145,6 +145,22 @@ button{
   height: 210px;
   background-color: deeppink;
   border-radius:8px;
+}
+@media screen and (max-width: 1600px){
+  .input-box{
+    position: relative;
+  height: 76px;
+  max-width: auto;
+  width: 100%;
+  background: none;
+  margin: 0 20px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 8px;
+  border: solid #1f1818;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
 }
 @media screen and (max-width: 950px){
     .container{
