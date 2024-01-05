@@ -60,25 +60,11 @@
 .card-right2{
     margin-top: 25px;
     border: 2px solid;
-    width: 500px;
+    width: 800px;
     height: 190px;
     border-radius: 20px;
     border-color:#fff;
     background-color:rgb(219, 207, 207);    
-}
-.map1{
-    display: inline-flex;
-    flex-direction: row;
-    .map{
-        margin-left: 300px;
-        height: 200px;
-        width: 240px;
-    }
-}
-.r8btmtext{
-    h1{
-        margin-top: 0px;
-    }
 }
 /*Overview*/
 .boxcard{
@@ -99,6 +85,7 @@
     font-size: 17.5px;
     padding: 10px 50px 8px;
 }
+
 @media screen and (max-width:1275px) {
     h1{
         display: flex;
