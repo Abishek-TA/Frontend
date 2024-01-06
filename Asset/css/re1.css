@@ -1,3 +1,14 @@
+.thick-arrow-down {
+    width: 25px;
+    height: 25px;
+    border: 10px solid #333;
+    border-left: 0;
+    border-top: 0;
+    transform: rotate(45deg);
+  }
+.dhph1{
+    color: #e47309;
+}
 .tablepg2{
         display: flex;
         align-items: center;
@@ -124,13 +135,10 @@
         padding: 8px 20px 0px;
     }
 }
+/*-------*/
 .r8btmtext{
     margin-top: 30px;
     margin-left: 30px;
-    h3{
-        margin-top: 5px;
-        margin-left: 60px;
-    }
 }
 /*Responsive for right-card*/
 @media screen and (max-width:1275px){
@@ -224,10 +232,9 @@
         height: auto;
     }
     .map1{
-        display: inline;
         margin-top: 46px;
-        margin-left: 10px;
-        width: 190px;
-        height: 200px;
+        margin-left: 0px;
+        width: 150px;
+        height: 150px;
     }
 }
