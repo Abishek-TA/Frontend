@@ -68,7 +68,6 @@
   .dropdown:hover .dropdown-content {
     display: block;
   }
-/*---------*/
 .thick-arrow-down {
     width: 25px;
     height: 25px;
@@ -77,6 +76,7 @@
     border-top: 0;
     transform: rotate(45deg);
   }
+/*---------*/
 .dhph1{
     color: #e47309;
 }
@@ -308,4 +308,13 @@
         width: 150px;
         height: 150px;
     }
+}
+/*Over-card*/
+.over-card{
+    margin-top: 25px;
+    border: 2px solid;
+    width: auto;
+    height: 250px;
+    border-color:#fff;
+    background-color:rgb(219, 207, 207);
 }
