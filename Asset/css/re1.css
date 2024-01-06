@@ -224,9 +224,10 @@
         height: auto;
     }
     .map1{
-        margin-top: 20px;
+        display: inline;
+        margin-top: 46px;
         margin-left: 10px;
-        width: 200px;
+        width: 190px;
         height: 200px;
     }
 }
