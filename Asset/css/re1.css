@@ -218,7 +218,7 @@
     }
     .card-right{
         margin-top: 25px;
-        margin-left: 50px;
+        margin-left: auto;
         border: 2px solid;
         width: 800px;
         height: 250px;
@@ -229,6 +229,7 @@
     .r8img{
         width: 165px;
         height: 165px;
+        object-fit: fill;
     }
     .r8text{
         margin-left: 70px;
@@ -246,7 +247,7 @@
         flex-direction: column;
         border: 0px;
         top: 30px;
-        width: auto;
+        width: 165px;
         height: auto;
     }
     .map1{
