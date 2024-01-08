@@ -303,14 +303,17 @@
         display: none;
     }
     .r8text{
-        display: inline;
-        justify-content: center;
-        align-items: center;
         text-align: center;
     }
     .r8text2{
-        margin: 5px 0px;
+        font-size: medium;
+        margin: 13px;
         text-align: center;
+    }
+    .dropdown {
+        background-color: none;
+        float: right;
+        overflow: hidden;
     }
     .r8img2{
         display: none;

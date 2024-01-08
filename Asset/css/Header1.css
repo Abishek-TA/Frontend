@@ -110,12 +110,12 @@ header {
       color: black;font-weight: bold;font-size: 15px; text-decoration: none;
   }
   /*---------------------------------------*/
-  @media only screen and (max-width: 700px) { 
+  @media only screen and (max-width: 680px) { 
       header{ 
           padding: 0 30px; 
       } 
   } 
-  @media only screen and (max-width: 700px) { 
+  @media only screen and (max-width: 680px) { 
       .hamburger { 
           display: block;
           position: relative; 
