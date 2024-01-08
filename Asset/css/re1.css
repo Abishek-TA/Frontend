@@ -283,8 +283,8 @@
         align-items: center;
         margin-top: 25px;
         margin-left: -10px;
-        width: 430px;
-        height: 420px;
+        width: 400px;
+        height: 400px;
         border-radius: 20px;
     }
     .imgcard{
@@ -309,11 +309,6 @@
         font-size: medium;
         margin: 13px;
         text-align: center;
-    }
-    .dropdown {
-        background-color: none;
-        float: right;
-        overflow: hidden;
     }
     .r8img2{
         display: none;
