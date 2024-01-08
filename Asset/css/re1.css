@@ -283,8 +283,8 @@
         align-items: center;
         margin-top: 25px;
         margin-left: -10px;
-        width: 400px;
-        height: 400px;
+        width: auto;
+        height: 420px;
         border-radius: 20px;
     }
     .imgcard{
