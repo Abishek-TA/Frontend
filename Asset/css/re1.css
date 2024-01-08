@@ -212,6 +212,22 @@
     margin-left: 30px;
 }
 /*Responsive for right-card*/
+@media screen and (ma-width:1600px){
+    .r8-top{
+        display: inline-flex;
+    }
+    .card-right{
+        margin-top: 25px;
+        margin-left: auto;
+        border: 2px solid;
+        font-size: small;
+        max-width: auto;
+        height: auto;
+        border-radius: 20px;
+        border-color:#fff;
+        background-color:whitesmoke;
+    }
+}
 @media screen and (max-width:1275px){
     .r8-top{
         display: inline-flex;
@@ -276,16 +292,20 @@
         place-items: center;
     }
     .card-right{
-        margin-top: auto;
+        margin-top: 10px;
         margin-left: -10px;
         width: auto;
         height: auto;
         background-color:rgb(219, 207, 207);
     }
     .r8img{
+        font-size: auto;
         display: none;
     }
     .r8text{
+        display: inline;
+        justify-content: center;
+        align-items: center;
         text-align: center;
     }
     .r8text2{
