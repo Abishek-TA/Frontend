@@ -23,7 +23,6 @@
     border: none;
     outline: none;
     color: #000;
- 
     background-color: none;
   }
   .arrow-down {
@@ -34,25 +33,21 @@
     height: 10px;
     border: 3px solid #333;
     border-left: 0;
-    border-top: 0;
-  
+    border-top: 0;  
     transform: rotate(45deg);
-  }
-  
-  .navbar a:hover, .dropdown:hover .dropbtn {
+}  
+.navbar a:hover, .dropdown:hover .dropbtn {
     background-color: none;
-  }
-  
-  .dropdown-content {
+}  
+.dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-  }
-  
-  .dropdown-content a {
+}
+.dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
