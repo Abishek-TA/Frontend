@@ -118,7 +118,7 @@ button{
 }
 .carousel-view .item-list {
   max-width: auto;
-  width: 80vw;
+  width: 70vw;
   padding: 50px 10px;
   display: flex;
   gap: 33px;
