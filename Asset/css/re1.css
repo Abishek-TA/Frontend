@@ -351,6 +351,7 @@
         padding:5px;
     }
     .dropdown .dropbtn {
+        font-size: small;
         padding: 0px 140px;
         cursor: pointer;
         font-size: 16px;  
@@ -360,7 +361,8 @@
         background-color: none;
       } 
       .dropdown-content {
-        margin: 0px 100px;
+          font-size: small;
+          margin: 0px 100px;
           display: none;
           position: absolute;
           background-color: #f9f9f9;
