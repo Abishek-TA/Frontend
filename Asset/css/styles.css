@@ -113,12 +113,12 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   transition: all 0.25s ease-in;
 }
 .carousel-view .item-list {
   max-width: auto;
-  width: 70vw;
+  width: 87vw;
   padding: 50px 10px;
   display: flex;
   gap: 33px;

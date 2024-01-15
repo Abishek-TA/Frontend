@@ -3,11 +3,9 @@
     overflow: hidden;
      }
 .navbar a {
-    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
   }
   
@@ -18,6 +16,7 @@
   }
   
   .dropdown .dropbtn {
+    margin-left: 20px;
     cursor: pointer;
     font-size: 16px;  
     border: none;
@@ -207,22 +206,6 @@
     margin-left: 30px;
 }
 /*----------------------------------Responsive for right-card-------------------------------------*/
-@media screen and (max-width:1600px){
-    .r8-top{
-        display: inline-flex;
-    }
-    .card-right{
-        margin-top: 25px;
-        margin-left: auto;
-        border: 2px solid;
-        font-size: small;
-        max-width: auto;
-        height: auto;
-        border-radius: 20px;
-        border-color:#fff;
-        background-color:whitesmoke;
-    }
-}
 @media screen and (max-width:1275px){
     .r8-top{
         display: inline-flex;
@@ -262,7 +245,7 @@
         height: auto;
     }
     .map1{
-        margin-top: 20px;
+        padding: 10px;
         margin-left: 10px;
         width: 300px;
         height: 300px;
@@ -310,7 +293,7 @@
         margin-top: 5px;
         width: 200px;
         height: 200px;
-        padding: 5px;
+        padding: 10px;
     }
 }
 @media screen and (max-width:680px) {
@@ -367,6 +350,24 @@
         height: 150px;
         padding:5px;
     }
+    .dropdown .dropbtn {
+        padding: 0px 140px;
+        cursor: pointer;
+        font-size: 16px;  
+        border: none;
+        outline: none;
+        color: #000;
+        background-color: none;
+      } 
+      .dropdown-content {
+        margin: 0px 100px;
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+      }
 }
 /*-------------------------------------------Over-card-------------------------------------------*/
 .over-card{
