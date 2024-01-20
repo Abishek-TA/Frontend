@@ -1,38 +1,61 @@
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signup_page</title>
-    <link rel="stylesheet" href="./Asset/css/Header1.css">
-    <link rel="stylesheet" href="./Asset/css/Footer.css">
-    <link rel="stylesheet" href="./Asset/css/signup1.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="./Asset/js/index.js" async></script>
+    <link rel="stylesheet" href="./signup1.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./index.js" async></script>
   </head>
-<body>
-  <!--Header-->
+  <body>
+    <!--Header-->
     <div id="head1"></div>
-  <!--signuppage-->
-        <div class="form1_container">
-          <div class="card">
-            <div class="card_title">
-              <h1>Create Account</h1>
-              <span>Already have an account? <a href="login.html">Login</a></span>
-            </div>
-          <div class="form">
-            <form action="/register" method="post">
-              <input type="text" name="username" id="username" placeholder="UserName" />
-              <input type="email" name="email" placeholder="Email" id="email" />
-              <input type="password" name="password" placeholder="Password" id="password" />
-              <button>Sign Up</button>
-            </form>
-          </div>
-          <div class="card_terms">
-              <input type="checkbox" name="" id="terms"> <span>I have read all the <a href="">Terms & Conditons</a></span>
-          </div>
+    <!--signuppage-->
+    <div class="form1_container">
+      <div class="card">
+        <div class="card_title">
+          <h1>Create Account</h1>
+          <span>Already have an account? <a href="login.html">Login</a></span>
+        </div>
+        <div class="form">
+          <form action="backend.php" method="POST">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="UserName"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email"
+              id="email"
+              required
+            />
+            <input
+              type="password"
+              name="password"
+              placeholder="Password"
+              id="password"
+              required
+            />
+            <button>Sign Up</button>
+          </form>
+        </div>
+        <div class="card_terms">
+          <input type="checkbox" name="" id="terms" />
+          <span
+            >I have read and agree to the <a href="">Terms of Service</a></span
+          >
         </div>
       </div>
-  <!--footer-->
-  <div class="footer"></div>
-</body>
-</html>   
+    </div>
+    <!--footer-->
+    <div class="footer"></div>
+  </body>
+</html>

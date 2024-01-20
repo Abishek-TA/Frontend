@@ -4,40 +4,34 @@
   align-items: center;
   margin: 30px 0px;
 }
-.card-header{
-  border-top: 100px;
-  margin: -20px;
-  padding: 10px;
-  margin-bottom: 0px;
-  text-align: center;
-  background-color: #000;   
-  color: #fff;
-}
+
 .card {
   width: 300px;
   border: 1px solid #000;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  background-color:#ccc;
-  .card-body{
+  background-color: #ccc;
+
+  .card-body {
     padding: 20px;
   }
 
   .form-group {
     margin-bottom: 25px;
+
     input[type="text"],
     input[type="password"] {
-      width: 110%;
+      width: 90%;
+      height: auto ;
       padding: 10px;
       font-size: 16px;
+      border-radius: 4px;
       border: 1px solid #ccc;
       margin-top: 8px;
-      margin-left: -15px;
     }
 
     label {
-      margin-left: -15px;
       display: block;
       font-weight: bold;
     }
@@ -49,25 +43,25 @@
   }
 
   button[type="submit"] {
-    width: 110%;
-    margin-left: -15px;
+    width: 100%;
     padding: 10px;
     background-color: #3f51b5;
     color: white;
+    border-radius: 4px;
     border: 0;
     cursor: pointer;
   }
 }
 
-.sign1 a{
-    color: #e74b03;
-    text-decoration: none;
+.sign1 a {
+  color: #e74b03;
+  text-decoration: none;
 }
 
-@media screen and (max-width: 680px){
-.fomr2_container{
-  width: auto;
-  height: auto;
-  margin: auto;
-}
+@media screen and (max-width: 680px) {
+  .fomr2_container {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
 }
