@@ -1,0 +1,15 @@
+.table-container{
+    margin: 3% 10%;
+    border: 2px solid;
+    width: auto;
+    height: 800px;
+    border-color:#000;
+    background-color: #fff;
+}
+.ent{
+        text-align: center;
+        border: 2px dotted #000;
+        border-top: 0px;
+        margin: 0% 44%;
+        width: 15%;
+}
