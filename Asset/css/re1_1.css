@@ -2,7 +2,7 @@
     margin: 3% 10%;
     border: 2px solid;
     width: auto;
-    height: 800px;
+    height: 1200px;
     border-color:#000;
     background-color: #fff;
 }
@@ -12,4 +12,22 @@
         border-top: 0px;
         margin: 0% 44%;
         width: 15%;
+}
+.r1c1{
+    margin: 2%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 20%;
+}
+.r2c1{
+    margin: 2%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 28%;
+}
+.r3c1{
+    margin: 2%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 28%;
 }
