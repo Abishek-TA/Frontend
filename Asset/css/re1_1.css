@@ -48,7 +48,7 @@
     margin: 2%;
     border: 2px dotted #000;
     width: 36%;
-    height: 90%;
+    height: 95%;
 }
 .r2c2{
     display: inline-flex;
@@ -57,12 +57,12 @@
     margin-left: 21%;
     border: 2px dotted #000;
     width: 36%;
-    height: 90%;    
+    height: 95%;    
 }
 .r3c1{
     margin: 2%;
     border: 2px dotted #000;
     width: 36%;
-    height: 28%;
+    height: 30%;
 }
 /*Inner table*/
