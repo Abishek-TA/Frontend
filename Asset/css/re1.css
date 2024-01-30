@@ -167,12 +167,6 @@
     font-size: 17.5px;
     padding: 10px 50px 8px;
 }
-<<<<<<< Updated upstream
-=======
-.boxa:hover{
-    color: #e01111;
-}
->>>>>>> Stashed changes
 
 @media screen and (max-width:1275px) {
     h1{
@@ -214,11 +208,6 @@
         padding: 8px 20px 0px;
     }
 }
-<<<<<<< Updated upstream
-=======
-
-
->>>>>>> Stashed changes
 /*-------*/
 .r8btmtext{
     margin-top: 30px;
@@ -342,19 +331,16 @@
     }
 }
 /*Over-card*/
-<<<<<<< Updated upstream
 .over-card{
     margin-top: 25px;
-=======
+}
 .over-card2{
     margin-top: auto;
->>>>>>> Stashed changes
     border: 2px solid;
     width: auto;
     height: 450px;
     border-color:#fff;
-    background-color:rgb(219, 207, 207);
-    
+    background-color:rgb(219, 207, 207);   
 }
 /* Review */
 .over-card3{
