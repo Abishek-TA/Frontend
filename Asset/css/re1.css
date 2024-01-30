@@ -167,6 +167,12 @@
     font-size: 17.5px;
     padding: 10px 50px 8px;
 }
+<<<<<<< Updated upstream
+=======
+.boxa:hover{
+    color: #e01111;
+}
+>>>>>>> Stashed changes
 
 @media screen and (max-width:1275px) {
     h1{
@@ -186,6 +192,8 @@
     .boxa{
         padding: 10px 60px 8px;
     }
+
+
 }
 @media screen and (max-width:680px) {
     h1{
@@ -206,6 +214,11 @@
         padding: 8px 20px 0px;
     }
 }
+<<<<<<< Updated upstream
+=======
+
+
+>>>>>>> Stashed changes
 /*-------*/
 .r8btmtext{
     margin-top: 30px;
@@ -329,11 +342,153 @@
     }
 }
 /*Over-card*/
+<<<<<<< Updated upstream
 .over-card{
     margin-top: 25px;
+=======
+.over-card2{
+    margin-top: auto;
+>>>>>>> Stashed changes
     border: 2px solid;
     width: auto;
-    height: 250px;
+    height: 450px;
     border-color:#fff;
     background-color:rgb(219, 207, 207);
+    
+}
+/* Review */
+.over-card3{
+    margin-top: auto;
+    border: 2px solid;
+    width: auto;
+    height: 70px;
+    border-color:#fff;
+    background-color:rgb(219, 207, 207);
+    
+}
+/* menu */
+.over-card4{
+    margin-top: auto;
+    border: 2px solid;
+    width: auto;
+    height: auto;
+    border-color:#fff;
+    background-color:rgb(219, 207, 207);
+    
+}
+.over-card5{
+    margin-top: auto;
+    border: 2px solid;
+    width: auto;
+    height: 400px;
+    border-color:#fff;
+    background-color:rgb(219, 207, 207);
+    
+}
+.over-card6{
+    margin-top: auto;
+    border: 2px solid;
+    width: auto;
+    height: 400px;
+    border-color:#fff;
+    background-color:rgb(219, 207, 207);
+    
+}
+
+    #menu
+    #overview
+    #help
+
+    #about{
+        border-radius: 10px;
+        
+    }
+    #menu{
+        background-color: #fffefe;
+    }
+    #help{
+        margin-top: 4px;
+        background-color: blue;
+    }
+    #review{
+        background-color: #f0dff0;
+        border-radius: 10px;
+    }
+    .recbox1 {
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        border-radius: 10px;
+        width: 100%; 
+        height: 400px; 
+        background-color: #ebe3eb; 
+
+    }
+
+    .catlog-container{
+        margin-top: 29px;
+        display: flex;
+        flex-wrap:wrap;
+        justify-content: center;
+        gap:25px;
+    }
+    .item-container{
+        display: flex;
+        flex-direction: column;
+        gap:2% ;
+        margin-top: 2%;
+        border: 1px solid;
+        width:320px;
+        height: 80px;
+        border-radius: 6px;
+        border-color:#fff;
+        background-color:rgb(216, 206, 206);
+        display:flex ;
+
+    }
+    .item-name{
+        justify-content: center;
+        margin-top: -60px;
+        margin-left: 100px;
+        margin-bottom: 5px;
+    }
+
+    .price-holder{
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-top: -px;
+        margin-left: 130px;
+}
+.food-img{
+    height:80px; 
+    width:80px;
+    border-radius: 20px;
+}
+.rating-value{
+    font-size: 32px;
+    color: #34be34;
+    display: inline-block;
+    margin-left: 2%;
+
+}
+.total-rating{
+    color: #333;
+    font-size: 27px;
+    display: inline-block;
+
+}
+@media screen and (max-width:680px) {
+    .recbox1{
+        display: inline-flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+    }
+    .over-card3{
+        height: auto;
+    }
+}
+html{
+    scroll-behavior: smooth;
 }
