@@ -69,6 +69,9 @@
         height: 10%;
     }
     .re1content{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
         font-size: 80%;
         margin-top: 1%;
         margin-left: 3%;
