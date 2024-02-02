@@ -1,12 +1,12 @@
 .prof-res1{
     display: inline-flex;
     flex-direction: row;
-    margin: 3% 10%;
+    margin: 2% 10%;
     border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(196, 172, 172);
     width: auto;
-    height: 60%;
+    height: 20%;
 }
 .prof-img1{
     padding: 1%;
@@ -15,7 +15,7 @@
 }
 .re1content{
     margin-top: 1%;
-    margin-left: 2%;
+    margin-left: 5%;
 }
 /*------------------------------For button---------------------*/
 .re1btn button{
@@ -50,7 +50,7 @@
 .re1btn:focus{
     box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
 }
-/*----------------------------------------------Responsive for res1 profile card--------------------------------------------------------*/
+/*----------------------------------------------Responsive for res1 profile card--------------------------------------------------------
 
 @media only screen and (max-width: 680px) {
     .prof-res1{
@@ -100,4 +100,4 @@
         touch-action: manipulation;
         box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
     }    
-}
+}*/
