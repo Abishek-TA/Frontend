@@ -55,7 +55,7 @@
 .re1btn:focus{
     box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
 }
-/*----------------------------------------------Responsive for res1 profile card--------------------------------------------------------
+/*----------------------------------------------Responsive for res1 profile card--------------------------------------------------------*/
 
 @media only screen and (max-width: 680px) {
     .prof-res1{
@@ -105,4 +105,4 @@
         touch-action: manipulation;
         box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
     }    
-}*/
+}
