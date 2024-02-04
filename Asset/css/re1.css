@@ -1,11 +1,13 @@
-/*-------------------------------------------opening hours-------------------------------------------*/
+/*opening hours*/
 .navbar { 
     overflow: hidden;
      }
 .navbar a {
+    float: left;
     display: block;
     color: #f2f2f2;
     text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
   }
   
@@ -16,12 +18,12 @@
   }
   
   .dropdown .dropbtn {
-    margin-left: 20px;
     cursor: pointer;
     font-size: 16px;  
     border: none;
     outline: none;
     color: #000;
+ 
     background-color: none;
   }
   .arrow-down {
@@ -32,21 +34,25 @@
     height: 10px;
     border: 3px solid #333;
     border-left: 0;
-    border-top: 0;  
+    border-top: 0;
+  
     transform: rotate(45deg);
-}  
-.navbar a:hover, .dropdown:hover .dropbtn {
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
     background-color: none;
-}  
-.dropdown-content {
+  }
+  
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-}
-.dropdown-content a {
+  }
+  
+  .dropdown-content a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -70,7 +76,7 @@
     border-top: 0;
     transform: rotate(45deg);
   }
-/*---------------------------------------Right-----------------------------------------------*/
+/*---------*/
 .dhph1{
     color: #e47309;
 }
@@ -78,7 +84,6 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor:context-menu;
 }
 .img1pg2{
     margin-top: 25px;
@@ -102,7 +107,7 @@
     border-color:#fff;
     background-color:rgb(219, 207, 207);
 }
-/*-------------------------------------------right-top-------------------------------------------*/
+/*right-top*/
 .r8-top{
     display: inline-flex;
     flex-direction: row;
@@ -113,24 +118,21 @@
 }
 .r8text{
     position: relative;
-    margin-top: 8%;
+    margin-top: 4f0px;
     margin-left: 20px;
-    cursor:context-menu;
 }
 .r8text2{
     margin-left: 20px;
-    cursor:context-menu;
 }
 .btxt{
     display: inline-flex;
     margin: 0px 80px;
     margin-bottom: 12px;
 }
-/*-------------------------------------------right-bottom-------------------------------------------*/
+/*right-bottom*/
 .r8-bottom{
     display: inline-flex;
     flex-direction: row;
-    cursor:context-menu;
 }
 .r8img2{
     margin-top: 10px;
@@ -146,7 +148,7 @@
     border-color:#fff;
     background-color:rgb(219, 207, 207);    
 }
-/*----------------------------------------------Overview---------------------------------------------*/
+/*Overview*/
 .boxcard{
     background-color:whitesmoke;
     display: flex;
@@ -165,7 +167,7 @@
     font-size: 17.5px;
     padding: 10px 50px 8px;
 }
-/*----------------------------------------Responsive overall--------------------------------------------*/
+
 @media screen and (max-width:1275px) {
     h1{
         display: flex;
@@ -184,6 +186,8 @@
     .boxa{
         padding: 10px 60px 8px;
     }
+
+
 }
 @media screen and (max-width:680px) {
     h1{
@@ -204,12 +208,28 @@
         padding: 8px 20px 0px;
     }
 }
-/*-----------------------------------------------------------------------------------------------*/
+/*-------*/
 .r8btmtext{
     margin-top: 30px;
     margin-left: 30px;
 }
-/*----------------------------------Responsive for right-card-------------------------------------*/
+/*Responsive for right-card*/
+@media screen and (ma-width:1600px){
+    .r8-top{
+        display: inline-flex;
+    }
+    .card-right{
+        margin-top: 25px;
+        margin-left: auto;
+        border: 2px solid;
+        font-size: small;
+        max-width: auto;
+        height: auto;
+        border-radius: 20px;
+        border-color:#fff;
+        background-color:whitesmoke;
+    }
+}
 @media screen and (max-width:1275px){
     .r8-top{
         display: inline-flex;
@@ -249,55 +269,10 @@
         height: auto;
     }
     .map1{
-        padding: 10px;
+        margin-top: 20px;
         margin-left: 10px;
         width: 300px;
         height: 300px;
-    }
-}
-@media screen and (max-width:1030px){
-    .r8-top{
-        display: inline-flex;
-    }
-    .card-right{
-        margin-top: 25px;
-        margin-left: auto;
-        border: 2px solid;
-        width: 800px;
-        height: 250px;
-        border-radius: 20px;
-        border-color:#fff;
-        background-color:whitesmoke;
-    }
-    .r8img{
-        width: 165px;
-        height: 165px;
-        object-fit: fill;
-    }
-    .r8text{
-        margin-left: 70px;
-        display: inline-flex;
-        flex-direction: column;
-    }
-    .r8text2{
-        margin-left: 20px;
-    }
-    .r8img2{
-        display: none;
-    }
-    .card-right2{
-        display:inline-flex;
-        flex-direction: column;
-        border: 0px;
-        top: 30px;
-        width: auto;
-        height: auto;
-    }
-    .map1{
-        margin-top: 5px;
-        width: 200px;
-        height: 200px;
-        padding: 10px;
     }
 }
 @media screen and (max-width:680px) {
@@ -345,37 +320,17 @@
         flex-direction: column;
         border: 0px;
         top: 30px;
-        width: auto;
+        width: 410px;
         height: auto;
     }
     .map1{
         margin-top: 46px;
+        margin-left: 0px;
         width: 150px;
         height: 150px;
-        padding:5px;
     }
-    .dropdown .dropbtn {
-        font-size: small;
-        padding: 0px 140px;
-        cursor: pointer;
-        font-size: 16px;  
-        border: none;
-        outline: none;
-        color: #000;
-        background-color: none;
-      } 
-      .dropdown-content {
-          font-size: small;
-          margin: 0px 100px;
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-      }
 }
-/*-------------------------------------------Over-card-------------------------------------------*/
+/*Over-card*/
 .over-card{
     margin-top: 25px;
 }
@@ -399,12 +354,13 @@
 }
 /* menu */
 .over-card4{
-    margin-top: 3%;
+    margin-top: auto;
     border: 2px solid;
     width: auto;
     height: auto;
     border-color:#fff;
-    background-color: none ;
+    background-color:rgb(219, 207, 207);
+    
 }
 .over-card5{
     margin-top: auto;
@@ -424,26 +380,17 @@
     background-color:rgb(219, 207, 207);
     
 }
-.menu{
-    margin-top: 2%;
-    display: flex;
-    flex-direction: row;
-}
-.re1menu{
-    text-align: center;
-    margin-top: 1%;
-}
-.re1book{
-    display: inline-flex;
-    margin-top: 1%;
-    width: 20%;
-    border-radius: 20%;
-    border-color:#fff;
-    background-color:rgb(219, 207, 207);
 
-}
+    #menu
+    #overview
+    #help
+
+    #about{
+        border-radius: 10px;
+        
+    }
     #menu{
-        background-color: none;
+        background-color: #fffefe;
     }
     #help{
         margin-top: 4px;
@@ -459,13 +406,13 @@
         justify-content: center;
         border-radius: 10px;
         width: 100%; 
-        height: 0%; 
+        height: 400px; 
         background-color: #ebe3eb; 
 
     }
 
     .catlog-container{
-        margin-top: 1%;
+        margin-top: 29px;
         display: flex;
         flex-wrap:wrap;
         justify-content: center;
@@ -488,7 +435,7 @@
     .item-name{
         justify-content: center;
         margin-top: -60px;
-        margin-left: 100px;
+        margin-left: 90px;
         margin-bottom: 5px;
     }
 
@@ -496,13 +443,12 @@
         font-size: 18px;
         font-weight: bold;
         color: #333;
-        margin-top: -px;
+        margin-top: -30px;
         margin-left: 130px;
 }
 .food-img{
     height:80px; 
     width:80px;
-    border-radius: 20px;
 }
 .rating-value{
     font-size: 32px;
@@ -527,6 +473,46 @@
     .over-card3{
         height: auto;
     }
+}
+.bookbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.book-table-btn {
+    background-color: #4CAF50; 
+    border: none;
+    color: white;
+    padding: 25px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 10px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.book-table-btn:hover {
+    background-color: #15f120;
+}
+.quantity {
+    margin-left: 2px;
+    display:inline-flex;
+    margin-right: 10px;
+}
+.quantity button {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #000;
+}
+.q_box{
+    margin-left: 250px;
+    width: 59px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #ffffff;
 }
 html{
     scroll-behavior: smooth;
