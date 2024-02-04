@@ -35,7 +35,6 @@
     border: 3px solid #333;
     border-left: 0;
     border-top: 0;
-  
     transform: rotate(45deg);
   }
   
@@ -81,9 +80,10 @@
     color: #e47309;
 }
 .tablepg2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .img1pg2{
     margin-top: 25px;
@@ -498,16 +498,25 @@
     font-size: medium;
     margin: 7%;
 }
-
+#cartQuantity_item1 , #cartQuantity_item2 , #cartQuantity_item3 ,
+#cartQuantity_item4 , #cartQuantity_item5 , #cartQuantity_item6{
+    text-align: center;
+    margin-top: 8%;
+}
 .quantity {
-    margin-left: 2px;
     display:inline-flex;
-    margin-right: 10px;
 }
 .quantity button {
     padding: 5px 10px;
     cursor: pointer;
     color: #000;
+}
+.book-table-btn:active{
+    background-color: none;
+    transform: translateY(0.125rem);
+}
+.book-table-btn:focus{
+    box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
 }
 .q_box{
     margin-left: 250px;
