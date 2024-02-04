@@ -118,11 +118,13 @@
 }
 .r8text{
     position: relative;
-    margin-top: 4f0px;
+    margin-top: 8%;
     margin-left: 20px;
+    cursor: default;
 }
 .r8text2{
     margin-left: 20px;
+    cursor: default;
 }
 .btxt{
     display: inline-flex;
@@ -133,6 +135,7 @@
 .r8-bottom{
     display: inline-flex;
     flex-direction: row;
+    cursor: default;
 }
 .r8img2{
     margin-top: 10px;
@@ -480,22 +483,22 @@
     transform: translateY(-50%);
 }
 .book-table-btn {
-    background-color: #4CAF50; 
-    border: none;
-    color: white;
-    padding: 25px 25px;
+    background-color: #002c0a; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 10px;
-    margin: 4px 2px;
+    width: 10%;
+    height: 10%;
     cursor: pointer;
     border-radius: 10px;
 }
-
-.book-table-btn:hover {
-    background-color: #15f120;
+.btdemore1{
+    color: #Eb9c5c;
+    text-align: center;
+    font-size: medium;
+    margin: 7%;
 }
+
 .quantity {
     margin-left: 2px;
     display:inline-flex;
