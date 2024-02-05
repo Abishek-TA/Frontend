@@ -278,6 +278,7 @@
         height: 300px;
     }
 }
+/*---------------------------------------------------------*/
 @media screen and (max-width:680px) {
     .r8-top{
         display: inline-flex;
@@ -384,11 +385,9 @@
     background-color:rgb(219, 207, 207);
     
 }
-
     #menu
     #overview
     #help
-
     #about{
         border-radius: 10px;
         
@@ -530,4 +529,16 @@
 }
 html{
     scroll-behavior: smooth;
+}
+
+.book-table-btn {
+    background-color: #002c0a; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+    margin: 1%;
+    height: 10%;
+    cursor: pointer;
+    border-radius: 10px;
 }
