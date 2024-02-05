@@ -333,6 +333,7 @@
         height: 150px;
     }
 }
+/*------------------------------------------------------------------------------------------------*/
 /*Over-card*/
 .over-card{
     margin-top: 25px;
@@ -487,8 +488,9 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    width: 10%;
-    height: 10%;
+    width: 20%;
+    height: 15%;
+    margin: 5% 44%;
     cursor: pointer;
     border-radius: 10px;
 }
