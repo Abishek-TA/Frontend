@@ -35,7 +35,6 @@
     border: 3px solid #333;
     border-left: 0;
     border-top: 0;
-  
     transform: rotate(45deg);
   }
   
@@ -81,9 +80,10 @@
     color: #e47309;
 }
 .tablepg2{
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .img1pg2{
     margin-top: 25px;
@@ -118,11 +118,13 @@
 }
 .r8text{
     position: relative;
-    margin-top: 4f0px;
+    margin-top: 8%;
     margin-left: 20px;
+    cursor: default;
 }
 .r8text2{
     margin-left: 20px;
+    cursor: default;
 }
 .btxt{
     display: inline-flex;
@@ -133,6 +135,7 @@
 .r8-bottom{
     display: inline-flex;
     flex-direction: row;
+    cursor: default;
 }
 .r8img2{
     margin-top: 10px;
@@ -384,20 +387,13 @@
     #menu
     #overview
     #help
-
     #about{
-        border-radius: 10px;
-        
-    }
-    #menu{
-        background-color: #fffefe;
+        border-radius: 10px;   
     }
     #help{
         margin-top: 4px;
-        background-color: blue;
     }
     #review{
-        background-color: #f0dff0;
         border-radius: 10px;
     }
     .recbox1 {
@@ -435,7 +431,7 @@
     .item-name{
         justify-content: center;
         margin-top: -60px;
-        margin-left: 100px;
+        margin-left: 90px;
         margin-bottom: 5px;
     }
 
@@ -443,13 +439,12 @@
         font-size: 18px;
         font-weight: bold;
         color: #333;
-        margin-top: -px;
+        margin-top: -30px;
         margin-left: 130px;
 }
 .food-img{
     height:80px; 
     width:80px;
-    border-radius: 20px;
 }
 .rating-value{
     font-size: 32px;
@@ -475,6 +470,103 @@
         height: auto;
     }
 }
+.bookbtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.book-table-btn {
+    background-color: #002c0a; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    width: 10%;
+    height: 10%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.btdemore1{
+    color: #Eb9c5c;
+    text-align: center;
+    font-size: medium;
+    margin: 7%;
+}
+#cartQuantity_item1 , #cartQuantity_item2 , #cartQuantity_item3 ,
+#cartQuantity_item4 , #cartQuantity_item5 , #cartQuantity_item6{
+    text-align: center;
+    margin-top: 8%;
+}
+.quantity {
+    display:inline-flex;
+}
+.quantity button {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #000;
+}
+.book-table-btn:active{
+    background-color: none;
+    transform: translateY(0.125rem);
+}
+.book-table-btn:focus{
+    box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
+}
+.q_box{
+    margin-left: 250px;
+    width: 59px;
+    height: 30px;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+.recbox_abt{
+    margin-left: 20%;
+    width: 30%;
+    height: 45vh;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #e40d0d;
+}
+.forkplate{
+    height:65px; 
+    width:65px;
+    margin-bottom: 0%;
+}
+.plate{
+    height:65px; 
+    width:65px;
+    margin-bottom: -50px;
+}
+.rupees{
+    height:65px; 
+    width:65px;
+   margin-bottom: -100px;
+
+}
+.rup_c{
+    margin-left: 120px;
+    margin-top: 45px;
+    font-family: Helvetica, Sans-Serif;
+    color: #000000;
+    font-size: 12pt;
+}
+.fp_1{
+    margin-left: 120px;
+    margin-top: -55px;
+    font-family: Helvetica, Sans-Serif;
+    color: #000000;
+    font-size: 12pt;
+    margin-bottom: 0px;
+}
+.fp2{
+    margin-left: 120px;
+    margin-top: 20px;
+    font-family: Helvetica, Sans-Serif;
+    color: #000000;
+    font-size: 12pt;
+    margin-bottom: 20px;
+}
+
 html{
     scroll-behavior: smooth;
 }

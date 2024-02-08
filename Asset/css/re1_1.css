@@ -1,0 +1,70 @@
+.table-container{
+    margin: 3% 10%;
+    border: 2px solid;
+    width: auto;
+    height: 1190px;
+    border-color:#000;
+    background-color: #fff;
+}
+.ent{
+        text-align: center;
+        border: 2px dotted #000;
+        border-top: 0px;
+        margin: 0% auto;
+        width: 15%;
+}
+.r1{
+    width: auto;
+    height: 35%;
+}
+.r1c1{
+    display: inline-flex;
+    flex-direction:row;
+    margin: 2%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 85%;
+}
+.r1wall{
+    display: inline-flex;
+    flex-direction:row;
+    margin-bottom: 2%;
+    margin-left: 21%;
+    /*border: 1px solid #000;*/
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    background-color:#a5842a;
+    width: 38.6%;
+    margin-top: -4%;
+    height: 100%;
+}
+.r2{
+    width: auto;
+    height: 30%;
+}
+.r2c1{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 2%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 95%;
+}
+.r2c2{
+    display: inline-flex;
+    flex-direction:row;
+    margin: 2%;
+    margin-left: 21%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 95%;    
+}
+.r3c1{
+    margin: 2%;
+    border: 2px dotted #000;
+    width: 36%;
+    height: 30%;
+}
+/*Responsive for outlayer of the table*/
+
+/*Inner table*/

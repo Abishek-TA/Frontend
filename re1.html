@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhahabi Test</title>
+    <title>ArrowGrub</title>
+    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
     <link rel="stylesheet" href="./Asset/css/re1.css">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>        
     <script src="./Asset/js/index.js" async></script>
@@ -16,13 +17,13 @@
         <h1 class="tablepg2"><b>Find Your Table For Any Occasion</b></h1>
     <!--img and date selector-->
         <div class="imgcard">
-            <img class="img1pg2" src="./Asset/Images/Dhaha.png">
+            <img class="img1pg2" src="./Asset/Images/SAB.png">
             <div class="card-right">
                 <div class="r8-top">
                     <img class="r8img" src="./Asset/Images/Arrow__3_-removebg-preview.png" alt="no img found">
                     <div class="r8">
                         <div class="r8text">
-                            <h1>Dhahabi Fried Chicken</h1><br>
+                            <h1>SAB RESTAURANT</h1><br>
                             <h4>Casual Dinning •  Cost for two : ₹500</h4>
                             <h4>Kumbakonam - 612001</h4><br>    
                         </div>
@@ -45,9 +46,8 @@
                     </div>
                 </div>
                 <div class="r8text2">
-                    <h3>Dhahabi Fried Chicken is a F&B-Casual Dining outlet that offers a variety of delicious  fried chicken dishes. The menu includes classic fried chicken, spicy fried chicken, and a variety of sides.The restaurant is open for lunch and dinner, and offers take-out and delivery services.</h3>
+                    <h3>SAB restaurant is a F&B-Casual Dining outlet that offers a variety of delicious  fried chicken dishes. The menu includes classic fried chicken, spicy fried chicken, and a variety of sides.The restaurant is open for lunch and dinner, and offers take-out and delivery services.</h3>
                 </div>
-
                 <div class="card-right2">
                     <div class="r8-bottom">
                         <div class="r8btmtext">
@@ -57,9 +57,9 @@
                                     Kumbakonam,612001
                                 </h3><br>
                                 <h2>Contact</h2>
-                                <h3>000000</h3>
+                                <h3>xxxxxxxxxx</h3>
                         </div>
-                        <iframe class="map1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.0403067417733!2d79.38227087579328!3d10.960327955773144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a55330cdc4cc261%3A0xb711a60f0d3cbac4!2sDHAHABI%20RESTAURANT!5e0!3m2!1sen!2sin!4v1704426803957!5m2!1sen!2sin" width="auto" height="185" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!--<iframe class="map1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3917.0403067417733!2d79.38227087579328!3d10.960327955773144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a55330cdc4cc261%3A0xb711a60f0d3cbac4!2sDHAHABI%20RESTAURANT!5e0!3m2!1sen!2sin!4v1704426803957!5m2!1sen!2sin" width="auto" height="185" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>-->
                     </div>
                 </div>
             </div>
@@ -89,96 +89,129 @@
 
     </div>
 <!--overview-card-->
-
-            </section>
             <div class="over-card4">
             <section id="menu">
                 <div class="recbox1">
                     <center><h1>Menu</h1></center>
                     <article class="catlog-container">
+                        
                         <div class="item-container">
-                            <div class="food-img">
-                                <img src="./Asset/Images/chickburger.jpg" alt="Img Not Found" height="80px" width="80px">
-                            </div> 
+                            <img class="food-img" src="./Asset/Images/chickburger.jpg" alt="no img found">
+                            <section class="item-details">
+                                <p class="item-name">
+                                    <b>CHICKEN BURGER</b>
+                                </p>
+                                <div class="q_box">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity('item1')">-</button>
+                                        <span id="cartQuantity_item1">0</span>
+                                        <button onclick="increaseQuantity('item1')">+</button>
+                                    </div>
+                                </div>
+                                <p class="price-holder">
+                                    ₹120
+                                </p>
+                            </section>
+                        </div>
+                        <div class="item-container">
+                            <img class="food-img" src="./Asset/Images/chickburger.jpg" alt="no img found">
+                            <section class="item-details">
+                                <p class="item-name">
+                                    <b>CHICKEN BURGER</b>
+                                </p>
+                                <div class="q_box">
+                                    <div class="quantity">
+                                        <button onclick="decreaseQuantity('item2')">-</button>
+                                        <span id="cartQuantity_item2">0</span>
+                                        <button onclick="increaseQuantity('item2')">+</button>
+                                    </div>
+                                </div>
+                                <p class="price-holder">
+                                    ₹120
+                                </p>
+                            </section>
+                        </div>
+                        <div class="item-container">
+                            <img class="food-img" src="./Asset/Images/chickburger.jpg" alt="no img found"> 
                           <section class="item-details">
                             <p class="item-name">
                                 <b>CHICKEN BURGER</b>
                             </p>
+                            <div class="q_box">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity('item3')">-</button>
+                                    <span id="cartQuantity_item3">0</span>
+                                    <button onclick="increaseQuantity('item3')">+</button>
+                                </div>
+                            </div>
                             <p class="price-holder">
                                 ₹120
                             </p>
                           </section>
                         </div>
                         <div class="item-container">
-                            <div class="food-img">
-                                <img src="./Asset/Images/chickburger.jpg" alt="Img Not Found" height="80px" width="80px">
-                            </div> 
+                            <img class="food-img" src="./Asset/Images/chickburger.jpg" alt="no img found">
                           <section class="item-details">
                             <p class="item-name">
                                 <b>CHICKEN BURGER</b>
                             </p>
+                            <div class="q_box">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity('item4')">-</button>
+                                    <span id="cartQuantity_item4">0</span>
+                                    <button onclick="increaseQuantity('item4')">+</button>
+                                </div>
+                            </div>
                             <p class="price-holder">
                                 ₹120
                             </p>
                           </section>
                         </div>
                         <div class="item-container">
-                            <div class="food-img">
-                                <img src="./Asset/Images/chickburger.jpg" alt="Img Not Found" height="80px" width="80px">
-                            </div> 
+                            <img class="food-img" src="./Asset/Images/chickburger.jpg" alt="no img found">
                           <section class="item-details">
                             <p class="item-name">
                                 <b>CHICKEN BURGER</b>
                             </p>
+                            <div class="q_box">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity('item5')">-</button>
+                                    <span id="cartQuantity_item5">0</span>
+                                    <button onclick="increaseQuantity('item5')">+</button>
+                                </div>
+                            </div>
                             <p class="price-holder">
                                 ₹120
                             </p>
                           </section>
                         </div>
                         <div class="item-container">
-                            <div class="food-img">
-                                <img src="./Asset/Images/chickburger.jpg" alt="Img Not Found" height="80px" width="80px">
-                            </div> 
-                          <section class="item-details">
-                            <p class="item-name">
-                                <b>CHICKEN BURGER</b>
-                            </p>
-                            <p class="price-holder">
-                                ₹120
-                            </p>
-                          </section>
-                        </div>
-                        <div class="item-container">
-                            <div class="food-img">
-                                <img src="./Asset/Images/chickburger.jpg" alt="Img Not Found" height="80px" width="80px">
-                            </div> 
-                          <section class="item-details">
-                            <p class="item-name">
-                                <b>CHICKEN BURGER</b>
-                            </p>
-                            <p class="price-holder">
-                                ₹120
-                            </p>
-                          </section>
-                        </div>
-                        <div class="item-container">
-                            <div class="food-img">
-                                <img src="./Asset/Images/chickburger.jpg" alt="Img Not Found" height="80px" width="80px">
-                            </div> 
+                             <img class="food-img" src="./Asset/Images/chickburger.jpg" alt="no img found">
                           <section class="item-details">
                             <p class="item-name">
                                 <b>VEG BURGER</b>
                             </p>
+                            <div class="q_box">
+                                <div class="quantity">
+                                    <button onclick="decreaseQuantity('item6')">-</button>
+                                    <span id="cartQuantity_item6">0</span>
+                                    <button onclick="increaseQuantity('item6')">+</button>
+                                </div>
+                            </div>
                             <p class="price-holder">
                                 ₹120
                             </p>
                           </section>
-                        </div>
-                        
+
+                        </div> 
                     </article>
+                    <div class="book-table-btn">
+                        <a href="./re1_1.html"><button class="btdemore1">Book Table</button></a>
+                    </div> 
                 </div>
-            </section>
+                </section>
             </div>
+            
             <div class="over-card3">
             <section id="review">
                 <center><h1>Reviews & Ratings</h1></center>
@@ -191,31 +224,41 @@
         </div>
         <div class="over-card6">
             <section id="about">
-                <h1>About</h1>
-                <br>
-                <br>
-                <br>
-               <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+                <div class="recbox_abt">
+                    <center><h1>About</h1></center>
+                    
+                        <img class="forkplate" src="./Asset/Images/forkplate.png" alt="no img found">
+                            <div class="fp_1">
+                                <p>
+                                    <h4>AVERAGE COST</h4>
+                                        1500 For Two
+                                </p>
+                            </div>
+                    
+                        <img class="plate" src="./Asset/Images/plate.png" alt="no img found">
+                        <div class="fp2">
+                            <p>
+                                <h4>AVERAGE COST</h4>
+                                    1500 For Two
+                            </p>
+                        </div>
+                    <img class="rupees" src="./Asset/Images/rupees.png" alt="no img found">
+                    <div class="rup_c">
+                            <p>
+                                <h4>AVERAGE COST</h4>
+                                    1500 For Two
+                            </p>
+                        
+                    </div>
+                </div>
+
+            
+
+            </section>
             </div>
         <div class="over-card5">
             <section id="help">
-                <h1>Help</h1>
+                <center><h1>Help</h1></center>
                 <br>
                 <br>
                 <br>
@@ -241,8 +284,36 @@
 
 
     </div>
-<!--Footer-->
+    <script>
+        const quantities = {};
 
+function updateQuantityDisplay(itemId) {
+    const cartQuantityElement = document.getElementById(`cartQuantity_${itemId}`);
+    if (quantities[itemId] === undefined) {
+        quantities[itemId] = 0;
+    }
+    cartQuantityElement.textContent = quantities[itemId];
+}
+
+function increaseQuantity(itemId) {
+    if (quantities[itemId] === undefined) {
+        quantities[itemId] = 0;
+    }
+    quantities[itemId]++;
+    updateQuantityDisplay(itemId);
+}
+
+function decreaseQuantity(itemId) {
+    if (quantities[itemId] === undefined) {
+        quantities[itemId] = 0;
+    }
+    if (quantities[itemId] > 0) {
+        quantities[itemId]--;
+        updateQuantityDisplay(itemId);
+    }
+}
+</script>
+<!--Footer-->
 </body>
 <div class="footer"></div>
 </html>

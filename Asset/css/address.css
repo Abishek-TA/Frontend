@@ -8,10 +8,21 @@
 
 } 
 body{
-    background-color: white;
+    background-color: green;
+}
+h1{
+   font-size: 150%; 
+   margin: 1% 5%;
 }
 .form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    margin: 2% 5%;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
+    width: auto;
+    height: auto;
+}
+.formcontent{
+    margin: 2% 10%;
+    font-size: 100%;
 }

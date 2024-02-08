@@ -14,23 +14,22 @@ body {
 /*Code for Image(pg-1,step-2*/
 .arrowimg{
   display: block;
-  margin: 40px auto;
+  margin: 3% auto;
 }
 @media screen and (max-width: 660px){
   .arrowimg{
-    margin-top: 5px;
-    margin-bottom: 0;
+    margin-top: 3%;
+    margin-bottom: 3%;
   }
 }
 /*Code for search bar(pg-1,step-3)*/
 .input-box {
   position: relative;
   height: 76px;
-  max-width: 900px;
+  max-width: 67%;
   width: 100%;
   background: none;
-  margin: 0 20px;
-  margin-top: 10px;
+  margin-top: 1%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
@@ -44,27 +43,27 @@ body {
   transform: translateY(-50%);
 }
 .input-box i {
-  left: 20px;
-  font-size: 30px;
+  left: 20%;
+  font-size: 40%;
   color: #000;
 }
 .input-box input {
   height: 100%;
   width: 100%;
   outline: none;
-  font-size: 18px;
+  font-size: 110%;
   font-weight: 400;
   border: none;
-  padding: 0 155px 0 65px;
+  padding: 0 30% 0 3%;
   background-color: transparent;
 }
 .input-box .button {
-  right: 20px;
-  font-size: 16px;
+  right: 2%;
+  font-size: 100%;
   font-weight: 400;
   color: #fff;
   border: none;
-  padding: 12px 30px;
+  padding: 1.2% 3%;
   border-radius: 6px;
   background-color: #083302;
   cursor: pointer;
@@ -75,22 +74,24 @@ body {
 /* Responsive */
 @media screen and (max-width: 600px) {
   .input-box {
+    height: 20%;
+    max-width: 80%;
     margin-left: auto;
     margin-right: auto;
     z-index: auto;
     overflow: hidden;
   }
   .input-box i {
-    left: 12px;
+    left: 10%;
     font-size: 25px;
   }
   .input-box input {
-    padding: 0 112px 0 50px;
+    padding: 0 30% 0 4%;
   }
   .input-box .button {
-    right: 12px;
+    right: 4%;
     font-size: 14px;
-    padding: 8px 18px;
+    padding: 2% 5%;
   }
 }
 /*Code for Slider (pg-1,step-4)*/
@@ -113,12 +114,12 @@ button{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
   transition: all 0.25s ease-in;
 }
 .carousel-view .item-list {
   max-width: auto;
-  width: 80vw;
+  width: 87vw;
   padding: 50px 10px;
   display: flex;
   gap: 33px;
@@ -153,8 +154,7 @@ button{
   max-width: auto;
   width: 100%;
   background: none;
-  margin: 0 20px;
-  margin-top: 10px;
+  margin: 5% 0%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 8px;
