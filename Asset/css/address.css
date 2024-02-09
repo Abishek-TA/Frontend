@@ -23,12 +23,28 @@
     height: auto;
 }
 .formcontent{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 2% 10%;
     font-size: 100%;
 }
 .regre{
-    margin: 0% 37%;
+    margin: 0% 30%;
+    width: 40%;
+    padding: 2%;
+    border-radius: 20px;
+    background-color: #deb887;
+}
+.aformtxt{
+    font-size: 20px;
+}
+#rname,
+#ename,
+#cont,
+#mail,
+#radd{
+    border-color: none;
+    background-color:#e8eeef;
+    margin-top: 1%;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
 }
