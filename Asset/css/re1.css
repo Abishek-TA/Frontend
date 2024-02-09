@@ -357,13 +357,15 @@
 }
 /* menu */
 .over-card4{
-    margin-top: auto;
+    margin-top: 1%;
     border: 2px solid;
     width: auto;
     height: auto;
     border-color:#fff;
-    background-color:rgb(219, 207, 207);
-    
+    background-color:rgb(219, 207, 207);   
+}
+.menure1{
+    margin-top: 0%;
 }
 .over-card5{
     margin-top: auto;
@@ -408,7 +410,6 @@
     }
 
     .catlog-container{
-        margin-top: 29px;
         display: flex;
         flex-wrap:wrap;
         justify-content: center;
@@ -482,6 +483,7 @@
     display: inline-block;
     width: 10%;
     height: 10%;
+    margin:1% 45%;
     cursor: pointer;
     border-radius: 10px;
 }

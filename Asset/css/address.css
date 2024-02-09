@@ -7,10 +7,7 @@
     box-sizing: border-box; 
 
 } 
-body{
-    background-color: green;
-}
-h1{
+.reah1{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,7 +15,7 @@ h1{
    margin: 1% 5%;
 }
 .form{
-    margin: 2% 5%;
+    margin: 2% 30%;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #fff;
@@ -31,4 +28,7 @@ h1{
     align-items: center;
     margin: 2% 10%;
     font-size: 100%;
+}
+.regre{
+    margin: 0% 37%;
 }
