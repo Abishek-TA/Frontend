@@ -519,6 +519,54 @@
     border-radius: 5px;
     background-color: #ffffff;
 }
+.recbox_abt{
+    margin-left: 20%;
+    width: 30%;
+    height: 45vh;
+    padding: 2px;
+    border-radius: 5px;
+    background-color: #e40d0d;
+}
+.forkplate{
+    height:65px; 
+    width:65px;
+    margin-bottom: 0%;
+}
+.plate{
+    height:65px; 
+    width:65px;
+    margin-bottom: -50px;
+}
+.rupees{
+    height:65px; 
+    width:65px;
+   margin-bottom: -100px;
+
+}
+.rup_c{
+    margin-left: 120px;
+    margin-top: 45px;
+    font-family: Helvetica, Sans-Serif;
+    color: #000000;
+    font-size: 12pt;
+}
+.fp_1{
+    margin-left: 120px;
+    margin-top: -55px;
+    font-family: Helvetica, Sans-Serif;
+    color: #000000;
+    font-size: 12pt;
+    margin-bottom: 0px;
+}
+.fp2{
+    margin-left: 120px;
+    margin-top: 20px;
+    font-family: Helvetica, Sans-Serif;
+    color: #000000;
+    font-size: 12pt;
+    margin-bottom: 20px;
+}
+
 html{
     scroll-behavior: smooth;
 }
