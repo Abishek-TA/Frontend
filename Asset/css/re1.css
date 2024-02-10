@@ -15,7 +15,6 @@
     background-color: none;
     float: left;
     overflow: hidden;
-    margin-left: 6.5%;
   }
   
   .dropdown .dropbtn {
@@ -575,6 +574,7 @@
     font-size: 12pt;
     margin-bottom: 20px;
 }
+
 html{
     scroll-behavior: smooth;
 }
