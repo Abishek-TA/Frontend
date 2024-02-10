@@ -1,17 +1,18 @@
+
 .form1_container {
   width: 100%;
   margin: 30px 0px;
   align-items: center;
   display: flex;
   justify-content: center;
-}
+  }
 
 .card {
   border: 1px solid #000;
   border-radius: 2.9px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 350px;
-  background-color: #fffff7;
+  background-color: #FFFFF7;
   padding: 0px 30px;
   margin-top: 20px;
 }
@@ -66,8 +67,8 @@
   color: #e74b03;
   text-decoration: none;
 }
-@media screen and (max-width: 680px) {
-  .form1_container {
+@media screen and (max-width:680px){
+  .form1_container{
     margin-top: auto;
     width: auto;
     margin: auto;

@@ -1,0 +1,107 @@
+.profilesection{
+    margin: 5%;
+}
+.prof-res1{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 2% 10%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(196, 172, 172);
+    width: auto;
+    height: 20%;
+}
+.prof-img1{
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    border: 1px solid none;
+    width: 18%;
+}
+.re1content{
+    margin-top: 1%;
+    margin-left: 5%;
+}
+/*------------------------------For button---------------------*/
+.re1btn button{
+    background-color: #Eb9c5c;
+    margin-left: 40%;
+    margin-top: 2%;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    padding: 1%;
+    width: 20%;
+    background-image: linear-gradient(to bottom, #fff, #f8eedb);
+    border: 0 solid #e5e7eb;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    color: #482307;
+    column-gap: 1rem;
+    cursor: pointer;
+    display:inline; 
+    outline: 2px solid transparent;
+    text-align: center;
+    text-transform: none;
+    transition: all .1s cubic-bezier(.4, 0, .2, 1);
+    user-select: none;
+    text-decoration: none;
+    touch-action: manipulation;
+    box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+}
+.re1btn:active{
+    background-color: none;
+    transform: translateY(0.125rem);
+}
+.re1btn:focus{
+    box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81,41,10,0.1), 0px 2px 2px rgba(81,41,10,0.2);
+}
+/*----------------------------------------------Responsive for res1 profile card--------------------------------------------------------*/
+
+@media only screen and (max-width: 680px) {
+    .prof-res1{
+        display: inline-flex;
+        flex-direction: row;
+        margin: 3% 1%;
+        border: 1px solid #000;
+        border-radius: 20px;
+        background-color: rgb(196, 172, 172);
+        width: auto;
+        height: 60%;    
+    }
+    .prof-img1{
+        padding: 1%;
+        width: 30%;
+        height: 10%;
+    }
+    .re1content{
+        display: flex;
+        flex-direction: column;
+        padding: 1%;
+        font-size: 80%;
+        margin-top: 1%;
+        margin-left: 3%;
+    }
+    .re1btn button{
+        background-color: #Eb9c5c;
+        margin: 0% 30%;
+        margin-top: 2%;
+        border-radius: 10px;
+        padding: 2%;
+        width: 40%;
+        background-image: linear-gradient(to bottom, #fff, #f8eedb);
+        border: 0 solid #e5e7eb;
+        border-radius: .5rem;
+        box-sizing: border-box;
+        color: #482307;
+        column-gap: 1rem;
+        cursor: pointer;
+        display:inline; 
+        outline: 2px solid transparent;
+        text-align: center;
+        text-transform: none;
+        transition: all .1s cubic-bezier(.4, 0, .2, 1);
+        user-select: none;
+        text-decoration: none;
+        touch-action: manipulation;
+        box-shadow: -6px 8px 10px rgba(81,41,10,0.1),0px 2px 2px rgba(81,41,10,0.2);
+    }    
+}

@@ -7,11 +7,28 @@
     box-sizing: border-box; 
 
 } 
-body{
-    background-color: white;
+.reah1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 150%; 
+   margin: 1% 5%;
 }
 .form{
+    margin: 2% 30%;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fff;
+    width: 40%;
+    height: auto;
+}
+.formcontent{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    margin: 2% 10%;
+    font-size: 100%;
+}
+.regre{
+    margin: 0% 37%;
 }
