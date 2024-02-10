@@ -4,7 +4,7 @@ $e=$_POST['email'];
 $p=$_POST['password'];
 $con=mysqli_connect("localhost","root","","signup details");
 
-if (!empty($e) && !empty($p) && !empty($u) )
+if (!empty($e) && !empty($p) )
 {
     $sql="INSERT INTO signup(Username,Email,Password) values('$u','$e','$p')";
 $r=mysqli_query($con,$sql);

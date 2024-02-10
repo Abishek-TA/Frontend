@@ -21,8 +21,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
        // header("Location: index.html");
     }
     else {
-        echo "<script type='text/javascript'> alert ('wrong username or password')</script>";       
+        echo "<script type='text/javascript'> alert ('wrong username or password')</script>"; 
+       
     }
+    
+
 }
+ 
+
 mysqli_close($conn);
 ?>
