@@ -239,10 +239,10 @@
 .recep{
     width: 100%;
     height: 100%;
-    padding: 43% 0%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 43% 23%;
+    display: grid;
+    justify-content: stretch;
+    align-items: stretch;
     border-top: 1px dashed #000;
     border-left: 1px dashed #000;
 }
