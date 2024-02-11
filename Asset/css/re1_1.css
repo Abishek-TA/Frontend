@@ -46,7 +46,6 @@
 }
 /*For row1 table*/
 .r1{
-    border: 1px solid black;
     display: inline-flex;
     flex-direction:row;
     width: 100%;
@@ -113,7 +112,6 @@
 }
 /*For row2 column1 table*/
 .r2{
-    border: 1px solid black;
     width: auto;
     height: 30%;
     display: flex;
@@ -188,17 +186,16 @@
 }
 /*For row3 table*/
 .r3{
-    margin-top: 8%;
     display: flex;
     flex-direction: row;
     width: auto;
-    height: 58%;
+    height: 410px;
 }
 .r3c1{
     padding: 4%;
     margin: 2%;
     width: 36%;
-    height: auto;
+    height: 65%;
 }
 .r3c1s1{
     margin-left: 14%;
@@ -238,9 +235,9 @@
     display: flex;
     flex-direction:column;
     margin: 2% 0%;
-    margin-left: 25%;
-    width: 35%;
-    height: 51.5%;    
+    margin-left: 23%;
+    width: 38%;
+    height: 96%;    
 }
 .recep{
     width: 100%;
