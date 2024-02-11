@@ -94,11 +94,6 @@ input{
     background-color: #008000;
     color:burlywood;
 }
-#r1c1s2{
-    margin-left: 37%;
-    width: 50px;
-    height: 40px; 
-}
 .r1table1{
     display: grid;
     align-content: space-evenly;
@@ -109,27 +104,17 @@ input{
     height: 75%;
     width: 95%;
 }
-#r1c1s3{
-    margin-left: 14%;
-    width: 50px;
-    height: 40px; 
-}
-#r1c1s4{
-    margin-left: 37%;
-    width: 50px;
-    height: 40px; 
-}
 /*For row2 column1 table*/
 .r2{
     width: auto;
-    height: 30%;
+    height: 350px;
     display: flex;
     flex-direction: row;
     padding: 1%;
 }
 .r2c1{
     margin: 2%;
-    width: 34%;
+    width: 37%;
 }
 .r2c2{
     padding: 2%;
@@ -140,15 +125,10 @@ input{
     width: 36%;
     height: auto;    
 }
-#r2c1s1{
-    margin-left: 21%;
-   width: 50px;
-   height: 40px; 
-}
-#r2c1s2{
-    margin-left: 29.2%;
-    width: 50px;
-    height: 40px; 
+.r2c1s{
+    display: flex;
+    flex-direction: row;
+    margin: 0% 8%;
 }
 .r2table1{
     display: grid;
@@ -157,19 +137,21 @@ input{
     margin: 1% 10%;
     border-radius: 50px;
     border: 1px solid #000;
-    height: 73%;
-    width: 80%;
+    height: 67%;
+    width: 75%;
 }
-#r2c1s3{
-    margin-top: 1%;
-    margin-left: 21%;
+.seatr2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16%;
     width: 50px;
-    height: 40px; 
+    height: 40px;
 }
-#r2c1s4{
-    margin-left: 29.2%;
-    width: 50px;
-    height: 40px; 
+.r2c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
 }
 /*For row2 column2 table*/
 #r2c2s1{
