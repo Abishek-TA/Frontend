@@ -1,3 +1,36 @@
+/*For Timing*/
+input {
+    display: none;
+  }
+.timings {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+  }
+.times {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .time {
+    font-size: 14px;
+    width: fit-content;
+    padding: 7px 14px;
+    background: rgb(233, 233, 233);
+    border-radius: 2mm;
+    cursor: pointer;
+  }
+  .timings input:checked + label {
+    background: rgb(28, 185, 120);
+    color: white;
+  }
+
+/*Table css*/
 .table-container{
     margin: 3% 10%;
     border: 2px solid;
@@ -151,7 +184,7 @@
     justify-content: space-evenly;
     margin: 3%;
     margin-left: 20%;
-    border-radius: 50px;
+    border-radius: 90px;
     border: 1px solid #000;
     height: 75%;
     width: 60%;
@@ -162,11 +195,17 @@
     height: 40px; 
 }
 /*For row3 table*/
+.r3{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 58%;
+}
 .r3c1{
     padding: 4%;
     margin: 2%;
     width: 36%;
-    height: 30%;
+    height: 50%;
 }
 .r3c1s1{
     margin-left: 14%;
@@ -197,4 +236,26 @@
     margin-left: 37%;
     width: 50px;
     height: 40px; 
+}
+.r3c2{
+    padding-top: 4%;
+    padding-left: 4%;
+    border-top: 1px dashed #000;
+    border-left: 1px dashed #000;
+    display: flex;
+    flex-direction:column;
+    margin: 2% 0%;
+    margin-left: 25%;
+    width: 35%;
+    height: 51.5%;    
+}
+.recep{
+    width: 100%;
+    height: 200%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px dashed #000;
+    border-left: 1px dashed #000;
+    display: grid;
 }
