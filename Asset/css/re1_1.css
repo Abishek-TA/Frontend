@@ -46,6 +46,7 @@
 }
 /*For row1 table*/
 .r1{
+    border: 1px solid black;
     display: inline-flex;
     flex-direction:row;
     width: 100%;
@@ -55,7 +56,7 @@
     padding: 4%;
     margin: 2%;
     width: 36%;
-    height: 85%;
+    height: auto;
 }
 .r1wall{
     margin-bottom: 2%;
@@ -97,7 +98,7 @@
     margin: 2%;
     border-radius: 50px;
     border: 1px solid #000;
-    height: 70%;
+    height: 75%;
     width: 95%;
 }
 .r1c1s3{
@@ -112,33 +113,33 @@
 }
 /*For row2 column1 table*/
 .r2{
+    border: 1px solid black;
     width: auto;
     height: 30%;
     display: flex;
     flex-direction: row;
+    padding: 1%;
 }
 .r2c1{
-    padding: 4%;
     margin: 2%;
-    width: 36%;
-    height: 95%;
+    width: 34%;
 }
 .r2c2{
-    padding: 4%;
+    padding: 2%;
     display: flex;
     flex-direction:column;
     margin: 3%;
     margin-left: 21%;
     width: 36%;
-    height: 95%;    
+    height: auto;    
 }
 .r2c1s1{
-    margin-left: 14%;
+    margin-left: 21%;
    width: 50px;
    height: 40px; 
 }
 .r2c1s2{
-    margin-left: 37%;
+    margin-left: 29.2%;
     width: 50px;
     height: 40px; 
 }
@@ -146,19 +147,20 @@
     display: grid;
     align-content: space-evenly;
     justify-content: space-evenly;
-    margin: 2%;
+    margin: 1% 10%;
     border-radius: 50px;
     border: 1px solid #000;
-    height: 70%;
-    width: 95%;
+    height: 73%;
+    width: 80%;
 }
 .r2c1s3{
-    margin-left: 14%;
+    margin-top: 1%;
+    margin-left: 21%;
     width: 50px;
     height: 40px; 
 }
 .r2c1s4{
-    margin-left: 37%;
+    margin-left: 29.2%;
     width: 50px;
     height: 40px; 
 }
@@ -173,11 +175,11 @@
     align-content: space-evenly;
     justify-content: space-evenly;
     margin: 3%;
-    margin-left: 20%;
+    margin-left: 25%;
     border-radius: 90px;
     border: 1px solid #000;
-    height: 75%;
-    width: 60%;
+    height: 100px;
+    width: 50%;
 }
 .r2c2s2{
     margin-left: 42%;
@@ -186,6 +188,7 @@
 }
 /*For row3 table*/
 .r3{
+    margin-top: 8%;
     display: flex;
     flex-direction: row;
     width: auto;
@@ -195,7 +198,7 @@
     padding: 4%;
     margin: 2%;
     width: 36%;
-    height: 50%;
+    height: auto;
 }
 .r3c1s1{
     margin-left: 14%;
@@ -214,7 +217,7 @@
     margin: 2%;
     border-radius: 50px;
     border: 1px solid #000;
-    height: 70%;
+    height:115%;
     width: 95%;
 }
 .r3c1s3{
