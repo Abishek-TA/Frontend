@@ -5,14 +5,13 @@ input{
 .times{
     width: 100%;
     display: flex;
-    margin-top: 2%;
-    margin-left: 19%;
+    margin: 2%;
     gap: 2%;
   }
   .time {
     font-size: 14px;
     width: fit-content;
-    padding: 7px 14px;
+    padding: 7px 7px;
     background: rgb(233, 233, 233);
     border-radius: 2mm;
     cursor: pointer;
