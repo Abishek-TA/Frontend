@@ -3,15 +3,17 @@ input{
     display: none;
 }
 .times{
-    width: 100%;
+    width: 98%;
     display: flex;
-    margin: 2%;
+    margin: 2% 1%;
     gap: 2%;
+    padding: 1%;
+    border: 1px solid #000;
   }
   .time {
     font-size: 14px;
     width: fit-content;
-    padding: 7px 7px;
+    padding: 7px 6px;
     background: rgb(233, 233, 233);
     border-radius: 2mm;
     cursor: pointer;
