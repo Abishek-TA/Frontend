@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Order Summary</title>
+        <link rel="stylesheet" href="order_summary.css" />
+        <!-- Link to your CSS file -->
+    </head>
+    <style>
+        /* CSS for order_summary.html */
+        /* CSS for order_summary.html */
+
+        #orderItems {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .itemBox {
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .itemBox img {
+            max-width: 100px; /* Adjust image size as needed */
+            max-height: 100px;
+        }
+
+        .totalBox {
+            width: 100%;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <div id="orderItems">
+            <!-- Order items will be displayed here -->
+        </div>
+
+        <!-- JavaScript code to display selected items -->
+    </body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderItems = document.getElementById("orderItems");
+            let totalAmount = 0;
+
+            urlParams.forEach((quantity, itemId) => {
+                // Calculate total amount for each item
+                const itemAmount = quantity * getItemPrice(itemId); // Assuming getItemPrice function returns the price of each item
+
+                // Create a box for each item with its quantity, image, and total amount
+                const itemBox = document.createElement("div");
+                itemBox.classList.add("itemBox");
+
+                // Add item image
+                const itemImg = document.createElement("img");
+                itemImg.src = `./Asset/Images/${itemId}.png`; // Assuming images are named after their IDs
+                itemImg.alt = `${itemId}`;
+                itemBox.appendChild(itemImg);
+
+                // Add item name, quantity, and total amount
+                const itemName = document.createElement("p");
+                itemName.textContent = `${formatItemName(
+                    itemId
+                )} - Quantity: ${quantity}`;
+                itemBox.appendChild(itemName);
+
+                // Add item total amount
+                const itemTotal = document.createElement("p");
+                itemTotal.textContent = `Total: ₹${itemAmount}`;
+                itemBox.appendChild(itemTotal);
+
+                orderItems.appendChild(itemBox);
+
+                // Update total amount
+                totalAmount += itemAmount;
+            });
+
+            // Display total amount
+            const totalBox = document.createElement("div");
+            totalBox.classList.add("totalBox");
+            totalBox.textContent = `Total Amount: ₹${totalAmount}`;
+            orderItems.appendChild(totalBox);
+        });
+
+        // Function to format item name (replace underscores with spaces)
+        function formatItemName(itemId) {
+            return itemId.replace(/_/g, " ");
+        }
+
+        // Function to get the price of each item (replace this with your own logic)
+        // Function to get the price of each item based on its ID
+        function getItemPrice(itemId) {
+            switch (itemId) {
+                case "veg_burger":
+                    return 143;
+                case "veg_pizza":
+                    return 143; // Price for Veg Pizza is $8
+                case "chicken_pizza":
+                    return 143; // Price for Chicken Pizza is $10
+                case "chili_pizza":
+                    return 143; // Price for Chili Pizza is $9
+                case "veg_sandwich":
+                    return 143; // Price for Veg Sandwich is $6
+                case "mushroom_pizza":
+                    return 143; // Price for Maroon Pizza is $12
+                default:
+                    return 143; // Default price if item ID is not recognized
+            }
+        }
+    </script>
+</html>

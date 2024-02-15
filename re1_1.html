@@ -1,41 +1,56 @@
 <!--Res Dhahabi-->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ArrowGrub</title>
-    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
-    <link rel="stylesheet" href="./Asset/css/styles.css">
-    <link rel="stylesheet" href="./Asset/css/re1_1.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>        
-    <script src="./Asset/js/index.js" async></script>
-</head>
-<body>
-<!--------------------------Header-------------------------------->
-<div id="head1"></div>
-<!-----------------------Table section---------------------------->
-    <div class="table-container">
-        <!-----------------------Table1 content------------------->    
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ArrowGrub</title>
+        <link
+            rel="icon"
+            href="./Asset/Images/ArrowGrub.png"
+            type="Image/x-icon"
+        />
+        <link rel="stylesheet" href="./Asset/css/styles.css" />
+        <link rel="stylesheet" href="./Asset/css/re1_1.css" />
+        <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./Asset/js/index.js" async></script>
+    </head>
+    <body>
+        <!--------------------------Header-------------------------------->
+        <div id="head1"></div>
+        <div id="orderItems"></div>
+        <!-----------------------Table section---------------------------->
+        <div class="table-container">
+            <!-----------------------Table1 content------------------->
             <div class="r1">
                 <div class="entry_or_exit">
                     <h1 class="ent">Entrance</h1>
                 </div>
                 <div class="r1c1"></div>
                 <div class="r1wall"></div>
-            </div>   
-        <!-----------------------Table2 content------------------->
-                <div class="r2">
-                    <!--Table2 row1 content-->
-                        <div class="r2c1"></div>
-                    <!--Table2 row2 content-->
-                        <div class="r2c2"></div>
-                </div>
-        <!-----------------------Table3 content------------------->
-                <div class="r3c1"></div>
-        <!-----------------------X-------------------------------->    
-    </div>
-<!---------------------------Footer------------------------------->
-<div class="footer"></div>
-</body>
+            </div>
+            <button class="button" onclick="proceedToOrderSummary()">
+                Proceed
+            </button>
+            <!-----------------------Table2 content------------------->
+            <div class="r2">
+                <!--Table2 row1 content-->
+                <div class="r2c1"></div>
+                <!--Table2 row2 content-->
+                <div class="r2c2"></div>
+            </div>
+            <!-----------------------Table3 content------------------->
+            <div class="r3c1"></div>
+            <!-----------------------X-------------------------------->
+        </div>
+        <!-- Button to proceed to order summary -->
+
+        <!---------------------------Footer------------------------------->
+        <div class="footer"></div>
+    </body>
+</html>

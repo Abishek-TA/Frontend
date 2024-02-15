@@ -3,20 +3,20 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-}
-.center {
+  }
+  .center {
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(
-        to right,
-        rgb(162, 216, 162),
-        rgb(102, 194, 102)
+      to right,
+      rgb(162, 216, 162),
+      rgb(102, 194, 102)
     );
-}
-.tickets {
+  }
+  .tickets {
     width: 750px;
     height: 700px;
     border: 0.4mm solid rgba(0, 0, 0, 0.08);
@@ -28,8 +28,8 @@ body {
     overflow: auto;
     background: white;
     box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
-}
-.ticket-selector {
+  }
+  .ticket-selector {
     background: rgb(243, 243, 243);
     display: flex;
     align-items: center;
@@ -38,19 +38,19 @@ body {
     box-sizing: border-box;
     padding: 20px;
     height: 600px;
-}
-.head {
+  }
+  .head {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 30px;
-}
-.title {
+  }
+  .title {
     font-size: 16px;
     font-weight: 600;
-}
-.seats {
+  }
+  .seats {
     width: 100%;
     display: flex;
     align-items: center;
@@ -58,14 +58,14 @@ body {
     flex-direction: column;
     min-height: 150px;
     position: relative;
-}
-.status {
+  }
+  .status {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-}
-.seats::before {
+  }
+  .seats::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -73,12 +73,12 @@ body {
     transform: translate(-50%, 0);
     width: 220px;
     height: 7px;
-}
-.item {
+  }
+  .item {
     font-size: 12px;
     position: relative;
-}
-.item::before {
+  }
+  .item::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -89,16 +89,16 @@ body {
     background: rgb(255, 255, 255);
     outline: 0.2mm solid rgb(120, 120, 120);
     border-radius: 0.3mm;
-}
-.item:nth-child(2)::before {
+  }
+  .item:nth-child(2)::before {
     background: rgb(180, 180, 180);
     outline: none;
-}
-.item:nth-child(3)::before {
+  }
+  .item:nth-child(3)::before {
     background: rgb(28, 185, 120);
     outline: none;
-}
-.all-seats {
+  }
+  .all-seats {
     display: grid;
     grid-template-columns: repeat(14, 1fr);
     grid-gap: 15px;
@@ -106,45 +106,46 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
     position: relative;
-}
-.all-seats {
-    margin-left: 10px;
+  }
+  .all-seats {
+    margin-left: 150px;
+    gap:30px;
     margin-right: -10px;
-}
-.seat {
+  }
+  .seat {
     width: 20px;
     height: 20px;
     background: white;
     border-radius: 0.5mm;
     outline: 0.3mm solid rgb(180, 180, 180);
     cursor: pointer;
-}
-.all-seats input:checked + label {
+  }
+  .all-seats input:checked + label {
     background: rgb(28, 185, 120);
     outline: none;
-}
-.seat.booked {
+  }
+  .seat.booked {
     background: rgb(180, 180, 180);
     outline: none;
-}
-input {
+  }
+  input {
     display: none;
-}
-.timings {
+  }
+  .timings {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 30px;
-}
-.dates {
+  }
+  .dates {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.dates-item {
+  }
+  .dates-item {
     width: 50px;
     height: 40px;
     background: rgb(233, 233, 233);
@@ -156,50 +157,50 @@ input {
     padding: 10px 0;
     border-radius: 2mm;
     cursor: pointer;
-}
-.day {
+  }
+  .day {
     font-size: 12px;
-}
-.times {
+  }
+  .times {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 10px;
-}
-.time {
+  }
+  .time {
     font-size: 14px;
     width: fit-content;
     padding: 7px 14px;
     background: rgb(233, 233, 233);
     border-radius: 2mm;
     cursor: pointer;
-}
-.timings input:checked + label {
+  }
+  .timings input:checked + label {
     background: rgb(28, 185, 120);
     color: white;
-}
-.price {
+  }
+  .price {
     width: 100%;
     box-sizing: border-box;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.total {
+  }
+  .total {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     font-size: 16px;
     font-weight: 500;
-}
-.total span {
+  }
+  .total span {
     font-size: 11px;
     font-weight: 400;
-}
-.price button {
+  }
+  .price button {
     background: rgb(60, 60, 60);
     color: white;
     font-family: poppins;
@@ -209,42 +210,42 @@ input {
     outline: none;
     border: none;
     cursor: pointer;
-}
-
-.centerr {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: -35px;
-}
-
-.twoppl {
-    height: 20%;
-    width: 20%;
-    transform: rotate(45deg);
-    margin-bottom: -60px;
-    margin-left: -225px;
-}
-.fourppl {
-    height: 20%;
-    width: 20%;
+  }
+  
+  .centerr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -35px;
+  }
+  
+  .twoppl{
+  height: 20%; 
+  width: 20%;
+  transform: rotate(45deg); 
+  margin-bottom: -60px; 
+  margin-left: -225px; 
+  }
+  .fourppl{
+  height: 20%; 
+  width: 20%;
+  transform: rotate(90deg);
+  margin-bottom: 20px;
+  margin-left:110px;
+  margin-top: 20px; 
+  }
+  
+  .sixppl{
+  height: 20%; 
+  width: 20%; 
+  transform: rotate(90deg);
+  margin-bottom: 8px; 
+  margin-left: 10px;
+  }
+  .sixpppl{
+    height: 20%; 
+    width: 20%; 
     transform: rotate(90deg);
-    margin-bottom: 20px;
-    margin-left: 9px;
-    margin-top: 20px;
-}
-
-.sixppl {
-    height: 20%;
-    width: 20%;
-    transform: rotate(90deg);
-    margin-bottom: 8px;
-    margin-left: 59px;
-}
-.sixpppl {
-    height: 20%;
-    width: 20%;
-    transform: rotate(360deg);
-    margin-bottom: 8px;
-    margin-left: 59px;
-}
+    margin-bottom: 8px; 
+    margin-left: 16px;
+  }
