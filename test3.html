@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    
+</head>
+<style>
+    /* CSS for re1.html */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#menuItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.menuItem {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.quantityButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.quantityButton:hover {
+    background-color: #0056b3;
+}
+
+.quantityButton:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+span {
+    margin: 0 5px;
+}
+
+</style>
+<body>
+    <div id="menuItems">
+        <!-- Veg Pizza -->
+        <div class="menuItem" id="veg_pizza">
+            <h3>Veg Pizza</h3>
+            <p>Price: $10</p>
+            <button class="quantityButton increaseButton" onclick="increaseQuantity('veg_pizza')">+</button>
+            <span class="quantity" id="quantity_veg_pizza">0</span>
+            <button class="quantityButton decreaseButton" onclick="decreaseQuantity('veg_pizza')">-</button>
+        </div>
+
+        <!-- Chicken Pizza -->
+        <div class="menuItem" id="chicken_pizza">
+            <h3>Chicken Pizza</h3>
+            <p>Price: $10</p>
+            <button class="quantityButton increaseButton" onclick="increaseQuantity('chicken_pizza')">+</button>
+            <span class="quantity" id="quantity_chicken_pizza">0</span>
+            <button class="quantityButton decreaseButton" onclick="decreaseQuantity('chicken_pizza')">-</button>
+        </div>
+
+        <!-- Chili Pizza -->
+        <div class="menuItem" id="chili_pizza">
+            <h3>Chili Pizza</h3>
+            <p>Price: $10</p>
+            <button class="quantityButton increaseButton" onclick="increaseQuantity('chili_pizza')">+</button>
+            <span class="quantity" id="quantity_chili_pizza">0</span>
+            <button class="quantityButton decreaseButton" onclick="decreaseQuantity('chili_pizza')">-</button>
+        </div>
+
+        <!-- Veg Sandwich -->
+        <div class="menuItem" id="veg_sandwich">
+            <h3>Veg Sandwich</h3>
+            <p>Price: $10</p>
+            <button class="quantityButton increaseButton" onclick="increaseQuantity('veg_sandwich')">+</button>
+            <span class="quantity" id="quantity_veg_sandwich">0</span>
+            <button class="quantityButton decreaseButton" onclick="decreaseQuantity('veg_sandwich')">-</button>
+        </div>
+
+        <!-- Maroon Pizza -->
+        <div class="menuItem" id="maroon_pizza">
+            <h3>Maroon Pizza</h3>
+            <p>Price: $10</p>
+            <button class="quantityButton increaseButton" onclick="increaseQuantity('maroon_pizza')">+</button>
+            <span class="quantity" id="quantity_maroon_pizza">0</span>
+            <button class="quantityButton decreaseButton" onclick="decreaseQuantity('maroon_pizza')">-</button>
+        </div>
+    </div>
+    <button onclick="redirectToOrderSummary()">Book Table</button>
+
+    <!-- JavaScript code to capture selected item details and redirect to order summary page -->
+     <!-- Link to your JavaScript file -->
+     <script>
+        // JavaScript functions for quantity manipulation
+function increaseQuantity(itemId) {
+    const quantityElement = document.getElementById(`quantity_${itemId}`);
+    let quantity = parseInt(quantityElement.textContent);
+    quantity++;
+    quantityElement.textContent = quantity;
+}
+
+function decreaseQuantity(itemId) {
+    const quantityElement = document.getElementById(`quantity_${itemId}`);
+    let quantity = parseInt(quantityElement.textContent);
+    if (quantity > 0) {
+        quantity--;
+        quantityElement.textContent = quantity;
+    }
+}
+
+function redirectToOrderSummary() {
+    // Construct URL parameters based on selected item quantities
+    let urlParams = new URLSearchParams();
+    document.querySelectorAll('.menuItem').forEach(item => {
+        const itemId = item.id;
+        const quantity = parseInt(document.getElementById(`quantity_${itemId}`).textContent);
+        if (quantity > 0) {
+            urlParams.append(itemId, quantity);
+        }
+    });
+
+    // Redirect to order summary page with URL parameters
+    window.location.href = `order_summary.html?${urlParams.toString()}`;
+}
+
+     </script>
+    </body>
+</html>
