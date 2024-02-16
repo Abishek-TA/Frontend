@@ -526,8 +526,8 @@ span {
     text-decoration: none;
     display: inline-block;
     width: 10%;
-    height: 10%;
-    margin: 1% 45%;
+    padding: 1%;
+    margin: 1% 50%;
     cursor: pointer;
     border-radius: 10px;
 }
