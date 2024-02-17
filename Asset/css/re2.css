@@ -1,4 +1,5 @@
 /*opening hours*/
+
 .navbar {
     overflow: hidden;
 }
@@ -88,26 +89,25 @@
     justify-content: center;
 }
 .img1pg2 {
-    margin-top: 25px;
-    margin-left: 30px;
+    margin: 2%;
     flex-direction: row;
     width: 450px;
     height: 450px;
     border-radius: 20px;
+    border:1px solid #000;
 }
 .imgcard {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
 }
 .card-right {
     margin-top: 25px;
-    margin-left: 50px;
-    border: 2px solid;
-    width: 800px;
+    margin-left: 1%;
+    border: 1px solid #000;
+    width: auto;
     height: 250px;
     border-radius: 20px;
-    border-color: #fff;
-    background-color: rgb(219, 207, 207);
+    background-image: linear-gradient(to right , #cdffd8 , #94b9ff);
 }
 /*right-top*/
 .r8-top {
@@ -146,16 +146,15 @@
 }
 .card-right2 {
     margin-top: 25px;
-    border: 2px solid;
+    border: 1px solid #000;
     width: auto;
     height: 190px;
     border-radius: 20px;
-    border-color: #fff;
-    background-color: rgb(219, 207, 207);
+    background-image: linear-gradient(to right , #cdffd8 , #94b9ff);
 }
 /*Overview*/
 .boxcard {
-    background-color: whitesmoke;
+    background-color: #effc5e; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -165,10 +164,10 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .boxa {
+    color: #093028;
     display: flex;
     justify-content: space-between;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 2% 1%;
     font-size: 17.5px;
     padding: 10px 50px 8px;
 }
@@ -527,7 +526,7 @@ span {
     display: inline-block;
     width: 10%;
     padding: 1%;
-    margin: 1% 50%;
+    margin: 1% 45%;
     cursor: pointer;
     border-radius: 10px;
 }
