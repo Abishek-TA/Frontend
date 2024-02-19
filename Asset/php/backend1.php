@@ -17,11 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (mysqli_num_rows($result) > 0) {
         // User authenticated, you can redirect to a dashboard or perform further actions
-        echo "<script type='text/javascript'> alert ('Login successful!')</script>"; 
+        echo "<script > alert ('Login successful!')</script>"; 
        // header("Location: index.html");
     }
     else {
-        echo "<script type='text/javascript'> alert ('wrong username or password')</script>"; 
+        echo "<script> alert ('wrong username or password')</script>"; 
        
     }
     

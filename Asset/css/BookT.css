@@ -10,6 +10,37 @@
     background-color: rgb(196, 172, 172);
     width: auto;
     height: 20%;
+    margin-top: 20px;
+}
+.prof-res2{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 2% 10%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(196, 172, 172);
+    width: auto;
+    height: 20%;
+}
+.prof-res3{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 2% 10%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(196, 172, 172);
+    width: auto;
+    height: 20%;
+}
+.prof-res4{
+    display: inline-flex;
+    flex-direction: row;
+    margin: 2% 10%;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: rgb(196, 172, 172);
+    width: auto;
+    height: 20%;
 }
 .prof-img1{
     border-top-left-radius: 10%;
@@ -68,7 +99,9 @@
         height: 60%;    
     }
     .prof-img1{
+        padding: 1%;
         width: 30%;
+        height: 10%;
     }
     .re1content{
         display: flex;
@@ -80,7 +113,7 @@
     }
     .re1btn button{
         background-color: #Eb9c5c;
-        margin: 0% 25%;
+        margin: 0% 30%;
         margin-top: 2%;
         border-radius: 10px;
         padding: 2%;
