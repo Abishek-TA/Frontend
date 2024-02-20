@@ -1,119 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Order Summary</title>
-        <link rel="stylesheet" href="order_summary.css" />
-        <!-- Link to your CSS file -->
-    </head>
-    <style>
-        /* CSS for order_summary.html */
-        /* CSS for order_summary.html */
-
-        #orderItems {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .itemBox {
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-            text-align: center;
-        }
-
-        .itemBox img {
-            max-width: 100px; /* Adjust image size as needed */
-            max-height: 100px;
-        }
-
-        .totalBox {
-            width: 100%;
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
-    <body>
-        <div id="orderItems">
-            <!-- Order items will be displayed here -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Summary</title>
+    <link rel="stylesheet" href="./Asset/css/order_summary.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+        <!--------------------------Header-------------------------------->
+        <div id="head1"></div>
+        <!--Text-->
+        <center><h1>Select your table</h1></center>
+        <!--Time slot-->
+        <div class="timings">
+            <div class="times">
+                <input type="radio" name="time" id="t1" value="09:00 AM" />
+                <label for="t1" class="time">09:00 AM</label>
+                <input type="radio" name="time" id="t2" value="10:00 AM" />
+                <label for="t2" class="time">10:00 AM</label>
+                <input type="radio" name="time" id="t3" value="11:00 AM" />
+                <label for="t3" class="time">11:00 AM</label>
+                <input type="radio" name="time" id="t4" value="12:00 PM" />
+                <label for="t4" class="time">12:00 PM</label>
+                <input type="radio" name="time" id="t5" value="13:00 PM" />
+                <label for="t5" class="time">01:00 PM</label>
+                <input type="radio" name="time" id="t6" value="14:00 PM" />
+                <label for="t6" class="time">02:00 PM</label>
+                <input type="radio" name="time" id="t7" value="15:00 AM" />
+                <label for="t7" class="time">03:00 PM</label>
+                <input type="radio" name="time" id="t8" value="16:00 PM" />
+                <label for="t8" class="time">04:00 PM</label>
+                <input type="radio" name="time" id="t9" value="17:00 PM" />
+                <label for="t9" class="time">05:00 PM</label>
+                <input type="radio" name="time" id="t10" value="18:00 PM" />
+                <label for="t10" class="time">06:00 PM</label>
+                <input type="radio" name="time" id="t11" value="19:00 PM" />
+                <label for="t11" class="time">07:00 PM</label>
+                <input type="radio" name="time" id="t12" value="20:00 PM" />
+                <label for="t12" class="time">08:00 PM</label>
+                <input type="radio" name="time" id="t13" value="21:00 PM" />
+                <label for="t13" class="time">09:00 PM</label>
+                <input type="radio" name="time" id="t14" value="22:00 PM" />
+                <label for="t14" class="time">10:00 PM</label>
+            </div>
         </div>
 
-        <!-- JavaScript code to display selected items -->
-    </body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const urlParams = new URLSearchParams(window.location.search);
-            const orderItems = document.getElementById("orderItems");
-            let totalAmount = 0;
+        <!-----------------------Table section---------------------------->
+        <div class="table-container">
+            <form action="./Asset/php/resvere.php" method="POST">
+                <!-----------------------Table1 content------------------->
+                <div class="entry_or_exit">
+                    <h1 class="ent">Entrance</h1>
+                </div>
+                <div class="status">
+                    <div class="item1">Available</div>
+                    <div class="item1">Booked</div>
+                    <div class="item1">Selected</div>
+                  </div>
+                <div class="r1">
+                    <!--Row1c1-->
+                    <div class="r1c1">
+                        <div class="r1c1s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r1c1s1"
+                                value="t1s1"
+                            />
+                            <label for="r1c1s1" class="seatr1">s1</label>
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r1c1s2"
+                                value="t1s2"
+                            />
+                            <label for="r1c1s2" class="seatr1">s2</label>
+                        </div>
+                        <h1 class="r1table1">table 1</h1>
+                        <div class="r1c1s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r1c1s3"
+                                value="t1s3"
+                            />
+                            <label for="r1c1s3" class="seatr1">s3</label>
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r1c1s4"
+                                value="t1s4"
+                            />
+                            <label for="r1c1s4" class="seatr1">s4</label>
+                        </div>
+                    </div>
+                    <!--Row1c2-->
+                    <div class="r1wall"><span class="wall1">WALL</span></div>
+                </div>
+                <!-----------------------Table2 content------------------->
+                <div class="r2">
+                    <!--Table2 row1 content-->
+                    <div class="r2c1">
+                        <div class="r2c1s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r2c1s1"
+                                value="t2s1"
+                            />
+                            <label for="r2c1s1" class="seatr2">s1</label>
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r2c1s2"
+                                value="t2s2"
+                            />
+                            <label for="r2c1s2" class="seatr2">s2</label>
+                        </div>
+                        <h1 class="r2table1">table 2</h1>
+                        <div class="r2c1s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r2c1s3"
+                                value="t2s3"
+                            />
+                            <label for="r2c1s3" class="seatr2">s3</label>
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r2c1s4"
+                                value="t2s4"
+                            />
+                            <label for="r2c1s4" class="seatr2">s4</label>
+                        </div>
+                    </div>
+                    <!--Table2 row2 content-->
+                    <div class="r2c2">
+                        <div class="r2c2s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r2c2s1"
+                                value="t4s1"
+                            />
+                            <label for="r2c2s1" class="seatr22">s1</label>
+                        </div>
+                        <h1 class="r2table2">table 4</h1>
+                        <div class="r2c2s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r2c2s2"
+                                value="t4s2"
+                            />
+                            <label for="r2c2s2" class="seatr22">s2</label>
+                        </div>
+                    </div>
+                </div>
+                <!-----------------------Table3 content------------------->
+                <div class="r3">
+                    <div class="r3c1">
+                        <div class="r3c1s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r3c1s1"
+                                value="t3s1"
+                            />
+                            <label for="r3c1s1" class="seatr3">s1</label>
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r3c1s2"
+                                value="t3s2"
+                            />
+                            <label for="r3c1s2" class="seatr3">s2</label>
+                        </div>
+                        <h1 class="r3table1">table 3</h1>
+                        <div class="r3c1s">
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r3c1s3"
+                                value="t3s3"
+                            />
+                            <label for="r3c1s3" class="seatr3">s3</label>
+                            <input
+                                type="checkbox"
+                                name="tickets"
+                                id="r3c1s4"
+                                value="t3s4"
+                            />
+                            <label for="r3c1s4" class="seatr3">s4</label>
+                        </div>
+                    </div>
+                    <div class="r3c2">
+                        <div class="recep">
+                            <h1>RECEPTION</h1>
+                        </div>
+                    </div>
+                </div>
+                
+        <div id="orderItems">
+        <!-- Order items will be displayed here -->
+        </div>
+            <button class="bookre1">Book Table</button>
+    </form>
+</div>
+<br><br>
+<!---------------------------Footer------------------------------->
+<div class="footer"></div>
 
-            urlParams.forEach((quantity, itemId) => {
-                // Calculate total amount for each item
-                const itemAmount = quantity * getItemPrice(itemId); // Assuming getItemPrice function returns the price of each item
+    <!-- JavaScript code to display selected items -->
+</body>
+<div class="footer"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const orderItems = document.getElementById("orderItems");
+    let totalAmount = 0;
 
-                // Create a box for each item with its quantity, image, and total amount
-                const itemBox = document.createElement("div");
-                itemBox.classList.add("itemBox");
+    urlParams.forEach((quantity, itemId) => {
+        // Calculate total amount for each item
+        const itemAmount = quantity * getItemPrice(itemId); // Assuming getItemPrice function returns the price of each item
 
-                // Add item image
-                const itemImg = document.createElement("img");
-                itemImg.src = `./Asset/Images/${itemId}.png`; // Assuming images are named after their IDs
-                itemImg.alt = `${itemId}`;
-                itemBox.appendChild(itemImg);
+        // Create a box for each item with its quantity, image, and total amount
+        const itemBox = document.createElement("div");
+        itemBox.classList.add("itemBox");
 
-                // Add item name, quantity, and total amount
-                const itemName = document.createElement("p");
-                itemName.textContent = `${formatItemName(
-                    itemId
-                )} - Quantity: ${quantity}`;
-                itemBox.appendChild(itemName);
+        // Add item image
+        const itemImg = document.createElement("img");
+        itemImg.src = `./Asset/Images/${itemId}.png`; // Assuming images are named after their IDs
+        itemImg.alt = `${itemId}`;
+        itemBox.appendChild(itemImg);
 
-                // Add item total amount
-                const itemTotal = document.createElement("p");
-                itemTotal.textContent = `Total: ₹${itemAmount}`;
-                itemBox.appendChild(itemTotal);
+        // Add item name, quantity, and total amount
+        const itemName = document.createElement("p");
+        itemName.textContent = `${formatItemName(itemId)} - Quantity: ${quantity}`;
+        itemBox.appendChild(itemName);
 
-                orderItems.appendChild(itemBox);
+        // Add item total amount
+        const itemTotal = document.createElement("p");
+        itemTotal.textContent = `Total: ₹${itemAmount}`;
+        itemBox.appendChild(itemTotal);
 
-                // Update total amount
-                totalAmount += itemAmount;
-            });
+        orderItems.appendChild(itemBox);
 
-            // Display total amount
-            const totalBox = document.createElement("div");
-            totalBox.classList.add("totalBox");
-            totalBox.textContent = `Total Amount: ₹${totalAmount}`;
-            orderItems.appendChild(totalBox);
-        });
+        // Update total amount
+        totalAmount += itemAmount;
+    });
 
-        // Function to format item name (replace underscores with spaces)
-        function formatItemName(itemId) {
-            return itemId.replace(/_/g, " ");
-        }
+    // Display total amount
+    const totalBox = document.createElement("div");
+    totalBox.classList.add("totalBox");
+    totalBox.textContent = `Total Amount: ₹${totalAmount}`;
+    orderItems.appendChild(totalBox);
+});
 
-        // Function to get the price of each item (replace this with your own logic)
-        // Function to get the price of each item based on its ID
-        function getItemPrice(itemId) {
-            switch (itemId) {
-                case "veg_burger":
-                    return 143;
-                case "veg_pizza":
-                    return 143; // Price for Veg Pizza is $8
-                case "chicken_pizza":
-                    return 143; // Price for Chicken Pizza is $10
-                case "chili_pizza":
-                    return 143; // Price for Chili Pizza is $9
-                case "veg_sandwich":
-                    return 143; // Price for Veg Sandwich is $6
-                case "mushroom_pizza":
-                    return 143; // Price for Maroon Pizza is $12
-                default:
-                    return 143; // Default price if item ID is not recognized
-            }
-        }
-    </script>
+// Function to format item name (replace underscores with spaces)
+function formatItemName(itemId) {
+    return itemId.replace(/_/g, ' ');
+}
+
+// Function to get the price of each item (replace this with your own logic)
+// Function to get the price of each item based on its ID
+function getItemPrice(itemId) {
+    switch (itemId) {
+        case "veg_burger":
+            return 143;
+        case "veg_pizza":
+            return 143; 
+        case "chicken_pizza":
+            return 143; 
+        case "chili_pizza":
+            return 143; 
+        case "veg_sandwich":
+            return 143; 
+        case "mushroom_pizza":
+            return 143;
+        case "shawarma":
+            return 143;
+        case "vegroll":
+            return 143;
+        case "chocolate_icecream":
+            return 143;
+        case "crab_lollipop":
+            return 143;
+        case "french_fries":
+            return 143;
+        case "chicken_lollipop":
+           return 143;
+        case "chettinad_chicken_gravy":
+           return 143;
+        case "panner_butter_masala":
+            return 143;
+        case "mojito":
+            return 143;
+        case "falooda":
+            return 143; // Price for Maroon Pizza is $12
+        default:
+            return 143; // Default price if item ID is not recognized
+    }
+}
+
+</script>
+<script>
+
+// Seat Selection
+let seats = document.querySelectorAll(".all-seats input");
+seats.forEach((ticket) => {
+  ticket.addEventListener("change", () => {
+    let amount = document.querySelector(".amount").innerHTML;
+    let count = document.querySelector(".count").innerHTML;
+    amount = Number(amount);
+    count = Number(count);
+    if (ticket.checked) {
+      count += 1;
+      amount += calculateDynamicPrice(200); // Price per seat
+    } else {
+      count -= 1;
+      amount -= calculateDynamicPrice(200); // Price per seat
+    }
+    document.querySelector(".amount").innerHTML = amount.toFixed(2);
+    document.querySelector(".count").innerHTML = count;
+  });
+});
+
+// Function to calculate dynamic pricing based on selected time slot
+function calculateDynamicPrice(basePrice) {
+  // Get the selected time slot
+  let selectedTime = document.querySelector('input[name="time"]:checked').value;
+  // Convert the selected time to hours
+  let selectedHours = parseInt(selectedTime.split(':')[0]);
+  // Adjust pricing based on time slots
+  if (selectedHours >= 18 && selectedHours < 20) {
+    // Increase price during dinner time (6 PM to 8 PM)
+    return basePrice * 1.2; // 20% increase
+  } else {
+    return basePrice; // Base price for other times
+  }
+}
+</script>
 </html>

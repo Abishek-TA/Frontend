@@ -1,3 +1,61 @@
+
+    /* CSS for order_summary.html */
+/* CSS for order_summary.html */
+
+#orderItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.itemBox {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.itemBox img {
+    max-width: 100px; /* Adjust image size as needed */
+    max-height: 100px;
+}
+
+.totalBox {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#orderItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.itemBox {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.itemBox img {
+    max-width: 100px; /* Adjust image size as needed */
+    max-height: 100px;
+}
+
+.totalBox {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*re1_1.css*/
 /*For Timing*/
 input{
     display: none;
@@ -256,6 +314,9 @@ background-size: cover;
     font-size: 20px;
     padding: 1%;   
 }
+
+
+
 .status {
     width: 100%;
     display: flex;

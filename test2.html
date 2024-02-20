@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="./Asset/css/tester.css">
+<link rel="stylesheet" href="./Asset/css/test2.css">
 </head>
 <body>
 <div class="center">
@@ -50,9 +50,9 @@
             <div>
               <!-- Images of seat arrangements -->
               <img src="./Asset/Images/4 ppl.png" class="fourppl" alt="4 ppl"/>
-              <img src="./Asset/Images/4 ppl.png" class="sixppl" alt="4 ppl"/>
               <img src="./Asset/Images/4 ppl.png" class="sixpppl" alt="4 ppl"/>
-              <img src="./Asset/Images/2 ppl.png" class="twoppl" alt="2 ppl"/>
+              <img src="./Asset/Images/4 ppl.png" class="sixppl" alt="4 ppl"/>
+              <!-- <img src="./Asset/Images/2 ppl.png" class="twoppl" alt="2 ppl"/> -->
             </div>
             <div class="all-seats" style="margin-top: 0px;">
               <!-- Seats -->
@@ -80,13 +80,45 @@
       </div>
       <div class="timings">
         <div class="times">
-          <input type="radio" name="time" id="t1" value="11:00 AM" checked />
-          <label for="t1" class="time">11:00 AM</label>
-          <input type="radio" name="time" id="t2" value="12:00 PM" />
-          <label for="t2" class="time">12:00 PM</label>
-          <input type="radio" name="time" id="t3" value="19:00 PM" />
-          <label for="t3" class="time">07:00 PM</label>
-          <!-- Add more time slots as needed -->
+        <input type="radio" name="time" id="t1" checked />
+        <label for="t1" class="time">11:00 AM</label>
+        <input type="radio" id="t2" name="time" />
+        <label for="t2" class="time"> 12:00 PM</label>
+        <input type="radio" id="t3" name="time" />
+        <label for="t3" class="time"> 1:00 PM </label>
+        <input type="radio" id="t4" name="time" />
+        <label for="t4" class="time"> 2:00 PM</label>
+        <input type="radio" id="t5" name="time" />
+        <label for="t5" class="time">03:00 PM</label>
+        <input type="radio" name="time" id="t6" checked />
+        <label for="t6" class="time">04:00 PM</label>
+        <input type="radio" id="t7" name="time" />
+        <label for="t7" class="time">05:00 PM</label>
+        <input type="radio" id="t8" name="time" />
+        <label for="t8" class="time">06:00 PM </label>
+        <input type="radio" id="t9" name="time" />
+        <label for="t9" class="time">07:00 PM</label>
+        <input type="radio" id="t10" name="time" />
+        <label for="t10" class="time"> 08:00 PM </label>
+        </div>
+      </div>
+      <div class="times">
+
+      </div>
+      <div class="times">
+          <input type="radio" name="time" id="t11" checked />
+          <label for="t11" class="time">09:00 PM</label>
+          <input type="radio" id="t12" name="time" />
+          <label for="t12" class="time">10:00 PM</label>
+          <input type="radio" id="t13" name="time" />
+          <label for="t13" class="time">11:00 PM </label>
+           <input type="radio" id="t11" name="time" />
+          <label for="t11" class="time">09:00 PM</label>
+          <input type="radio" id="t12" name="time" />
+          <label for="t12" class="time"> 10:00 PM </label> 
+        <!-- Automatic Date Selection -->
+        <div>
+          <input type="date" id="inputdate" name="inputdate" min="" max=""/>
         </div>
       </div>
     </div>
@@ -121,14 +153,11 @@ seats.forEach((ticket) => {
   });
 });
 
-// Function to calculate dynamic pricing based on selected time slot
+
+// Function to calculate dynamic pricing based on booking time
 function calculateDynamicPrice(basePrice) {
-  // Get the selected time slot
-  let selectedTime = document.querySelector('input[name="time"]:checked').value;
-  // Convert the selected time to hours
-  let selectedHours = parseInt(selectedTime.split(':')[0]);
-  // Adjust pricing based on time slots
-  if (selectedHours >= 18 && selectedHours < 20) {
+  const currentTime = new Date().getHours();
+  if ((currentTime >= 12 && currentTime < 14) || (currentTime >= 18 && currentTime < 20)) {
     // Increase price during dinner time (6 PM to 8 PM)
     return basePrice * 1.2; // 20% increase
   } else {
