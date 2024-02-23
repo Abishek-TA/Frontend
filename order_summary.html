@@ -10,7 +10,7 @@
         <!--------------------------Header-------------------------------->
         <div id="head1"></div>
         <!--Text-->
-        <center><h1>Select your table</h1></center>
+        <center><h1>Select your Table</h1></center>
         <!--Time slot-->
         <div class="timings">
             <div class="times">
@@ -76,7 +76,7 @@
                             />
                             <label for="r1c1s2" class="seatr1">s2</label>
                         </div>
-                        <h1 class="r1table1">table 1</h1>
+                        <h1 class="r1table1">Table 1</h1>
                         <div class="r1c1s">
                             <input
                                 type="checkbox"
@@ -117,7 +117,7 @@
                             />
                             <label for="r2c1s2" class="seatr2">s2</label>
                         </div>
-                        <h1 class="r2table1">table 2</h1>
+                        <h1 class="r2table1">Table 2</h1>
                         <div class="r2c1s">
                             <input
                                 type="checkbox"
@@ -146,7 +146,7 @@
                             />
                             <label for="r2c2s1" class="seatr22">s1</label>
                         </div>
-                        <h1 class="r2table2">table 4</h1>
+                        <h1 class="r2table2">Table 4</h1>
                         <div class="r2c2s">
                             <input
                                 type="checkbox"
@@ -177,7 +177,7 @@
                             />
                             <label for="r3c1s2" class="seatr3">s2</label>
                         </div>
-                        <h1 class="r3table1">table 3</h1>
+                        <h1 class="r3table1">Table 3</h1>
                         <div class="r3c1s">
                             <input
                                 type="checkbox"
@@ -205,6 +205,12 @@
         <div id="orderItems">
         <!-- Order items will be displayed here -->
         </div>
+        <div class="price">
+            <div class="total">
+              <span> <span class="count">0</span> SEATS </span>
+              <div class="amount">0</div>
+            </div>
+         </div>
             <button class="bookre1">Book Table</button>
     </form>
 </div>
@@ -212,9 +218,7 @@
 <!---------------------------Footer------------------------------->
 <div class="footer"></div>
 
-    <!-- JavaScript code to display selected items -->
-</body>
-<div class="footer"></div>
+    <!-- Code to display selected items -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -222,49 +226,33 @@ document.addEventListener("DOMContentLoaded", function() {
     let totalAmount = 0;
 
     urlParams.forEach((quantity, itemId) => {
-        // Calculate total amount for each item
-        const itemAmount = quantity * getItemPrice(itemId); // Assuming getItemPrice function returns the price of each item
-
-        // Create a box for each item with its quantity, image, and total amount
+        const itemAmount = quantity * getItemPrice(itemId);
         const itemBox = document.createElement("div");
         itemBox.classList.add("itemBox");
-
-        // Add item image
         const itemImg = document.createElement("img");
-        itemImg.src = `./Asset/Images/${itemId}.png`; // Assuming images are named after their IDs
+        itemImg.src = `./Asset/Images/${itemId}.png`;
         itemImg.alt = `${itemId}`;
         itemBox.appendChild(itemImg);
-
-        // Add item name, quantity, and total amount
         const itemName = document.createElement("p");
         itemName.textContent = `${formatItemName(itemId)} - Quantity: ${quantity}`;
         itemBox.appendChild(itemName);
-
-        // Add item total amount
         const itemTotal = document.createElement("p");
         itemTotal.textContent = `Total: ₹${itemAmount}`;
         itemBox.appendChild(itemTotal);
 
         orderItems.appendChild(itemBox);
-
-        // Update total amount
         totalAmount += itemAmount;
     });
 
-    // Display total amount
     const totalBox = document.createElement("div");
     totalBox.classList.add("totalBox");
-    totalBox.textContent = `Total Amount: ₹${totalAmount}`;
+    totalBox.textContent = `Total Amount: ₹${totalAmount}`;/*totalamount*/
     orderItems.appendChild(totalBox);
 });
-
-// Function to format item name (replace underscores with spaces)
 function formatItemName(itemId) {
     return itemId.replace(/_/g, ' ');
 }
 
-// Function to get the price of each item (replace this with your own logic)
-// Function to get the price of each item based on its ID
 function getItemPrice(itemId) {
     switch (itemId) {
         case "veg_burger":
@@ -298,48 +286,49 @@ function getItemPrice(itemId) {
         case "mojito":
             return 143;
         case "falooda":
-            return 143; // Price for Maroon Pizza is $12
+            return 143; 
         default:
-            return 143; // Default price if item ID is not recognized
+            return 143; 
     }
 }
 
 </script>
 <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const seats = document.querySelectorAll('input[name="tickets"]');
+    const amountDisplay = document.querySelector(".amount");
+    const countDisplay = document.querySelector(".count");
+    let totalAmount = 0;
+    let selectedSeats = 0;
 
-// Seat Selection
-let seats = document.querySelectorAll(".all-seats input");
-seats.forEach((ticket) => {
-  ticket.addEventListener("change", () => {
-    let amount = document.querySelector(".amount").innerHTML;
-    let count = document.querySelector(".count").innerHTML;
-    amount = Number(amount);
-    count = Number(count);
-    if (ticket.checked) {
-      count += 1;
-      amount += calculateDynamicPrice(200); // Price per seat
-    } else {
-      count -= 1;
-      amount -= calculateDynamicPrice(200); // Price per seat
-    }
-    document.querySelector(".amount").innerHTML = amount.toFixed(2);
-    document.querySelector(".count").innerHTML = count;
-  });
+    seats.forEach(seat => {
+        seat.addEventListener("change", () => {
+            if (seat.checked) {
+                totalAmount += calculateDynamicPrice(200); 
+                selectedSeats++;
+            } else {
+                totalAmount -= calculateDynamicPrice(200);
+                selectedSeats--;
+            }
+            amountDisplay.textContent = (totalAmount + calculateDynamicPrice(200)).toFixed(2); 
+            countDisplay.textContent = selectedSeats;
+        });
+    });
 });
 
-// Function to calculate dynamic pricing based on selected time slot
 function calculateDynamicPrice(basePrice) {
-  // Get the selected time slot
-  let selectedTime = document.querySelector('input[name="time"]:checked').value;
-  // Convert the selected time to hours
-  let selectedHours = parseInt(selectedTime.split(':')[0]);
-  // Adjust pricing based on time slots
-  if (selectedHours >= 18 && selectedHours < 20) {
-    // Increase price during dinner time (6 PM to 8 PM)
-    return basePrice * 1.2; // 20% increase
-  } else {
-    return basePrice; // Base price for other times
-  }
+    const selectedTime = document.querySelector('input[name="time"]:checked').value;
+    const selectedHours = parseInt(selectedTime.split(':')[0]);
+
+    if (selectedHours >= 18 && selectedHours < 20) {
+      
+        return basePrice * 1.2;
+    } else {
+        return basePrice;
+    }
 }
 </script>
+</body>
+<div class="footer"></div>
+
 </html>
