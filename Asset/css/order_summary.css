@@ -1,0 +1,387 @@
+
+    /* CSS for order_summary.html */
+/* CSS for order_summary.html */
+
+#orderItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.itemBox {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.itemBox img {
+    max-width: 100px; /* Adjust image size as needed */
+    max-height: 100px;
+}
+
+.totalBox {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#orderItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.itemBox {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.itemBox img {
+    max-width: 100px; /* Adjust image size as needed */
+    max-height: 100px;
+}
+
+.totalBox {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+/*re1_1.css*/
+/*For Timing*/
+input{
+    display: none;
+}
+.times{
+    width: 98%;
+    display: flex;
+    margin: 2% 1%;
+    gap: 2%;
+    padding: 1% 3%;
+    border: 1px solid #000;
+  }
+  .time{
+    font-size: 15px;
+    width: fit-content;
+    padding: 0.48%;
+    background: rgb(233, 233, 233);
+    border-radius: 2mm;
+    cursor: pointer;
+  }
+
+.times input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+
+/*Table css*/
+.table-container{
+    margin: 3% 10%;
+    border: 2px solid;
+    width: auto;
+    height: auto;
+    border-color:#000;
+    background-color: #fff;
+}
+.ent{
+        text-align: center;
+        border: 2px dotted #000;
+        border-top: 0px;
+        margin: 0% auto;
+        width: 15%;
+}
+.r1c1s{
+    display: flex;
+    flex-direction: row;
+}
+.r1c2s{
+    display: flex;
+    flex-direction: row;
+}
+/*For row1 table*/
+.r1{
+    display: inline-flex;
+    flex-direction:row;
+    width: 100%;
+    height: 35%;
+}
+.r1c1{
+    padding: 4%;
+    margin: 2%;
+    width: 36%;
+    height: auto;
+}
+.r1wall{
+    margin-bottom: 2%;
+    margin-left: 22%;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-bottom-left-radius: 30px;
+    background-color: #802E12;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23732307' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
+    width: 38.6%;
+    margin-top: -3.7%;
+    height: 100%;
+}
+.wall1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 45% 40%;
+    -webkit-text-stroke-width: 1px;
+    font-family:Arial, Helvetica, sans-serif;
+  -webkit-text-stroke-color: rgb(8, 8, 8);
+    color: rgb(223, 162, 83);
+    font-size: 40px;
+}
+.seatr1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16.5%;
+    width: 50px;
+    height: 40px;
+}
+.r1c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+.r1table1{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 2%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height: 75%;
+    width: 95%;
+}
+/*For row2 column1 table*/
+.r2{
+    width: auto;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+.r2c1{
+    margin: 2%;
+    width: 37%;
+}
+.r2c2{
+    padding: 2%;
+    display: flex;
+    flex-direction:column;
+    margin: 3%;
+    margin-left: 21%;
+    width: 36%;
+    height: auto;    
+}
+.r2c1s{
+    display: flex;
+    flex-direction: row;
+    margin: 0% 8%;
+}
+.r2table1{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 1% 10%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height: 67%;
+    width: 75%;
+}
+.seatr2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16%;
+    width: 50px;
+    height: 40px;
+}
+.r2c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For row2 column2 table*/
+.r2table2{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 3%;
+    margin-left: 25%;
+    border-radius: 90px;
+    border: 1px solid #000;
+    height: 100px;
+    width: 50%;
+}
+.seatr22{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 43%;
+    width: 50px;
+    height: 40px;
+}
+.r2c2 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For row3 table*/
+.r3{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 415px;
+}
+.r3c1{
+    padding: 4%;
+    margin: 2%;
+    width: 38%;
+    height: auto;
+}
+.r3c1s{
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+}
+.r3table1{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 2%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height:75%;
+    width: 95%;
+}
+.seatr3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16%;
+    width: 50px;
+    height: 40px;
+}
+.r3c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For r3c2*/
+.r3c2{
+    background-color: #9b5842;
+    padding-top: 4%;
+    padding-left: 4%;
+    border-top: 1px dashed #000;
+    border-left: 1px dashed #000;
+    margin-left: 23%;
+    width: 38%;
+    height: 100%;    
+}
+.recep{
+    background-color: #A7FFA4;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(240)'%3E%3Cstop offset='0' stop-color='%23A7FFA4'/%3E%3Cstop offset='1' stop-color='%2377FF7C'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='540' height='450' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 43% 23%;
+    display: grid;
+    justify-content: stretch;
+    align-items: stretch;
+    border-top: 1px dashed #000;
+    border-left: 1px dashed #000;
+}
+.bookre1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #000;
+    background-color:#A7FFA4;
+    color: #000;
+    width: 100%;
+    font-size: 20px;
+    padding: 1%;   
+}
+
+
+
+.status {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 08%;
+    margin-top: 20px;
+    
+}
+.item1 {
+    font-size: 12px;
+    position: relative;
+}
+.item1::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translate(0, -50%);
+    width: 10px;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    outline: 0.2mm solid rgb(120, 120, 120);
+    border-radius: 0.3mm;
+}
+.item1:nth-child(2)::before {
+    background: rgb(180, 180, 180);
+    outline: none;
+}
+.item1:nth-child(3)::before {
+    background: rgb(28, 185, 120);
+    outline: none;
+}
+div {
+    display: block;
+}
+.price {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+.total span {
+    font-size: 11px;
+    font-weight: 400;
+}
+.price button {
+    background: rgb(60, 60, 60);
+    color: white;
+    font-family: poppins;
+    font-size: 14px;
+    padding: 7px 14px;
+    border-radius: 2mm;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
