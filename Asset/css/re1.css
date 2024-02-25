@@ -601,8 +601,19 @@ span {
     font-size: 12pt;
     margin-bottom: 0px;
 }
-.fp3re1 {
+.fp3re1img{
+    width: 4%;
+    height: 5%;
+    display: inline-flex;
+    flex-direction: row
+}
+.fp3re1txt{
+    margin: 0.5% 1%;
+}
+.fp3re1{
+    display: flex;
     margin-top: 2%;
+    margin-left: 2%;
     font-family: Helvetica, Sans-Serif;
     color: #000000;
     font-size: 12pt;
