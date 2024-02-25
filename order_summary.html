@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order Summary</title>
-    <link rel="stylesheet" href="./Asset/css/order_summary.css"> <!-- Link to your CSS file -->
+    <title>ArrowGrub</title>
+    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
+    <link rel="stylesheet" href="./Asset/css/order_summary.css">
+    <link rel="stylesheet" href="./Asset/css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>        
+    <script src="./Asset/js/index.js" async></script>
 </head>
 <body>
         <!--------------------------Header-------------------------------->
@@ -293,7 +297,144 @@ function getItemPrice(itemId) {
 }
 
 </script>
+<!-- Existing JavaScript code -->
 <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const seats = document.querySelectorAll('input[name="tickets"]');
+        const amountDisplay = document.querySelector(".amount");
+        const countDisplay = document.querySelector(".count");
+        let seatAmount = 0; // Updated variable name
+        let selectedSeats = 0;
+    
+        seats.forEach(seat => {
+            seat.addEventListener("change", () => {
+                const basePrice = 200;
+                const dynamicPrice = calculateDynamicPrice(basePrice);
+                if (seat.checked) {
+                    seatAmount += dynamicPrice; // Updated variable name
+                    selectedSeats++;
+                } else {
+                    seatAmount -= dynamicPrice; // Updated variable name
+                    selectedSeats--;
+                }
+                amountDisplay.textContent = seatAmount.toFixed(2); // Updated variable name
+                countDisplay.textContent = selectedSeats;
+    
+                // Calculate final amount
+                const finalAmount = calculateFinalAmount(seatAmount);
+                console.log('Final Amount:', finalAmount); // You can remove this line after testing
+            });
+        });
+    
+        // Function to calculate dynamic price based on time
+        function calculateDynamicPrice(basePrice) {
+            const selectedTimeInput = document.querySelector('input[name="time"]:checked');
+            if (!selectedTimeInput) {
+                // Handle case where no time is selected
+                return basePrice;
+            }
+            const selectedTime = selectedTimeInput.value;
+            const selectedHours = parseInt(selectedTime.split(':')[0]);
+    
+            if (selectedHours >= 18 && selectedHours < 20) {
+                return basePrice * 1.2;
+            } else {
+                return basePrice;
+            }
+        }
+    
+        // Function to calculate final amount
+        function calculateFinalAmount(seatAmount) {
+            const totalAmount = parseFloat(amountDisplay.textContent); // Get total amount from display
+            return totalAmount + seatAmount;
+        }
+    });
+    </script>
+    
+    <!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const seats = document.querySelectorAll('input[name="tickets"]');
+    const amountDisplay = document.querySelector(".amount");
+    const countDisplay = document.querySelector(".count");
+    let seatAmount = 0; // Updated variable name
+    let selectedSeats = 0;
+
+    seats.forEach(seat => {
+        seat.addEventListener("change", () => {
+            const basePrice = 200;
+            const dynamicPrice = calculateDynamicPrice(basePrice);
+            if (seat.checked) {
+                seatAmount += dynamicPrice; // Updated variable name
+                selectedSeats++;
+            } else {
+                seatAmount -= dynamicPrice; // Updated variable name
+                selectedSeats--;
+            }
+            amountDisplay.textContent = seatAmount.toFixed(2); // Updated variable name
+            countDisplay.textContent = selectedSeats;
+        });
+    });
+});
+
+function calculateDynamicPrice(basePrice) {
+    const selectedTimeInput = document.querySelector('input[name="time"]:checked');
+    if (!selectedTimeInput) {
+        // Handle case where no time is selected
+        return basePrice;
+    }
+    const selectedTime = selectedTimeInput.value;
+    const selectedHours = parseInt(selectedTime.split(':')[0]);
+
+    if (selectedHours >= 18 && selectedHours < 20) {
+        return basePrice * 1.2;
+    } else {
+        return basePrice;
+    }
+}
+
+</script> -->
+<!-- <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const seats = document.querySelectorAll('input[name="tickets"]');
+    const amountDisplay = document.querySelector(".amount");
+    const countDisplay = document.querySelector(".count");
+    let totalAmount = 0;
+    let selectedSeats = 0;
+
+    seats.forEach(seat => {
+        seat.addEventListener("change", () => {
+            const basePrice = 200;
+            const dynamicPrice = calculateDynamicPrice(basePrice);
+            if (seat.checked) {
+                totalAmount += dynamicPrice; 
+                selectedSeats++;
+            } else {
+                totalAmount -= dynamicPrice;
+                selectedSeats--;
+            }
+            amountDisplay.textContent = totalAmount.toFixed(2); 
+            countDisplay.textContent = selectedSeats;
+        });
+    });
+}); -->
+
+<!-- function calculateDynamicPrice(basePrice) {
+    const selectedTimeInput = document.querySelector('input[name="time"]:checked');
+    if (!selectedTimeInput) {
+        // Handle case where no time is selected
+        return basePrice;
+    }
+    const selectedTime = selectedTimeInput.value;
+    const selectedHours = parseInt(selectedTime.split(':')[0]);
+
+    if (selectedHours >= 18 && selectedHours < 20) {
+        return basePrice * 1.2;
+    } else {
+        return basePrice;
+    }
+}
+</script> -->
+<!-- <script>
 document.addEventListener("DOMContentLoaded", function() {
     const seats = document.querySelectorAll('input[name="tickets"]');
     const amountDisplay = document.querySelector(".amount");
@@ -327,8 +468,8 @@ function calculateDynamicPrice(basePrice) {
         return basePrice;
     }
 }
-</script>
-</body>
+</script> -->
 <div class="footer"></div>
+</body>
 
 </html>
