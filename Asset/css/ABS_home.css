@@ -96,6 +96,7 @@
 .imgcard {
     display: flex;
     flex-direction: row;
+    margin-bottom: 1%;
 }
 .card-right {
     margin-top: 25px;
@@ -143,7 +144,7 @@
     height: 165px;
 }
 .card-right2 {
-    margin-top: 25px;
+    margin-top: 2.7%;
     border: 2px solid;
     width: auto;
     height: 190px;
@@ -153,6 +154,7 @@
 }
 /*Overview*/
 .boxcard {
+    position: static;
     background-color: whitesmoke;
     display: flex;
     justify-content: center;
@@ -168,7 +170,8 @@
     margin-left: auto;
     margin-right: auto;
     font-size: 17.5px;
-    padding: 10px 50px 8px;
+    padding: 10px 165px;
+    color: #333;
 }
 
 @media screen and (max-width: 1275px) {

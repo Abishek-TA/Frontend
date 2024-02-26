@@ -1,3 +1,23 @@
+/*For calemder*/
+.date1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #000;
+    width: 20%;
+    margin: 1% 40%;
+    height: 80px;
+    padding: 0.5% 1%;
+}
+.dateselector{
+    margin-top: 4%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    width: 100%;
+}
 /*For Timing*/
 input{
     display: none;
@@ -7,13 +27,13 @@ input{
     display: flex;
     margin: 2% 1%;
     gap: 2%;
-    padding: 1%;
+    padding: 1% 1.5%;
     border: 1px solid #000;
   }
   .time{
-    font-size: 14px;
+    font-size: 15px;
     width: fit-content;
-    padding: 0.48%;
+    padding: 0.55%;
     background: rgb(233, 233, 233);
     border-radius: 2mm;
     cursor: pointer;
@@ -60,16 +80,26 @@ input{
     height: auto;
 }
 .r1wall{
+    position: relative;
     margin-bottom: 2%;
     margin-left: 22%;
     border-left: 1px solid #000;
     border-bottom: 1px solid #000;
     border-bottom-left-radius: 30px;
+    width: 38.6%;
+    margin-top: -3.3%;
+    height: 100%;
+}
+.wallimg{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
     background-color: #802E12;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 200 200'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='100' y1='33' x2='100' y2='-3'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='100' y1='135' x2='100' y2='97'%3E%3Cstop offset='0' stop-color='%23000' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23000' stop-opacity='1'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg fill='%23732307' fill-opacity='0.6'%3E%3Crect x='100' width='100' height='100'/%3E%3Crect y='100' width='100' height='100'/%3E%3C/g%3E%3Cg fill-opacity='0.5'%3E%3Cpolygon fill='url(%23a)' points='100 30 0 0 200 0'/%3E%3Cpolygon fill='url(%23b)' points='100 100 0 130 0 100 200 100 200 130'/%3E%3C/g%3E%3C/svg%3E");
-    width: 38.6%;
-    margin-top: -3.7%;
-    height: 100%;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
+    border-bottom-left-radius: 30px;
+ 
 }
 .wall1{
     display: flex;
