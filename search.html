@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live Filter</title>
+  <!-- Google Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./Asset/css/search.css">
+  <script
+            src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"
+        ></script>
+        <script src="./Asset/js/index.js" async></script>
+</head>
+<body>
+<div class="sbar">
+  <div class="search">
+    <form autocomplete="off">
+      <input type="search" id="search" placeholder="Search">
+    </form>
+  </div>
+  <div class="table" id="tableContainer" style="display: none;">
+    <table>
+      <thead>
+        <tr>
+          <th>Restaurant</th>
+          <th>Rating</th>
+          <th>Location</th>
+          <th>Reserve</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ABS</td>
+          <td>8.2</td>
+          <th>KUMBAKONAM</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+        <tr>
+          <td>MCAD</td>
+          <td>9.2</td>
+          <th>CHENNAI</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+        <tr>
+          <td>BCSF</td>
+          <td>7.2</td>
+          <th>KUMBAKONAM</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+        <tr>
+          <td>Smokie</td>
+          <td>9.4</td>
+          <th>MUMBAI</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+        <tr>
+          <td>Fire club</td>
+          <td>8.5</td>
+          <th>KOLKATA</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+        <tr>
+          <td>OVIYA</td>
+          <td>8.9</td>
+          <th>DELHI</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+        <tr>
+          <td>First</td>
+          <td>8.0</td>
+          <th>GOA</th>
+          <th><a href="./re1.html"><button class="searchre">BOOK</button></a></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+  <script>
+    let search = document.getElementById("search");
+    let tableContainer = document.getElementById("tableContainer");
+
+    search.addEventListener("input", () => {
+      let searchValue = search.value.trim().toUpperCase();
+      let rows = tableContainer.querySelectorAll("tbody tr");
+
+      let found = false;
+      rows.forEach(row => {
+        let text = row.innerText.toUpperCase();
+        let display = text.includes(searchValue) ? "" : "none";
+        row.style.display = display;
+        if (display !== "none") found = true;
+      });
+
+      tableContainer.style.display = found ? "block" : "none";
+    });
+
+    search.addEventListener("input", () => {
+      let searchValue = search.value.trim();
+      if (searchValue === '') {
+        tableContainer.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
