@@ -62,6 +62,84 @@
             <label for="t14" class="time">10:00 PM</label>
           </div>
         </div>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const timeContainer = document.querySelector('.times');
+  const dateInput = document.getElementById('restrict1');
+
+  function updateTimeSlots() {
+    const currentTime = new Date().getHours(); // Get current hour
+    const selectedDate = new Date(dateInput.value);
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
+    selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
+
+    if (selectedDate > currentDate) { // Check if selected date is after current date
+      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+        option.disabled = false; // Enable all time slots
+      });
+    } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
+      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+        const hour = parseInt(option.value.split(":")[0]);
+        if (hour < currentTime) {
+          option.disabled = true; // Disable past time slots for current date
+        } else {
+          option.disabled = false; // Enable future time slots for current date
+        }
+      });
+    } else { // Selected date is before current date
+      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+        option.disabled = true; // Disable all time slots
+      });
+    }
+  }
+
+  // Initial update of time slots
+  updateTimeSlots();
+
+  // Add event listener to date input
+  dateInput.addEventListener('change', updateTimeSlots);
+});
+
+
+
+      // <!-- old code-->
+//    document.addEventListener("DOMContentLoaded", function () {
+//   const timeContainer = document.querySelector('.times');
+//   const baseTime = 9; // Starting time in 24-hour format
+//   const currentTime = new Date().getHours(); // Get current hour
+//   const totalSlots = 14; // Total number of slots
+//   const timeFormat = 'hh:mm A'; // Format for displaying time
+
+//   // Clear existing time slots
+//   timeContainer.innerHTML = '';
+//   document.getElementById('restrict1').valueAsDate = new Date();
+
+//   // Generate time slots dynamically
+//   for (let i = 0; i < totalSlots; i++) {
+//     const hour = baseTime + i;
+//     const displayHour = hour > 12 ? hour - 12 : hour; // Convert to 12-hour format
+//     const ampm = hour >= 12 ? 'PM' : 'AM'; // Determine AM/PM
+//     const option = document.createElement('input');
+//     option.type = 'radio';
+//     option.name = 'time';
+//     option.id = 't' + (i + 1);
+//     option.value = `${displayHour}:00 ${ampm}`; // Format time
+//     if (hour < currentTime || (hour === currentTime && new Date().getMinutes() !== 0)) { // If it's a past hour or the current hour has already started
+//       option.disabled = true;
+//     }
+//     const label = document.createElement('label');
+//     label.htmlFor = 't' + (i + 1);
+//     label.className = 'time';
+//     label.textContent = option.value;
+//     timeContainer.appendChild(option);
+//     timeContainer.appendChild(label);
+//   }
+// });
+
+
+ 
+</script>
         <!-----------------------Table section---------------------------->
         <div class="table-container">
           <!-----------------------Table1 content------------------->
@@ -156,49 +234,51 @@
     </form>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-    const seats = document.querySelectorAll('input[type="checkbox"]');
-    const amountDisplay = document.querySelector(".amount");
-    const countDisplay = document.querySelector(".count");
-    let totalAmount = 0;
-    let selectedSeats = 0;
+        const seats = document.querySelectorAll('input[type="checkbox"]');
+        const amountDisplay = document.querySelector(".amount");
+        const countDisplay = document.querySelector(".count");
+        let totalAmount = 0;
+        let selectedSeats = 0;
 
-    seats.forEach((seat) => {
-        seat.addEventListener("change", () => {
+        seats.forEach((seat) => {
+          seat.addEventListener("change", () => {
             const basePrice = 200;
             const dynamicPrice = calculateDynamicPrice(basePrice);
             if (seat.checked) {
-                totalAmount += dynamicPrice;
-                selectedSeats++;
+              totalAmount += dynamicPrice;
+              selectedSeats++;
             } else {
-                totalAmount -= dynamicPrice;
-                selectedSeats--;
+              totalAmount -= dynamicPrice;
+              selectedSeats--;
             }
             amountDisplay.textContent = totalAmount.toFixed(2);
             countDisplay.textContent = selectedSeats;
             const finalAmount = calculateFinalAmount(totalAmount);
             console.log("Final Amount:", finalAmount);
+          });
         });
-    });
 
-    function calculateDynamicPrice(basePrice) {
-        const selectedTimeInput = document.querySelector('input[name="time"]:checked');
-        if (!selectedTimeInput) {
+        function calculateDynamicPrice(basePrice) {
+          const selectedTimeInput = document.querySelector(
+            'input[name="time"]:checked'
+          );
+          if (!selectedTimeInput) {
             return basePrice;
-        }
-        const selectedTime = selectedTimeInput.value;
-        const selectedHours = parseInt(selectedTime.split(":")[0]);
+          }
+          const selectedTime = selectedTimeInput.value;
+          const selectedHours = parseInt(selectedTime.split(":")[0]);
 
-        if (selectedHours >= 18 && selectedHours < 20) {
+          if (selectedHours >= 18 && selectedHours < 20) {
             return basePrice * 1.2;
-        } else {
+          } else {
             return basePrice;
+          }
         }
-    }
 
-    function calculateFinalAmount(totalAmount) {
-        return totalAmount;
-    }
-});
+        function calculateFinalAmount(totalAmount) {
+          return totalAmount;
+        }
+      });
     </script>
     <!---------------------------Footer------------------------------->
     <div class="footer"></div>
