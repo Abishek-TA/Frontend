@@ -1,1 +1,0 @@
-document.getElementById("wallimg").style.backgroundImage = "url('./asset/Images/wall1.jpg')";

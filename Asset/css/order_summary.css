@@ -1,0 +1,37 @@
+#orderItems {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.itemBox {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.itemBox img {
+    max-width: 100px; /* Adjust image size as needed */
+    max-height: 100px;
+}
+
+.totalBox {
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+.bookre11{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #000;
+    background-color:#A7FFA4;
+    color: #000;
+    width: 100%;
+    font-size: 20px;
+    padding: 1%;   
+}

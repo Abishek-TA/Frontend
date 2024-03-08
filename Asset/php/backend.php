@@ -8,12 +8,12 @@ if (!empty($e) && !empty($p) )
 {
     $sql="INSERT INTO signup(Username,Email,Password) values('$u','$e','$p')";
 $r=mysqli_query($con,$sql);
-echo "<script> alert ('Sucessfully Register')</script>";
+echo "<script type='text/javascript'> alert ('Sucessfully Register')</script>";
 // header("Location: login.html");
 }
 else
 {
-   echo "<script > alert ('Please Enter valid Info')</script>"; 
+   echo "<script type='text/javascript'> alert ('Please Enter valid Info')</script>"; 
 }
 
 ?>

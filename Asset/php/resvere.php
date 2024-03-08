@@ -1,122 +1,271 @@
- <?php 
-include("db.php"); 
-error_reporting(0);
+<?php 
+session_start();
+$conn = mysqli_connect("localhost", "root", "", "signup details"); // Change database name to "signup_details" as per your database name
 
-$conn = mysqli_connect("localhost", "root", "", "signup details");
+// Check if the connection is successful
+// if (!$connect) {
+//     die("Connection failed: " . mysqli_connect_error());
+// }
+// if (isset($_POST['submit'])) {
+//     // Get selected time
+//     $selectedTime = isset($_POST['time']) ? mysqli_real_escape_string($connect, $_POST['time']) : '';
 
+//     // Check if the selected time slot is already reserved
+//     $checkQuery = "SELECT * FROM reserved_seats WHERE reservation_time = '$selectedTime'";
+//     $checkResult = mysqli_query($connect, $checkQuery);
+
+//     if (mysqli_num_rows($checkResult) > 0) {
+//         // Time slot is already reserved
+//         echo "Time slot is already reserved.";
+//     } else {
+//         // Insert reservation into the database
+//         $insertQuery = "INSERT INTO reserved_seats (reservation_time) VALUES ('$selectedTime')";
+//         if (mysqli_query($connect, $insertQuery)) {
+//             echo "Time slot reserved successfully.";
+//         } else {
+//             echo "Error: " . mysqli_error($connect);
+//         }
+//     }
+// }
+
+// Form submission for reserving tables
 if(isset($_POST['submit'])) {
-    $t1 = mysqli_real_escape_string($conn, $_POST['T1_1']);
-    $t2 = mysqli_real_escape_string($conn, $_POST['T1_2']);
-    $t3 = mysqli_real_escape_string($conn, $_POST['T1_3']);
-    $t4 = mysqli_real_escape_string($conn, $_POST['T1_4']);
-    $t5 = mysqli_real_escape_string($conn, $_POST['T2_1']);
-    $t6 = mysqli_real_escape_string($conn, $_POST['T2_2']);
-    $t7 = mysqli_real_escape_string($conn, $_POST['T2_3']);
-    $t8 = mysqli_real_escape_string($conn, $_POST['T2_4']);
-    $t9 = mysqli_real_escape_string($conn, $_POST['T4_1']);
-    $t10 = mysqli_real_escape_string($conn, $_POST['T4_2']);
-    $t11 = mysqli_real_escape_string($conn, $_POST['T3_1']);
-    $t12 = mysqli_real_escape_string($conn, $_POST['T3_2']);
-    $t13 = mysqli_real_escape_string($conn, $_POST['T3_3']);
-    $t14 = mysqli_real_escape_string($conn, $_POST['T3_4']);
-    $times = mysqli_real_escape_string($conn, $_POST['time']);
-
+    $t1 = isset($_POST['T1_1']) ? mysqli_real_escape_string($conn, $_POST['T1_1']) : '';
+    $t2 = isset($_POST['T1_2']) ? mysqli_real_escape_string($conn, $_POST['T1_2']) : '';
+    $t3 = isset($_POST['T1_3']) ? mysqli_real_escape_string($conn, $_POST['T1_3']) : '';
+    $t4 = isset($_POST['T1_4']) ? mysqli_real_escape_string($conn, $_POST['T1_4']) : '';
+    $t5 = isset($_POST['T2_1']) ? mysqli_real_escape_string($conn, $_POST['T2_1']) : '';
+    $t6 = isset($_POST['T2_2']) ? mysqli_real_escape_string($conn, $_POST['T2_2']) : '';
+    $t7 = isset($_POST['T2_3']) ? mysqli_real_escape_string($conn, $_POST['T2_3']) : '';
+    $t8 = isset($_POST['T2_4']) ? mysqli_real_escape_string($conn, $_POST['T2_4']) : '';
+    $t9 = isset($_POST['T4_1']) ? mysqli_real_escape_string($conn, $_POST['T4_1']) : '';
+    $t10 = isset($_POST['T4_2']) ? mysqli_real_escape_string($conn, $_POST['T4_2']) : '';
+    $t11 = isset($_POST['T3_1']) ? mysqli_real_escape_string($conn, $_POST['T3_1']) : '';
+    $t12 = isset($_POST['T3_2']) ? mysqli_real_escape_string($conn, $_POST['T3_2']) : '';
+    $t13 = isset($_POST['T3_3']) ? mysqli_real_escape_string($conn, $_POST['T3_3']) : '';
+    $t14 = isset($_POST['T3_4']) ? mysqli_real_escape_string($conn, $_POST['T3_4']) : '';
+    $times = isset($_POST['time']) ? mysqli_real_escape_string($conn, $_POST['time']) : '';
+    $date = $_POST['datefrom'];
+    $username = $_SESSION['username'];
     $str = $t1."  ".$t2." ".$t3." ".$t4;
-    $str2 = $t5.",".$t6.",".$t7.",".$t8;
-    $str4 = $t9.",".$t10;
-    $str3 = $t11.",".$t12.",".$t13.",".$t14;
+    $str2 = $t5." ".$t6." ".$t7." ".$t8;
+    $str4 = $t9." ".$t10;
+    $str3 = $t11." ".$t12." ".$t13." ".$t14;
 
      echo $str ."<br>";
      echo $str2 ."<br>";
      echo $str3 ."<br>";
      echo $str4 ."<br>";
+     echo "Selected time: " . $times;
 
-    /*echo $t1 . " &nbsp ", $t2 . " &nbsp ", $t3 . " &nbsp ", $t4 . " &nbsp " . "<br>"; 
-    echo $t5 . " &nbsp ", $t6 . " &nbsp ", $t7 . " &nbsp ", $t8 . " &nbsp " . "<br>";
-    echo $t9 . " &nbsp " , $t10 . " &nbsp " . "<br>";
-    echo $t11 . " &nbsp ", $t12 . " &nbsp ", $t13 . " &nbsp ", $t14 . " &nbsp " . "<br>";*/
-    echo "Selected time: " . $times;
-
-    //$sql = "INSERT INTO reserved (Table1, Table2, Table3, Table4, Table5, Table6, Table7, Table8, Table9, Table10, Table11, Table12, Table13, Table14, times) VALUES ('$t1', '$t2', '$t3', '$t4', '$t5', '$t6', '$t7', '$t8', '$t9', '$t10', '$t11', '$t12', '$t13', '$t14', '$times')";
-  
-   
-    /*$a = "INSERT INTO reserved (Table1, times) VALUES ('$str', '$times')";
-    $b = "INSERT INTO reserved (Table2, times) VALUES ('$t5, $t6, $t7, $t8', '$times')";
-    $c = "INSERT INTO reserved (Table3, times) VALUES ('$t11, $t12, $t13, $t14', '$times')";
-    $d = "INSERT INTO reserved (Table4, times) VALUES ('$t9, $t10,  '$times')"; */
-   // $sql = "INSERT INTO `reserved`(`Table1`, `Table2`, `Table3`, `Table4`, `times`) 
-   // VALUES ('$str','$str2','$str3','$str4','$times')";
-    $result = mysqli_query($conn, $sql);
-    /*$result = mysqli_query($conn, $a);
-    $result = mysqli_query($conn, $b);
-    $result = mysqli_query($conn, $c);
-    $result = mysqli_query($conn, $d); */
-
-    if ($result) {
+$query="INSERT INTO reserved( username,Table1, Table2, Table3, Table4,date, times) VALUES ('$username','$str','$str2','$str3','$str4','$date','$times')";
+$result = mysqli_query($conn, $query);
+{if ($result) {
         echo "<script> alert ('Table Reserved Successfully')</script>";
     } else {
         echo "<script> alert ('Table Not Reserved')</script>";
     }
-} else {
-    echo "<script> alert ('Form not submitted')</script>";
 }
-// include("db.php"); 
-// error_reporting(0);
-//  $t1=$_POST['T1_1']; 
-//  $t2=$_POST['T1_2']; 
-//  $t3=$_POST['T1_3']; 
-//  $t4=$_POST['T1_4'];
-//  $t5=$_POST['T2_1']; 
-//  $t6=$_POST['T2_2'];
-//  $t7=$_POST['T2_3']; 
-//  $t8=$_POST['T2_4'];
-//  $t9=$_POST['T4_1']; 
-//  $t10=$_POST['T4_2'];
-//  $t11=$_POST['T3_1']; 
-//  $t12=$_POST['T3_2']; 
-//  $t13=$_POST['T3_3']; 
-//  $t14=$_POST['T3_4'];
-//  $times=$_POST['time']; -->
-   
-
-// $con = mysqli_connect("localhost", "root", "", "signup details");
-// if(isset($_POST['submit']))
-// {
-//     $t1=$_POST['T1_1']; $t2=$_POST['T1_2']; $t3=$_POST['T1_3']; $t4=$_POST['T1_4'];
-//     $t5=$_POST['T2_1']; $t6=$_POST['T2_2']; $t7=$_POST['T2_3']; $t8=$_POST['T2_4'];
-//     $t9=$_POST['T4_1']; $t10=$_POST['T4_2'];
-//     $t11=$_POST['T3_1']; $t12=$_POST['T3_2']; $t13=$_POST['T3_3']; $t14=$_POST['T3_4'];
-//     $times=$_POST['time'];
-//     echo $t1 . " &nbsp ", $t2 . " &nbsp ", $t3 . " &nbsp ", $t4 . " &nbsp " . "<br>"; 
-//     echo $t5 . " &nbsp ", $t6 . " &nbsp ", $t7 . " &nbsp ", $t8 . " &nbsp " . "<br>";
-//     echo $t9 . " &nbsp " , $t10 . " &nbsp " . "<br>";
-//     echo $t11 . " &nbsp ", $t12 . " &nbsp ", $t13 . " &nbsp ", $t14 . " &nbsp " . "<br>";
-//     echo  "Selected time: " . $times;
- 
-//     $sql="INSERT INTO reserved (Table1) values('$t1','$t2','$t3','$t4')";
-//     $r = mysqli_query($con,$sql);
-//     echo "<script> alert ('Table Reserved Sucessfully ')</script>";
+ //else {
+//   echo "<script> alert ('Form not submitted')</script>";
 // }
-// else
-// {
-//  echo "<script > alert ('Table Not Reserved')</script>"; 
+}
+
+
+
+// // Form submission for reserving tables
+// if(isset($_POST['submit'])) {
+//     // Get selected table and seat
+//     $selectedTable = isset($_POST['selected_table']) ? mysqli_real_escape_string($connect, $_POST['selected_table']) : '';
+//     $selectedSeat = isset($_POST['selected_seat']) ? mysqli_real_escape_string($connect, $_POST['selected_seat']) : '';
+//     $selectedTime = isset($_POST['time']) ? mysqli_real_escape_string($connect, $_POST['time']) : '';
+
+//     // Update database to mark seat as reserved
+//     $query = "UPDATE reserved_seats SET is_reserved = 1 WHERE table_number = '$selectedTable' AND seat_number = '$selectedSeat' AND reservation_time = '$selectedTime'";
+//     mysqli_query($connect, $query);
+
+//     // Remaining code...
+// }
+
+// if(isset($_POST['submit'])) {
+//     // Get the selected table and seats
+//     $table = isset($_POST['table']) ? mysqli_real_escape_string($connect, $_POST['table']) : '';
+//     $seats = isset($_POST['tickets']) ? $_POST['tickets'] : array();
+//     $time = isset($_POST['time']) ? mysqli_real_escape_string($connect, $_POST['time']) : '';
+
+//     // Insert reserved seats into the database
+//     foreach($seats as $seat) {
+//         $query = "INSERT INTO reserved_seats (table_number, seat_number, reservation_time) VALUES ('$table', '$seat', '$time')";
+//         mysqli_query($connect, $query);
+//     }
+// }
+// function isSeatReserved($seat) {
+//     global $connect;
+//     $query = "SELECT * FROM reserved_seats WHERE seat_number='$seat'";
+//     $result = mysqli_query($connect, $query);
+//     return mysqli_num_rows($result) > 0;
 // }
 
 
-    //     foreach($tables as $items)
-    //    {
-      //$query="INSERT INTO reserved (Time,T1,T2,T3,T4) values(".$_POST['T1']."','".$_POST['T2']."','".$_POST['T3']."','".$_POST['T4'].")";
-     // $r=mysqli_query($con,$query);
-    
-    //     }
-    //     // if(!empty($u) && !empty($d) && !empty($t))
-    // {
-    //     $sql="INSERT INTO reserved (Username,Date,Time) values('$u','$d','$t')";
-    //     $r=mysqli_query($con,$sql);
-    //     echo "<script> alert ('Table Reserved Sucessfully')</script>";
-    // }
-    // else{
-    //     echo "<script> alert ('Table Not Reserved')</script>";
-    // }
+// Form submission for adding items to cart
+if(isset($_POST["add_to_cart"])) {
+    if(isset($_SESSION["shopping_cart"])) {
+        $item_array_id = array_column($_SESSION["shopping_cart"], "item_id");
+        if(!in_array($_GET["id"], $item_array_id)) {
+            $item_array = array(
+                'item_id'           =>  $_GET["id"],
+                'item_name'         =>  $_POST["hidden_name"],
+                'item_price'        =>  $_POST["hidden_price"],
+                'item_quantity'     =>  $_POST["quantity"]
+            );
+            $_SESSION["shopping_cart"][] = $item_array;
+        } else {
+            echo '<script>alert("Item Already Added")</script>';
+        }
+    } else {
+        $item_array = array(
+            'item_id'           =>  $_GET["id"],
+            'item_name'         =>  $_POST["hidden_name"],
+            'item_price'        =>  $_POST["hidden_price"],
+            'item_quantity'     =>  $_POST["quantity"]
+        );
+        $_SESSION["shopping_cart"][0] = $item_array;
+    }
+}
 
-?> 
+// Logic to remove items from the cart
+if(isset($_GET["action"])) {
+    if($_GET["action"] == "delete") {
+        foreach($_SESSION["shopping_cart"] as $keys => $values) {
+            if($values["item_id"] == $_GET["id"]) {
+                unset($_SESSION["shopping_cart"][$keys]);
+                echo '<script>alert("Item Removed")</script>';
+                echo '<script>window.location="resvere.php"</script>';
+            }
+        }
+    }
+}
+
+// Logic to place the order
+if(isset($_POST["place_order"])) {
+    $username = $_SESSION['username'];
+    foreach($_SESSION["shopping_cart"] as $keys => $values) {
+        $item_name = $values["item_name"];
+        $item_quantity = $values["item_quantity"];
+        $item_price = $values["item_price"];
+        $total_price = $item_quantity * $item_price;
+        
+        $query = "INSERT INTO orders (username, item_name, item_quantity, item_price, total_price) VALUES ('$username', '$item_name', '$item_quantity', '$item_price', '$total_price')";
+        mysqli_query($conn, $query);
+    }
+    // Clear the shopping cart after placing the order
+    unset($_SESSION["shopping_cart"]);
+    echo '<script>alert("Order Placed Successfully")</script>';
+    echo '<script>window.location="resvere.php"</script>';
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <style>
+        .product-item {
+            border: 1px solid #333;
+            background-color: #f1f1f1;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .product-image {
+            text-align: center;
+        }
+        .product-image img {
+            max-width: 100%;
+            max-height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <br />
+    <!-- Product display section -->
+    <?php
+    $query = "SELECT * FROM tbl_product ORDER BY id ASC";
+    $result = mysqli_query($conn, $query);
+    if(mysqli_num_rows($result) > 0) {
+        while($row = mysqli_fetch_array($result)) {
+            ?>
+            <div class="col-md-4">
+                <form method="post" action="resvere.php?action=add&id=<?php echo $row["id"]; ?>">
+                    <div class="product-item">
+                        <div class="product-image">
+                           <img src="Images/<?php echo $row["image"]; ?>" class="img-responsive" />
+
+                        </div>
+
+                        <h4 class="text-info"><?php echo $row["name"]; ?></h4>
+                        <h4 class="text-danger">₹ <?php echo $row["price"]; ?></h4>
+                        <input type="text" name="quantity" value="1" class="form-control" />
+                        <input type="hidden" name="hidden_name" value="<?php echo $row["name"]; ?>" />
+                        <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>" />
+                        <input type="Submit" name="add_to_cart" style="margin-top:5px;" class="btn btn-success" value="Add to Cart" />
+                    </div>
+                </form>
+            </div>
+            <?php
+        }
+
+    }
+    ?>
+    <div style="clear:both"></div>
+    <br />
+    <!-- Shopping cart section -->
+    <h3>Order Details</h3>
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <tr>
+                <th width="40%">Item Name</th>
+                <th width="10%">Quantity</th>
+                <th width="20%">Price</th>
+                <th width="15%">Total</th>
+                <th width="5%">Action</th>
+            </tr>
+            <?php
+            if(!empty($_SESSION["shopping_cart"])) {
+                $total = 0;
+                foreach($_SESSION["shopping_cart"] as $keys => $values) {
+                    ?>
+                    <tr>
+                        <td><?php echo $values["item_name"]; ?></td>
+                        <td><?php echo $values["item_quantity"]; ?></td>
+                        <td>₹ <?php echo $values["item_price"]; ?></td>
+                        <td>₹ <?php echo number_format($values["item_quantity"] * $values["item_price"], 2);?></td>
+                        <td><a href="resvere.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
+                    </tr>
+                    <?php
+                    $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                }
+                ?>
+                <tr>
+                    <td colspan="3" align="right">Total</td>
+                    <td align="right">₹ <?php echo number_format($total, 2); ?></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="5" align="center">
+                        <form method="post">
+                            <input type="Submit" name="place_order" class="btn btn-warning" value="Place Order" />
+                        </form>
+                    </td>
+                </tr>
+                <?php
+            }
+            ?>
+        </table>
+    </div>
+</div>
+</body>
+</html>
