@@ -1,3 +1,17 @@
+/*for star*/
+.fa{
+    
+    margin-left: 10px;
+    font-size: 25px;
+    gap:10px;
+    display: inline-flex;
+}
+.checked{
+    margin-left: 10px;
+    width: 20px;
+    height: 10px;
+    color: orange;
+}
 /*opening hours*/
 .navbar {
     overflow: hidden;
@@ -351,7 +365,7 @@
     margin-top: auto;
     border: 2px solid;
     width: auto;
-    height: 70px;
+    height: 95px;
     border-color: #fff;
     background-color: rgb(219, 207, 207);
 }
@@ -374,7 +388,7 @@
     margin-top: auto;
     border: 2px solid;
     width: auto;
-    height: 400px;
+    height: auto;
     border-color: #fff;
     background-color: rgb(219, 207, 207);
 }
@@ -382,7 +396,7 @@
     margin-top: auto;
     border: 2px solid;
     width: auto;
-    height: 400px;
+    height: auto;
     border-color: #fff;
     background-color: rgb(219, 207, 207);
 }
@@ -396,6 +410,7 @@
 #review {
     border-radius: 10px;
 }
+
 #menuItems {
     display: flex;
     flex-wrap: wrap;
@@ -496,15 +511,20 @@ span {
     width:80px;
 } */
 .rating-value {
-    font-size: 32px;
-    color: #34be34;
+    margin-top: 3px;
+    font-size: 28px;
+    color:#e47309;
     display: inline-block;
     margin-left: 2%;
 }
 .total-rating {
+    margin-top: 3px;
     color: #333;
-    font-size: 27px;
+    font-size: 28px;
     display: inline-block;
+}
+.reviewcont{
+    margin: 5px 20px;
 }
 @media screen and (max-width: 680px) {
     .recbox1 {
@@ -529,7 +549,7 @@ span {
     display: inline-block;
     width: 10%;
     padding: 1%;
-    margin: 0% 45%;
+    margin: 1% 45%;
     cursor: pointer;
     border-radius: 10px;
 }
@@ -592,17 +612,28 @@ span {
     margin-left: 25%;
 }
 .fp1re1 {
+    display: flex;
     margin-top: 2%;
+    margin-left: 2%;
     font-family: Helvetica, Sans-Serif;
     color: #000000;
     font-size: 12pt;
+    margin-bottom: 20px;
+}
+.fp1re1txt{
+    margin: 0.5% 1%;
 }
 .fp2re1 {
+    display: flex;
     margin-top: 2%;
+    margin-left: 2%;
     font-family: Helvetica, Sans-Serif;
     color: #000000;
     font-size: 12pt;
-    margin-bottom: 0px;
+    margin-bottom: 20px;
+}
+.fp2re1txt{
+    margin: 0.5% 1%;
 }
 .fp3re1img{
     width: 4%;
@@ -623,11 +654,16 @@ span {
     margin-bottom: 20px;
 }
 .fp4re1 {
+    display: flex;
     margin-top: 2%;
+    margin-left: 2%;
     font-family: Helvetica, Sans-Serif;
     color: #000000;
     font-size: 12pt;
     margin-bottom: 20px;
+}
+.fp4re1txt{
+    margin: 0.5% 1%;
 }
 form {
     height: 200px;
@@ -637,20 +673,22 @@ form {
 }
 textarea {
     width: 100%;
-    height: 150px;
+    height: auto;
+    font-size: larger;
     resize: vertical;
     background-color: rgb(216, 206, 206);
 }
 .r1help {
-    margin-top: 100px;
+    margin-top: 2%;
 }
 .help_btn {
     background-color: #002c0a;
     text-align: center;
     text-decoration: none;
     display: inline-block;
+    padding: 7.9px;
     width: 15%;
-    height: 10%;
+    height: 19%;
     margin: 1% 45%;
     cursor: pointer;
     border-radius: 10px;
