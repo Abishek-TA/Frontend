@@ -30,6 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<script>alert('Registration successful.')</script>";
         // Redirect to login page or any other page
         // header("Location: login.html");
+         header("Location: ./index.html");
     } else {
         // Registration failed
         echo "<script>alert('Registration failed.')</script>";

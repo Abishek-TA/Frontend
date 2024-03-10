@@ -1,4 +1,4 @@
-$("#head2").load("header2.php"); /*access the header*/
+$("#head3").load("head.php"); /*access the header*/
 $(".footer").load("Footer.html"); /*access the header*/
 $(".sider").load("sider1.html"); /*access the sider*/
 const prev = document.getElementById("prev-btn");

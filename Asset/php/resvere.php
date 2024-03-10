@@ -1,35 +1,21 @@
-<?php 
+<?php
 session_start();
-$conn = mysqli_connect("localhost", "root", "", "signup details"); // Change database name to "signup_details" as per your database name
 
-// Check if the connection is successful
-// if (!$connect) {
-//     die("Connection failed: " . mysqli_connect_error());
-// }
-// if (isset($_POST['submit'])) {
-//     // Get selected time
-//     $selectedTime = isset($_POST['time']) ? mysqli_real_escape_string($connect, $_POST['time']) : '';
+// Establishing connection to the database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "signup details";
 
-//     // Check if the selected time slot is already reserved
-//     $checkQuery = "SELECT * FROM reserved_seats WHERE reservation_time = '$selectedTime'";
-//     $checkResult = mysqli_query($connect, $checkQuery);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-//     if (mysqli_num_rows($checkResult) > 0) {
-//         // Time slot is already reserved
-//         echo "Time slot is already reserved.";
-//     } else {
-//         // Insert reservation into the database
-//         $insertQuery = "INSERT INTO reserved_seats (reservation_time) VALUES ('$selectedTime')";
-//         if (mysqli_query($connect, $insertQuery)) {
-//             echo "Time slot reserved successfully.";
-//         } else {
-//             echo "Error: " . mysqli_error($connect);
-//         }
-//     }
-// }
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
 
-// Form submission for reserving tables
 if(isset($_POST['submit'])) {
+    // Escape user inputs for security
     $t1 = isset($_POST['T1_1']) ? mysqli_real_escape_string($conn, $_POST['T1_1']) : '';
     $t2 = isset($_POST['T1_2']) ? mysqli_real_escape_string($conn, $_POST['T1_2']) : '';
     $t3 = isset($_POST['T1_3']) ? mysqli_real_escape_string($conn, $_POST['T1_3']) : '';
@@ -47,29 +33,59 @@ if(isset($_POST['submit'])) {
     $times = isset($_POST['time']) ? mysqli_real_escape_string($conn, $_POST['time']) : '';
     $date = $_POST['datefrom'];
     $username = $_SESSION['username'];
-    $str = $t1."  ".$t2." ".$t3." ".$t4;
-    $str2 = $t5." ".$t6." ".$t7." ".$t8;
-    $str4 = $t9." ".$t10;
-    $str3 = $t11." ".$t12." ".$t13." ".$t14;
+    $str = $t1."  ".$t2."  ".$t3."  ".$t4;
+    $str2 = $t5."  ".$t6."  ".$t7."  ".$t8;
+    $str4 = $t9."  ".$t10;
+    $str3 = $t11."  ".$t12."  ".$t13."  ".$t14;
 
+    
      echo $str ."<br>";
      echo $str2 ."<br>";
      echo $str3 ."<br>";
      echo $str4 ."<br>";
      echo "Selected time: " . $times;
 
-$query="INSERT INTO reserved( username,Table1, Table2, Table3, Table4,date, times) VALUES ('$username','$str','$str2','$str3','$str4','$date','$times')";
-$result = mysqli_query($conn, $query);
-{if ($result) {
-        echo "<script> alert ('Table Reserved Successfully')</script>";
+    // Check if the reservation is within the allowed time frame (2 minutes)
+    $currentTime = time();
+    $lastReservationTime = isset($_SESSION['last_reservation_time']) ? $_SESSION['last_reservation_time'] : 0;
+    $reservationDuration = $currentTime - $lastReservationTime;
+    $allowedReservationDuration = 2 * 60; // 2 minutes in seconds
+
+    if($reservationDuration >= $allowedReservationDuration) {
+        // Update selected seats as reserved in the database
+        $selectedSeats = array($str, $str2, $str3, $str4);
+        foreach ($selectedSeats as $seat) {
+            // Update seat status in the database
+            $updateQuery = "UPDATE seats SET reserved = 1 WHERE seat_name = '$seat'";
+            if (!mysqli_query($conn, $updateQuery)) {
+                echo "Error updating record: " . mysqli_error($conn);
+            }
+        }
+
+        // Insert reservation into the database
+        $query = "INSERT INTO reserved (username, Table1, Table2, Table3, Table4, date, times) VALUES ('$username', '$str', '$str2', '$str3', '$str4', '$date', '$times')";
+        $result = mysqli_query($conn, $query);
+
+        if ($result) {
+            // Update last reservation time in session
+            $_SESSION['last_reservation_time'] = $currentTime;
+            echo "<script>alert('Table Reserved Successfully')</script>";
+        } else {
+            echo "<script>alert('Table Not Reserved')</script>";
+        }
     } else {
-        echo "<script> alert ('Table Not Reserved')</script>";
+        echo "<script>alert('You can only make a reservation  2 minutes')</script>";
     }
-}
- //else {
-//   echo "<script> alert ('Form not submitted')</script>";
-// }
-}
+ }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -263,6 +279,7 @@ if(isset($_POST["place_order"])) {
                 </tr>
                 <?php
             }
+            
             ?>
         </table>
     </div>

@@ -62,83 +62,45 @@
             <label for="t14" class="time">10:00 PM</label>
           </div>
         </div>
-    <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const timeContainer = document.querySelector('.times');
-  const dateInput = document.getElementById('restrict1');
+        <!-- dynamic time slot -->
+      <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const timeContainer = document.querySelector('.times');
+    const dateInput = document.getElementById('restrict1');
 
-  function updateTimeSlots() {
-    const currentTime = new Date().getHours(); // Get current hour
-    const selectedDate = new Date(dateInput.value);
-    const currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
-    selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
+    function updateTimeSlots() {
+      const currentTime = new Date().getHours(); // Get current hour
+      const selectedDate = new Date(dateInput.value);
+      const currentDate = new Date();
+      currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
+      selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
 
-    if (selectedDate > currentDate) { // Check if selected date is after current date
-      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-        option.disabled = false; // Enable all time slots
-      });
-    } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
-      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-        const hour = parseInt(option.value.split(":")[0]);
-        if (hour < currentTime) {
-          option.disabled = true; // Disable past time slots for current date
-        } else {
-          option.disabled = false; // Enable future time slots for current date
-        }
-      });
-    } else { // Selected date is before current date
-      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-        option.disabled = true; // Disable all time slots
-      });
+      if (selectedDate > currentDate) { // Check if selected date is after current date
+        timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+          option.disabled = false; // Enable all time slots
+        });
+      } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
+        timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+          const hour = parseInt(option.value.split(":")[0]);
+          if (hour < currentTime) {
+            option.disabled = true; // Disable past time slots for current date
+          } else {
+            option.disabled = false; // Enable future time slots for current date
+          }
+        });
+      } else { // Selected date is before current date
+        timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+          option.disabled = true; // Disable all time slots
+        });
+      }
     }
-  }
 
-  // Initial update of time slots
-  updateTimeSlots();
+    // Initial update of time slots
+    updateTimeSlots();
 
-  // Add event listener to date input
-  dateInput.addEventListener('change', updateTimeSlots);
-});
-
-
-
-      // <!-- old code-->
-//    document.addEventListener("DOMContentLoaded", function () {
-//   const timeContainer = document.querySelector('.times');
-//   const baseTime = 9; // Starting time in 24-hour format
-//   const currentTime = new Date().getHours(); // Get current hour
-//   const totalSlots = 14; // Total number of slots
-//   const timeFormat = 'hh:mm A'; // Format for displaying time
-
-//   // Clear existing time slots
-//   timeContainer.innerHTML = '';
-//   document.getElementById('restrict1').valueAsDate = new Date();
-
-//   // Generate time slots dynamically
-//   for (let i = 0; i < totalSlots; i++) {
-//     const hour = baseTime + i;
-//     const displayHour = hour > 12 ? hour - 12 : hour; // Convert to 12-hour format
-//     const ampm = hour >= 12 ? 'PM' : 'AM'; // Determine AM/PM
-//     const option = document.createElement('input');
-//     option.type = 'radio';
-//     option.name = 'time';
-//     option.id = 't' + (i + 1);
-//     option.value = `${displayHour}:00 ${ampm}`; // Format time
-//     if (hour < currentTime || (hour === currentTime && new Date().getMinutes() !== 0)) { // If it's a past hour or the current hour has already started
-//       option.disabled = true;
-//     }
-//     const label = document.createElement('label');
-//     label.htmlFor = 't' + (i + 1);
-//     label.className = 'time';
-//     label.textContent = option.value;
-//     timeContainer.appendChild(option);
-//     timeContainer.appendChild(label);
-//   }
-// });
-
-
- 
+    // Add event listener to date input
+    dateInput.addEventListener('change', updateTimeSlots);
+  }); 
 </script>
         <!-----------------------Table section---------------------------->
         <div class="table-container">
@@ -226,12 +188,14 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="amount">0</div>
             </div>
           </div>
-          <button class="bookre1" type="submit" name="submit">
+          <button  id="submit" class="bookre1" type="submit" name="submit">
             Book Table
           </button>
         </div>
       </div>
     </form>
+    
+    <!-- dynamic price calculation -->
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const seats = document.querySelectorAll('input[type="checkbox"]');
@@ -268,7 +232,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const selectedTime = selectedTimeInput.value;
           const selectedHours = parseInt(selectedTime.split(":")[0]);
 
-          if (selectedHours >= 18 && selectedHours < 20) {
+          if (selectedHours >= 18 && selectedHours <= 23) {
             return basePrice * 1.2;
           } else {
             return basePrice;
@@ -279,7 +243,37 @@ document.addEventListener("DOMContentLoaded", function () {
           return totalAmount;
         }
       });
+
+    
     </script>
+    <!------------------------------------->
+    <!-- block the checkbox -->
+  <script>
+//  $(document).ready(function(){
+//             $("#submit").click(function(){
+//                 // Disable the checkboxes
+//                 $('input[type="checkbox"]').prop("disabled", true);
+                
+//                 // Set a timeout to enable the checkboxes after 2 minutes
+//                 setTimeout(function(){
+//                     $('input[type="checkbox"]').prop("disabled", false);
+//                 }, 120000); // 2 minutes in milliseconds
+//             });
+//         });
+
+//  $(document).ready(function() {
+//       $('#lockSeatsBtn').on('click', function() {
+//         // Disable checkboxes upon clicking "Book Table" button
+//         $('input[type="checkbox"]').prop('disabled', true);
+//         // Enable checkboxes after 20 minutes
+//         setTimeout(function() {
+//           $('input[type="checkbox"]').prop('disabled', false);
+//         }, 20 * 60 * 1000); // 20 minutes in milliseconds
+//       });
+//     });
+
+</script>
+
     <!---------------------------Footer------------------------------->
     <div class="footer"></div>
   </body>
