@@ -27,8 +27,8 @@
           <?php
           session_start();
           if(isset($_SESSION['username'])) {
-              echo '<li>Welcome, ' . $_SESSION['username'] . '</li>';
-              echo '<li><a href="./logout.php">Logout</a></li>';
+              echo '<li><div class="well"><h3>WELCOME, ' . $_SESSION['username'] . '</h3></div></li>';
+              echo '<li><div class="btnclass3"><a href="./logout.php"><button>Logout</button></a></div></li>';
           } else {
               echo '<div class="btnclass1">
                       <a href="./login.html">
