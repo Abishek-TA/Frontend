@@ -1,3 +1,3 @@
 <?php
-$con=mysqli_connect("localhost","root","","signup details") or die (mysql_error());
+$con=mysqli_connect("localhost","root","","arrowgrub") or die (mysql_error());
 ?>

@@ -3,167 +3,76 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhahabhi Restaurant</title>
-<!-- Google Fonts and Icons -->
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Round|Material+Icons+Sharp|Material+Icons+Two+Tone" rel="stylesheet"/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="./Asset/css/test2.css">
+<title>Seat Reservation</title>
+<style>
+    /* Your CSS styles here */
+</style>
 </head>
 <body>
-<div class="center">
-  <div class="tickets">
-    <div class="ticket-selector">
-      <div class="head">
-        <div class="title">Dhahabhi Restaurant</div>
-      </div>
-      <div class="seats">
-        <div class="status">
-          <div class="item">Available</div>
-          <div class="item">Booked</div>
-          <div class="item">Selected</div>
-        </div>
-        <div class="centerr">
-          <div class="seating-plan">
-            <div class="all-seats" style="margin-bottom: 0px;">
-              <!-- Seats -->
-              <input type="checkbox" name="tickets" id="s1"/>
-              <label for="s1" class="seat"></label>
-              <input type="checkbox" name="tickets" id="s2"/>
-              <label for="s2" class="seat"></label>
-              <!-- Gap for spacing -->
-              <div style="width: 30px;"></div>
-              <!-- Seats -->
-              <input type="checkbox" name="tickets" id="s3"/>
-              <label for="s3" class="seat"></label>
-              <input type="checkbox" name="tickets" id="s4"/>
-              <label for="s4" class="seat"></label>
-              <!-- Gap for spacing -->
-              <div style="width: 30px;"></div>
-              <!-- Seats -->
-              <input type="checkbox" name="tickets" id="s5"/>
-              <label for="s5" class="seat"></label>
-              <input type="checkbox" name="tickets" id="s6"/>
-              <label for="s6" class="seat"></label>
-            </div>
-            <div>
-              <!-- Images of seat arrangements -->
-              <img src="./Asset/Images/4 ppl.png" class="fourppl" alt="4 ppl"/>
-              <img src="./Asset/Images/4 ppl.png" class="sixpppl" alt="4 ppl"/>
-              <img src="./Asset/Images/4 ppl.png" class="sixppl" alt="4 ppl"/>
-              <!-- <img src="./Asset/Images/2 ppl.png" class="twoppl" alt="2 ppl"/> -->
-            </div>
-            <div class="all-seats" style="margin-top: 0px;">
-              <!-- Seats -->
-              <input type="checkbox" name="tickets" id="s7"/>
-              <label for="s7" class="seat"></label>
-              <input type="checkbox" name="tickets" id="s8"/>
-              <label for="s8" class="seat"></label>
-              <!-- Gap for spacing -->
-              <div style="width: 30px;"></div>
-              <!-- Seats -->
-              <input type="checkbox" name="tickets" id="s9"/>
-              <label for="s9" class="seat"></label>
-              <input type="checkbox" name="tickets" id="s10"/>
-              <label for="s10" class="seat"></label>
-              <!-- Gap for spacing -->
-              <div style="width: 30px;"></div>
-              <!-- Seats -->
-              <input type="checkbox" name="tickets" id="s11"/>
-              <label for="s11" class="seat"></label>
-              <input type="checkbox" name="tickets" id="s12"/>
-              <label for="s12" class="seat"></label>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="timings">
-        <div class="times">
-        <input type="radio" name="time" id="t1" checked />
-        <label for="t1" class="time">11:00 AM</label>
-        <input type="radio" id="t2" name="time" />
-        <label for="t2" class="time"> 12:00 PM</label>
-        <input type="radio" id="t3" name="time" />
-        <label for="t3" class="time"> 1:00 PM </label>
-        <input type="radio" id="t4" name="time" />
-        <label for="t4" class="time"> 2:00 PM</label>
-        <input type="radio" id="t5" name="time" />
-        <label for="t5" class="time">03:00 PM</label>
-        <input type="radio" name="time" id="t6" checked />
-        <label for="t6" class="time">04:00 PM</label>
-        <input type="radio" id="t7" name="time" />
-        <label for="t7" class="time">05:00 PM</label>
-        <input type="radio" id="t8" name="time" />
-        <label for="t8" class="time">06:00 PM </label>
-        <input type="radio" id="t9" name="time" />
-        <label for="t9" class="time">07:00 PM</label>
-        <input type="radio" id="t10" name="time" />
-        <label for="t10" class="time"> 08:00 PM </label>
-        </div>
-      </div>
-      <div class="times">
+<h1>Select Your Seats</h1>
 
-      </div>
-      <div class="times">
-          <input type="radio" name="time" id="t11" checked />
-          <label for="t11" class="time">09:00 PM</label>
-          <input type="radio" id="t12" name="time" />
-          <label for="t12" class="time">10:00 PM</label>
-          <input type="radio" id="t13" name="time" />
-          <label for="t13" class="time">11:00 PM </label>
-           <input type="radio" id="t11" name="time" />
-          <label for="t11" class="time">09:00 PM</label>
-          <input type="radio" id="t12" name="time" />
-          <label for="t12" class="time"> 10:00 PM </label> 
-        <!-- Automatic Date Selection -->
-        <div>
-          <input type="date" id="inputdate" name="inputdate" min="" max=""/>
-        </div>
-      </div>
-    </div>
-    <!-- Price Calculation -->
-    <div class="price">
-      <div class="total">
-        <span> <span class="count">0</span> Seats </span>
-        <div class="amount">0</div>
-      </div>
-      <button type="button">Book</button>
-    </div>
-  </div>
-</div>
+<!-- Calendar -->
+<div id="calendar"></div>
+
+<!-- Seats selection -->
+<form id="seatSelectionForm">
+    <label for="seat">Select Seat:</label>
+    <select id="seat">
+        <!-- Populate seats options dynamically using JavaScript if needed -->
+        <option value="seat1">Seat 1</option>
+        <option value="seat2">Seat 2</option>
+        <!-- Add more options as needed -->
+    </select>
+    <button type="submit">Reserve</button>
+</form>
+
 <script>
-// Seat Selection
-let seats = document.querySelectorAll(".all-seats input");
-seats.forEach((ticket) => {
-  ticket.addEventListener("change", () => {
-    let amount = document.querySelector(".amount").innerHTML;
-    let count = document.querySelector(".count").innerHTML;
-    amount = Number(amount);
-    count = Number(count);
-    if (ticket.checked) {
-      count += 1;
-      amount += calculateDynamicPrice(200); // Price per seat
-    } else {
-      count -= 1;
-      amount -= calculateDynamicPrice(200); // Price per seat
+document.addEventListener("DOMContentLoaded", function() {
+    const calendar = document.getElementById("calendar");
+    const seatSelectionForm = document.getElementById("seatSelectionForm");
+    let currentDate = new Date();
+    let endDate = new Date();
+
+    // Set end date to 10 days from the current date
+    endDate.setDate(currentDate.getDate() + 10);
+
+    function renderCalendar() {
+        // Clear previous calendar
+        calendar.innerHTML = '';
+
+        // Render calendar for 10 days
+        while (currentDate <= endDate) {
+            const dateElement = document.createElement("div");
+            dateElement.textContent = currentDate.toDateString();
+            dateElement.dataset.date = currentDate.toISOString().slice(0, 10); // Store date as data attribute
+            dateElement.classList.add("calendar-date");
+            calendar.appendChild(dateElement);
+
+            currentDate.setDate(currentDate.getDate() + 1); // Move to next day
+        }
     }
-    document.querySelector(".amount").innerHTML = amount.toFixed(2);
-    document.querySelector(".count").innerHTML = count;
-  });
+
+    renderCalendar();
+
+    seatSelectionForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const selectedSeat = document.getElementById("seat").value;
+        const selectedDate = document.querySelector(".calendar-date.selected").dataset.date;
+        console.log(`Seat ${selectedSeat} reserved for ${selectedDate}`);
+        // Handle reservation logic here
+    });
+
+    // Add event listener to calendar dates for selection
+    calendar.addEventListener("click", function(event) {
+        const selectedDateElement = event.target.closest(".calendar-date");
+        if (selectedDateElement) {
+            // Remove selected class from all dates
+            document.querySelectorAll(".calendar-date").forEach(date => date.classList.remove("selected"));
+            // Add selected class to the clicked date
+            selectedDateElement.classList.add("selected");
+        }
+    });
 });
-
-
-// Function to calculate dynamic pricing based on booking time
-function calculateDynamicPrice(basePrice) {
-  const currentTime = new Date().getHours();
-  if ((currentTime >= 12 && currentTime < 14) || (currentTime >= 18 && currentTime < 20)) {
-    // Increase price during dinner time (6 PM to 8 PM)
-    return basePrice * 1.2; // 20% increase
-  } else {
-    return basePrice; // Base price for other times
-  }
-}
 </script>
 </body>
 </html>

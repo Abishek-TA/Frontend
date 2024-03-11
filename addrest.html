@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ArrowGrub</title>
-    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon" />
-    <link rel="stylesheet" href="./Asset/css/address.css" />
+    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
+    <link rel="stylesheet" href="./Asset/css/address.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./Asset/js/index.js" async></script>
 </head>
 <body>
+    <!--Header-->
+        <div id="head1"></div>
+    <!--FORM-->
     <div class="form">
-        <h1>Register for Partner Restuarant programme</h1>
-        <div class="formcontent">
-            <form action="/action_page.php">
-                <label for="rname">Restuarant Name</label><br />
-                <input type="text" id="rname" name="rname" /><br /><br />
-                <label for="ename">Executive Name</label><br />
-                <input type="text" id="ename" name="ename" /><br /><br />
-                <label for="cont">Contact</label><br />
-                <input type="text" id="cont" name="cont" /><br /><br />
-                <label for="mail">Email Address</label><br />
-                <input type="text" id="mail" name="mail" /><br /><br />
-                <label for="radd">Restuarant Address</label><br />
-                <input type="text" id="radd" name="radd" /><br /><br />
-                <input type="submit" value="Register" />
-            </form>
+    <h1 class="reah1">Register for Partner Restuarant programme</h1>
+    <div class="formcontent">
+        <form action="/action_page.php">    
+            <label class="aformtxt" for="rname">Restuarant Name</label><br>
+            <input type="text" id="rname" name="rname"><br><br>
+            <label class="aformtxt" for="ename">Executive Name</label><br>
+            <input type="text" id="ename" name="ename"><br><br>
+            <label class="aformtxt" for="cont">Contact</label><br>
+            <input type="text" id="cont" name="cont"><br><br>
+            <label class="aformtxt" for="mail">Email Address</label><br>
+            <input type="text" id="mail" name="mail"><br><br>
+            <label class="aformtxt" for="radd">Restuarant Address</label><br>
+            <input type="text" id="radd" name="radd"><br><br>
+            <input class="regre" type="submit" value="Register">
+        </form> 
         </div>
     </div>
+    <!--footer-->
+      <div class="footer"></div>
 </body>

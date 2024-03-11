@@ -2,7 +2,7 @@
 include("db.php"); 
 error_reporting(0);
 
-$conn = mysqli_connect("localhost", "root", "", "signup details");
+$conn = mysqli_connect("localhost", "root", "", "arrowgrub");
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];

@@ -2,7 +2,7 @@
 $u=$_POST['username'];
 $e=$_POST['email'];
 $p=$_POST['password'];
-$con=mysqli_connect("localhost","root","","signup details");
+$con=mysqli_connect("localhost","root","","arrowgrub");
 
 if (!empty($e) && !empty($p) )
 {

@@ -19,10 +19,8 @@
     border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(196, 172, 172);
-    width: 65%;
+    width: auto;
     height: 20%;
-    margin-left: 270px;
-    margin-top: -70px;
 }
 .prof-res3{
     display: inline-flex;
@@ -31,10 +29,8 @@
     border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(196, 172, 172);
-    width: 65%;
+    width: auto;
     height: 20%;
-    margin-left: 270px;
-    margin-top: 10px;
 }
 .prof-res4{
     display: inline-flex;
@@ -43,10 +39,8 @@
     border: 1px solid #000;
     border-radius: 20px;
     background-color: rgb(196, 172, 172);
-    width: 65%;
+    width: auto;
     height: 20%;
-    margin-left: 270px;
-    margin-top: 10px;
 }
 .prof-img1{
     border-top-left-radius: 10%;

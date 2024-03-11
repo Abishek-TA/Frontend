@@ -7,22 +7,44 @@
     box-sizing: border-box; 
 
 } 
-body{
-    background-color: green;
-}
-h1{
+.reah1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
    font-size: 150%; 
    margin: 1% 5%;
 }
 .form{
-    margin: 2% 5%;
+    margin: 2% 30%;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #fff;
-    width: auto;
+    width: 40%;
     height: auto;
 }
 .formcontent{
     margin: 2% 10%;
     font-size: 100%;
+}
+.regre{
+    margin: 0% 30%;
+    width: 40%;
+    padding: 2%;
+    border-radius: 20px;
+    background-color: #deb887;
+}
+.aformtxt{
+    font-size: 20px;
+}
+#rname,
+#ename,
+#cont,
+#mail,
+#radd{
+    border-color: none;
+    background-color:#e8eeef;
+    margin-top: 1%;
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
 }
