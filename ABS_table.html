@@ -21,9 +21,8 @@
   <div class="item1">Available</div>
   <div class="item1">Booked</div>
   <div class="item1">Selected</div>
-          </div>
+</div>
 <form id="reserveForm" action="./Asset/php/resvere.php" method="POST">
-  <input type="hidden" name="amount" id="amountField" value="">
 
 
   <!--Calennder slot-->
@@ -67,43 +66,54 @@
     </div>
      <!-- dynamic time slot -->
      <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const timeContainer = document.querySelector('.times');
-          const dateInput = document.getElementById('restrict1');
-      
-          function updateTimeSlots() {
-            const currentTime = new Date().getHours(); // Get current hour
-            const selectedDate = new Date(dateInput.value);
-            const currentDate = new Date();
-            currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
-            selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
-      
-            if (selectedDate > currentDate) { // Check if selected date is after current date
-              timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-                option.disabled = false; // Enable all time slots
-              });
-            } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
-              timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-                const hour = parseInt(option.value.split(":")[0]);
-                if (hour < currentTime) {
-                  option.disabled = true; // Disable past time slots for current date
-                } else {
-                  option.disabled = false; // Enable future time slots for current date
-                }
-              });
-            } else { // Selected date is before current date
-              timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-                option.disabled = true; // Disable all time slots
-              });
-            }
-          }
-      
-          // Initial update of time slots
-          updateTimeSlots();
-      
-          // Add event listener to date input
-          dateInput.addEventListener('change', updateTimeSlots);
-        }); 
+document.addEventListener("DOMContentLoaded", function () {
+  const timeContainer = document.querySelector('.times');
+  const dateInput = document.getElementById('restrict1');
+
+  // Array to store reserved seats (update this array with actual reserved seats)
+  const reservedSeats = [];
+
+  function updateTimeSlots() {
+    const currentTime = new Date().getHours(); // Get current hour
+    const selectedDate = new Date(dateInput.value);
+    const currentDate = new Date();
+    currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
+    selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
+
+    if (selectedDate > currentDate) { // Check if selected date is after current date
+      // Enable all time slots
+      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+        option.disabled = false;
+      });
+    } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
+      // Enable future time slots and disable past time slots
+      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+        const hour = parseInt(option.value.split(":")[0]);
+        option.disabled = hour < currentTime;
+      });
+    } else { // Selected date is before current date
+      // Disable all time slots
+      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+        option.disabled = true;
+      });
+    }
+
+    // Disable reserved seats
+    reservedSeats.forEach(seat => {
+      const reservedCheckbox = timeContainer.querySelector('input[value="' + seat + '"]');
+      if (reservedCheckbox) {
+        reservedCheckbox.disabled = true;
+      }
+    });
+  }
+
+  // Initial update of time slots
+  updateTimeSlots();
+
+  // Add event listener to date input
+  dateInput.addEventListener('change', updateTimeSlots);
+});
+
       </script>
   <!-----------------------Table section---------------------------->
   <div class="table-container">
@@ -192,7 +202,7 @@
             <div class="price">
                 <div class="total">
                   <span> <span class="count">0</span> SEATS </span>
-                  <div class="amount">0</div>
+                  <div class="amount" name="amountform">0</div>
                 </div>
               </div>
               <button onclick="myFunction(); document.getElementById('submit','amount').click()"></button>
@@ -210,6 +220,7 @@ function myFunction() {
     var checkboxes = document.querySelectorAll('input[name="tickets"]:checked');
     var selectedSeats = Array.from(checkboxes).map(checkbox => checkbox.value).join(', ');
     document.getElementById("demo").innerHTML = selectedSeats;
+    
 }
   </script>
 
@@ -271,52 +282,4 @@ function myFunction() {
       </script>
 <!---------------------------Footer------------------------------->
 <div class="footer"></div>
-<script>
-//     $('#restrict1').datetimepicker({
-//    format:'d-m-Y',
-//    formatDate:'d-m-Y',     
-//    minDate: 0,
-//    maxDate: 7
-// });
-/*let globalDetails = {
-  "abs":{
-    "tables": [
-      {
-      "tableName":"table1",
-      "seatings":{
-        "s1":"booked",
-        "s2":"not booked",
-        "s3":"booked",
-        "s4":"not booked"
-      }
-    },
-    {
-      "tableName":"table2",
-      "seatings":{
-        "s1":"booked",
-        "s2":"not booked",
-        "s3":"booked",
-        "s4":"not booked"
-      }
-    },
-    {
-      "tableName":"table3",
-      "seatings":{
-        "s1":"booked",
-        "s2":"not booked"
-      }
-    }
-  ]
-  }
-}
-let getCheckBox = document.querySelectorAll('.table-container input[type=checkbox]');
-let resutarentName = document.querySelector('[data-restaurent]').dataset.restaurent;
-getCheckBox.forEach((el)=>{
-    el.addEventListener('click',(event)=>{
-        console.log(globalDetails)
-        console.log(event.target.value)
-       globalDetails[resutarentName]['tables'].filter((el)=>{})
-    })
-})*/
-</script>
 </body>

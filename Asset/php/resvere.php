@@ -33,16 +33,14 @@ if (!$conn) {
 
 //         // Insert reservation into the database
 // }
+
+
 if(isset($_POST['submit'])) {
     $date = $_POST['datefrom'];
     $times = isset($_POST['time']) ? mysqli_real_escape_string($conn, $_POST['time']) : '';
     $username = $_SESSION['username'];
-    if (isset($_POST['amount'])) {
-        $amount = $_POST['amount'];
-    } else {
-        // Handle the case when 'amount' is not provided in the form
-        $amount = 0; // or any default value you want to assign
-    }
+    $amount = $_SESSION['amountform'];
+    
     
     // Check if tickets array is set and not empty
     if(isset($_POST['tickets']) && is_array($_POST['tickets']) && !empty($_POST['tickets'])) {
@@ -64,13 +62,15 @@ if(isset($_POST['submit'])) {
 
         // If any seat is already booked, display an error message
         if($isSeatsBooked) {
-            echo "One or more selected seats are already booked for the specified date and time.";
+            echo "Already seats been Booked";
         } else {
             // Perform the database insertion
-            $sql = "INSERT INTO reserved (username,date, times, tickets,amount) VALUES ('$username','$date', '$times', '$ticketString','$amount')";
+            $sql = "INSERT INTO reserved (username, date, times, tickets, amount) VALUES ('$username', '$date', '$times', '$ticketString', '$amount')";
             
             if(mysqli_query($conn, $sql)) {
-                echo "Reservation successfully added.";
+                echo " Table Reserved successfully.";
+                echo "$ticketString";
+                
             } else {
                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
             }
@@ -79,6 +79,66 @@ if(isset($_POST['submit'])) {
         echo "No tickets selected.";
     }
 }
+// Fetch most recent reservation from reserved table for the current session username
+$current_username = $_SESSION['username']; // Assuming username is stored in session
+$query_reserved = "SELECT * FROM reserved WHERE username = '$current_username' ORDER BY created_at DESC LIMIT 1";
+$result_reserved = mysqli_query($conn, $query_reserved);
+$reservedSeats = array();
+if (mysqli_num_rows($result_reserved) > 0) {
+    $row_reserved = mysqli_fetch_assoc($result_reserved);
+    // Extract reserved seat information and store in $reservedSeats array
+    $reservedSeats = explode(", ", $row_reserved['tickets']);
+}
+
+
+// if(isset($_POST['submit'])) {
+//     $date = $_POST['datefrom'];
+//     $times = isset($_POST['time']) ? mysqli_real_escape_string($conn, $_POST['time']) : '';
+//     $username = $_SESSION['username'];
+//     if (isset($_POST['amount'])) {
+//         $amount = $_POST['amount'];
+//     } else {
+//         // Handle the case when 'amount' is not provided in the form
+//         $amount = 0; // or any default value you want to assign
+//     }
+    
+//     // Check if tickets array is set and not empty
+//     if(isset($_POST['tickets']) && is_array($_POST['tickets']) && !empty($_POST['tickets'])) {
+//         $tickets = $_POST['tickets'];
+        
+//         // Convert array of tickets into a string
+//         $ticketString = implode(", ", $tickets);
+        
+//         // Check if any of the selected seats are already booked for the given date and time
+//         $isSeatsBooked = false;
+//         foreach ($tickets as $seat) {
+//             $query = "SELECT * FROM reserved WHERE date = '$date' AND times = '$times' AND FIND_IN_SET('$seat', tickets)";
+//             $result = mysqli_query($conn, $query);
+//             if(mysqli_num_rows($result) > 0) {
+//                 $isSeatsBooked = true;
+//                 break;
+//             }
+//         }
+
+//         // If any seat is already booked, display an error message
+//         if($isSeatsBooked) {
+//             echo "One or more selected seats are already booked for the specified date and time.";
+//         } else {
+//             // Perform the database insertion
+//             $sql = "INSERT INTO reserved (username,date, times, tickets,amount) VALUES ('$username','$date', '$times', '$ticketString','$amount')";
+            
+//             if(mysqli_query($conn, $sql)) {
+//                 echo "Reservation successfully added.";
+//                 echo"$ticketString";
+                
+//             } else {
+//                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+//             }
+//         }
+//     } else {
+//         echo "No tickets selected.";
+//     }
+// }
 
         
         // $query = "INSERT INTO reserved (username, Table1, Table2, Table3, Table4, date, times) VALUES ('$username', '$str', '$str2', '$str3', '$str4', '$date', '$times')";

@@ -64,6 +64,11 @@
     text-decoration: none;
 }
 
+.sign2 a{
+  color: #e74b03;
+  text-decoration: none;
+}
+
 @media screen and (max-width: 680px){
 .fomr2_container{
   width: auto;

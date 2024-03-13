@@ -1,23 +1,14 @@
 <?php
 session_start();
 
-// Database connection settings
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "arrowgrub";
-
-// Check if the session variable is set to determine if the user is logged in
-if (isset($_SESSION['username']) && $_SESSION['username'] === true) {
-    // If logged in, redirect to ABS_table.html
-    header('Location: ABS_table.html');
+// Check if user is logged in
+if(isset($_SESSION['username'])) {
+    // User is in session, proceed with booking table
+    header("Location: ./ABS_table.html"); // Redirect to booking page
     exit();
-}
-
-// Check if it's a POST request
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // If not logged in, redirect back to login page with error message
-    header('Location: login.html?error=not_logged_in');
-    exit();
+} else {
+    // User is not in session, handle accordingly (redirect to login page, show error message, etc.)
+    echo "You need to be logged in to book a table.";
+    header("Location: ./login.html");
 }
 ?>
