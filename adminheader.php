@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="./Asset/css/Header1.css" />
   <link rel="stylesheet" href="./Asset/css/styles.css" />
-  <script src="./Asset/js/index.js" async></script>
+  <script src="./Asset/js/index.js" async></script>    
 </head>
 <body>
   <!--Code for NAVBAR (Page-1,step-1)-->

@@ -21,6 +21,9 @@ if (!$conn) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="./Asset/js/index.js" async></script>
+    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
+     <title>ABS ADMIN PAGE</title>
     <style>
         .product-item {
             border: 1px solid #333;
@@ -36,16 +39,15 @@ if (!$conn) {
             max-width: 100%;
             max-height: 150px;
         }
-        .container{
-            margin-top: 70px;
+        .container12{
+            margin-top: 03%;
         }
     </style>
 </head>
 <body>
+    <div id="head2"></div>
 
-<div class="container">
-<div id="head2"></div>
-    <br />
+<div class="container12">
     <!-- Shopping cart section -->
     <h3>Upcoming Orders</h3>
     <div class="table-responsive">

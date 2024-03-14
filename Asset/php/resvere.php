@@ -90,72 +90,6 @@ if (mysqli_num_rows($result_reserved) > 0) {
     $reservedSeats = explode(", ", $row_reserved['tickets']);
 }
 
-
-// if(isset($_POST['submit'])) {
-//     $date = $_POST['datefrom'];
-//     $times = isset($_POST['time']) ? mysqli_real_escape_string($conn, $_POST['time']) : '';
-//     $username = $_SESSION['username'];
-//     if (isset($_POST['amount'])) {
-//         $amount = $_POST['amount'];
-//     } else {
-//         // Handle the case when 'amount' is not provided in the form
-//         $amount = 0; // or any default value you want to assign
-//     }
-    
-//     // Check if tickets array is set and not empty
-//     if(isset($_POST['tickets']) && is_array($_POST['tickets']) && !empty($_POST['tickets'])) {
-//         $tickets = $_POST['tickets'];
-        
-//         // Convert array of tickets into a string
-//         $ticketString = implode(", ", $tickets);
-        
-//         // Check if any of the selected seats are already booked for the given date and time
-//         $isSeatsBooked = false;
-//         foreach ($tickets as $seat) {
-//             $query = "SELECT * FROM reserved WHERE date = '$date' AND times = '$times' AND FIND_IN_SET('$seat', tickets)";
-//             $result = mysqli_query($conn, $query);
-//             if(mysqli_num_rows($result) > 0) {
-//                 $isSeatsBooked = true;
-//                 break;
-//             }
-//         }
-
-//         // If any seat is already booked, display an error message
-//         if($isSeatsBooked) {
-//             echo "One or more selected seats are already booked for the specified date and time.";
-//         } else {
-//             // Perform the database insertion
-//             $sql = "INSERT INTO reserved (username,date, times, tickets,amount) VALUES ('$username','$date', '$times', '$ticketString','$amount')";
-            
-//             if(mysqli_query($conn, $sql)) {
-//                 echo "Reservation successfully added.";
-//                 echo"$ticketString";
-                
-//             } else {
-//                 echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-//             }
-//         }
-//     } else {
-//         echo "No tickets selected.";
-//     }
-// }
-
-        
-        // $query = "INSERT INTO reserved (username, Table1, Table2, Table3, Table4, date, times) VALUES ('$username', '$str', '$str2', '$str3', '$str4', '$date', '$times')";
-        // $result = mysqli_query($conn, $sql);
-
-        // if ($result) {
-        //     // Update last reservation time in session
-        //     $_SESSION['last_reservation_time'] = $currentTime;
-        //     echo "<script>alert('Table Reserved Successfully')</script>";
-        // } else {
-        //     echo "<script>alert('Table Not Reserved')</script>";
-        // }
-    //} // else {
-    //     echo "<script>alert('You can only make a reservation  2 minutes')</script>";
-    // }
- //}
-
 // Form submission for adding items to cart
 if(isset($_POST["add_to_cart"])) {
     if(isset($_SESSION["shopping_cart"])) {
@@ -220,6 +154,8 @@ if(isset($_POST["place_order"])) {
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
+     <title>Menu & Confirmation </title>
     <style>
         .product-item {
             border: 1px solid #333;
