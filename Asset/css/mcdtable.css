@@ -1,0 +1,316 @@
+/*For calemder*/
+.date1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0% 40%;
+    margin-top: 1%;
+    flex-direction: column;
+    border: 1px solid #000;
+    width: 20%;
+    padding: 0.5% 1%;
+}
+.restrict1{
+    margin-top: 1%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #000;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.datecnf1{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #008000;
+    transition: ease-out;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 2px;
+    width: 10%;
+    height: 30px;
+}
+.datecnf1:active {
+    background-color: none;
+    transform: translateY(0.125rem);
+}
+/*For Timing*/
+.timings{
+    width: 82%;
+    margin: 0% 9%;
+}
+input{
+    display: none;
+}
+.times{
+    display: flex;
+    margin: 2% 1%;
+    gap: 1%;
+    padding: 1%;
+    border: 1px solid #000;
+  }
+  .time{
+    font-size: 15px;
+    width: fit-content;
+    padding: 0.55%;
+    background: rgb(233, 233, 233);
+    border-radius: 2mm;
+    cursor: pointer;
+  }
+  .timings input:checked + label {
+    background: rgb(28, 185, 120);
+    color: white;
+  }
+/*Table css*/
+.table-container{
+    margin: 0% 10%;
+    border: 2px solid;
+    width: auto;
+    height: auto;
+    border-color:#000;
+    background-color: #fff;
+}
+.r1c1s{
+    display: flex;
+    flex-direction: row;
+}
+.r1c2s{
+    display: flex;
+    flex-direction: row;
+}
+/*For row1 table*/
+.r1{
+    display: inline-flex;
+    flex-direction:row;
+    width: 100%;
+}
+.r1c1{
+    padding: 4%;
+    margin: 2%;
+    width: 36%;
+    height: auto;
+}
+.r1c2{
+    padding: 4%;
+    margin: 2%;
+    width: 36%;
+    height: auto;
+}
+.seatr1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16.5%;
+    width: 50px;
+    height: 40px;
+}
+.r1c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+.r1table1{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 2%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height: 150%;
+    width: 95%;
+}
+/*r1c2*/
+.r1c2{
+    padding: 4%;
+    margin: 2%;
+    width: 36%;
+    height: auto;
+    margin-left: 20%;
+}
+.seatr12{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16.5%;
+    width: 50px;
+    height: 40px;
+}
+.r1c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For row2 column1 table*/
+.r2{
+    margin-top: 15%;
+    width: auto;
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    padding: 1%;
+}
+.r2c1{
+    margin: 2%;
+    width: 37%;
+}
+.r2c2{
+    margin: 2%;
+    width: 37%;
+    margin-left: 20%;
+}
+.r2c1s{
+    display: flex;
+    flex-direction: row;
+    margin: 0% 8%;
+}
+.r2c2s{
+    display: flex;
+    flex-direction: row;
+    margin: 0% 8%;
+}
+.r2table1{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 1% 10%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height: 67%;
+    width: 75%;
+}
+.seatr2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 16%;
+    width: 50px;
+    height: 40px;
+}
+.r2c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For row2 column2 table*/
+.r2table2{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 1% 10%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height: 67%;
+    width: 75%;
+}
+.seatr22{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0% 43%;
+    width: 50px;
+    height: 40px;
+}
+.r2c2 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For row3 table*/
+.r3{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 415px;
+}
+.r3c1{
+    padding: 4%;
+    margin: 2%;
+    width: 38%;
+    height: auto;
+}
+.r3c1s{
+    display: flex;
+    flex-direction: row;
+    margin: 0%;
+}
+.r3table1{
+    display: grid;
+    align-content: space-evenly;
+    justify-content: space-evenly;
+    margin: 2%;
+    border-radius: 50px;
+    border: 1px solid #000;
+    height:80%;
+    width: 115%;
+}
+.seatr3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: 0%;
+    margin-left: 18%;
+    width: 50px;
+    height: 40px;
+}
+.r3c1 input:checked + label{
+    background-color: #008000;
+    color:burlywood;
+}
+/*For r3c2*/
+.entry_or_exit{
+    background-color: #008000;
+    color: bisque;
+    margin: 10.5% 0%;
+    width: 5%;
+    padding: 1%;
+    margin-left: 55%;
+    display: flex;   
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    border: 1px dotted #000;
+}
+.r4c1{
+    background-color: #000;
+    padding-top: 4%;
+    border-top: 1px dashed #000;
+    width: 100%;
+    height: 50%;   
+}
+.recep{
+    background-color: #ffffff;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 200 200'%3E%3Cpolygon fill='%23DCEFFA' points='100 0 0 100 100 100 100 200 200 100 200 0'/%3E%3C/svg%3E");
+    padding: 10%;
+    display: grid;
+    justify-content: stretch;
+    align-items: stretch;
+    border-top: 1px dashed #000;
+    border-left: 1px dashed #000;
+}
+.receptxt{
+    text-align: center;
+}
+.bookre1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 2px solid #000;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    background-color:#A7FFA4;
+    color: #000;
+    margin: 0%;
+    width: 100%;
+    font-size: 20px;
+    padding: 1%;   
+}
+.price{
+    background-color: burlywood;
+    border: 1px solid #000;
+    height: 58px;
+    padding: 1%;
+    font-size: 18px;
+}

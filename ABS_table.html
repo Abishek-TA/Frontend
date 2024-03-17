@@ -188,8 +188,8 @@
             </div>
             <div class="price">
                 <div class="total">
-                  <span> <span class="count">0</span> SEATS </span>
-                  <div class="amount">0</div>
+                  <span>No.of.seats : <span class="count">0</span></span><br>
+                  <span>Total price : <span class="amount">0</span></span>
                 </div>
               </div>
               <button  id="submit" class="bookre1" type="submit" name="submit">
@@ -200,8 +200,8 @@
     </form>
 </div>
 <br><br>
-    <!-- dynamic price calculation -->
-    <script>
+<!-- dynamic price calculation -->
+<script>
         document.addEventListener("DOMContentLoaded", function () {
           const seats = document.querySelectorAll('input[type="checkbox"]');
           const amountDisplay = document.querySelector(".amount");
@@ -247,59 +247,9 @@
           function calculateFinalAmount(totalAmount) {
             return totalAmount;
           }
-        });
-  
-      
-      </script>
+        });      
+</script>
 <!---------------------------Footer------------------------------->
 <div class="footer"></div>
-<!-- <script>
-//     $('#restrict1').datetimepicker({
-//    format:'d-m-Y',
-//    formatDate:'d-m-Y',     
-//    minDate: 0,
-//    maxDate: 7
-// });
-/*let globalDetails = {
-  "abs":{
-    "tables": [
-      {
-      "tableName":"table1",
-      "seatings":{
-        "s1":"booked",
-        "s2":"not booked",
-        "s3":"booked",
-        "s4":"not booked"
-      }
-    },
-    {
-      "tableName":"table2",
-      "seatings":{
-        "s1":"booked",
-        "s2":"not booked",
-        "s3":"booked",
-        "s4":"not booked"
-      }
-    },
-    {
-      "tableName":"table3",
-      "seatings":{
-        "s1":"booked",
-        "s2":"not booked"
-      }
-    }
-  ]
-  }
-}
-let getCheckBox = document.querySelectorAll('.table-container input[type=checkbox]');
-let resutarentName = document.querySelector('[data-restaurent]').dataset.restaurent;
-getCheckBox.forEach((el)=>{
-    el.addEventListener('click',(event)=>{
-        console.log(globalDetails)
-        console.log(event.target.value)
-       globalDetails[resutarentName]['tables'].filter((el)=>{})
-    })
-})*/
-</script> -->
 </body>
 </html>
