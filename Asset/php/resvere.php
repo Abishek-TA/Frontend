@@ -39,7 +39,16 @@ if(isset($_POST['submit'])) {
     $date = $_POST['datefrom'];
     $times = isset($_POST['time']) ? mysqli_real_escape_string($conn, $_POST['time']) : '';
     $username = $_SESSION['username'];
-    $amount = $_SESSION['amountform'];
+    $amount = $_POST['amountform'];
+    //var_dump($_POST); // Check the entire $_POST array
+
+// Check if the 'amountform' key exists in $_POST
+// if (isset($_POST['amountform'])) {
+//     $amount = $_POST['amountform'];
+//     echo "Amount: $amount";
+// } else {
+//     echo "Amount not found in POST data";
+// }
     
     
     // Check if tickets array is set and not empty
@@ -155,6 +164,7 @@ if(isset($_POST["place_order"])) {
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link rel="icon" href="./Asset/Images/ArrowGrub.png" type="Image/x-icon">
+    <script src="./Asset/js/index.js" async></script>
      <title>Menu & Confirmation </title>
     <style>
         .product-item {
@@ -174,6 +184,7 @@ if(isset($_POST["place_order"])) {
     </style>
 </head>
 <body>
+     <div id="head1"></div>
 <div class="container">
     <br />
     <!-- Product display section -->
@@ -231,7 +242,13 @@ if(isset($_POST["place_order"])) {
                         <td><a href="resvere.php?action=delete&id=<?php echo $values["item_id"]; ?>"><span class="text-danger">Remove</span></a></td>
                     </tr>
                     <?php
-                    $total = $total + ($values["item_quantity"] * $values["item_price"]);
+                    $total = $total+ ($values["item_quantity"] * $values["item_price"]);
+                    
+                }
+                if(isset($amount)) {
+                    $total = $total + $amount;
+                } else {
+                    // Handle the case where $amount is not set (optional)
                 }
                 ?>
                         <tr>

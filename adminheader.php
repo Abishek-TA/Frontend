@@ -15,27 +15,14 @@
           <?php
           session_start();
           if(isset($_SESSION['username'])) {
-              echo '<li><div class="well"><h3>WELCOME, ' . $_SESSION['username'] . '</h3></div></li>';
+              echo '<li><div class="adminwel"><h3>Welcome, ' . $_SESSION['username'] . '</h3></div></li>';
               echo '<li><div class="btnclass3"><a href="./logout.php"><button>Logout</button></a></div></li>';
-         } //else {
-        //       echo '<div class="btnclass1">
-        //               <a href="./login.html">
-        //                 <button>Login</button>
-        //               </a>
-        //             </div>';
-        //       echo '<div class="btnclass2">
-        //               <a href="./signup1.html">
-        //                 <button>Signup</button>
-        //               </a>
-        //             </div>';
-        //  }
+         } 
           ?>
         </ul>
       </nav>
       <label for="nav_check" class="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
+     
       </label>
     </header>
   </div>

@@ -318,8 +318,8 @@ background-size: cover;
     border-bottom: 2px solid #000;
     background-color:#A7FFA4;
     color: #000;
-    margin: 0% 10%;
-    width: 80%;
+    margin: 0% 0%;
+    width: 100%;
     font-size: 20px;
     padding: 1%;   
 }
@@ -336,11 +336,12 @@ background-size: cover;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 500;
+    margin-left: 600px;
   }
   .total span {
-    font-size: 11px;
+    font-size: 20px;
     font-weight: 400;
   }
   .price button {
@@ -391,5 +392,41 @@ background-size: cover;
 }
 div {
     display: block;
+}
+/* CSS for reserved seats */
+.reservedSeats {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #000;
+}
+
+#reservedSeats p {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#reservedSeats ul {
+    list-style-type: none;
+    padding: 0;
+    color: #00ffdd;
+}
+
+#reservedSeats li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #00ffdd;
+}
+/* Style for disabled checkboxes */
+input[type="checkbox"]:disabled {
+    opacity: 0.5; /* Adjust opacity to make them appear grayed out */
+    cursor: not-allowed; /* Change cursor to indicate unclickable */
+    /* Optionally, you can add additional styling to make them visually distinct */
+    /* For example, changing background color or adding a border */
+    background-color: #f0f0f0; /* Light gray background color */
+    border: 1px solid #ccc; /* Light gray border */
 }
   

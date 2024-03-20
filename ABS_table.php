@@ -1,4 +1,3 @@
-<!--Res abs-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -93,14 +92,6 @@ document.addEventListener("DOMContentLoaded", function () {
         option.disabled = true;
       });
     }
-
-    // Disable reserved seats
-    reservedSeats.forEach(seat => {
-      const reservedCheckbox = timeContainer.querySelector('input[value="' + seat + '"]');
-      if (reservedCheckbox) {
-        reservedCheckbox.disabled = true;
-      }
-    });
   }
 
   // Initial update of time slots
@@ -111,6 +102,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
       </script>
+      <!-- After the closing </form> tag -->
+        <div id="reservedSeats"></div>
+
   <!-----------------------Table section---------------------------->
   <div class="table-container">
         <!-----------------------Table1 content------------------->    
@@ -196,15 +190,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
             <div class="price">
-                <div class="total">
-                  <span> <span class="count">0</span> SEATS </span>
-                  <div class="amount" name="amountform">0</div>
-                </div>
-              </div>
-              <button onclick="myFunction(); document.getElementById('submit','amount').click()"></button>
-                <button id="submit" class="bookre1" type="submit" name="submit">
-                    Book Table
-                </button>
+            <div class="total">
+        <input type="hidden" id="amountField" name="amountform" value="0" />
+                <span>Total Amount: ₹ <span class="amount">0.00</span></span>
+                <span>Total Seats: <span class="count">0</span></span>
+            </div>
+        </div>
+        <button onclick="myFunction(); document.getElementById('submit').click()"></button>
+        <button id="submit" class="bookre1" type="submit" name="submit">Book Table</button>
 
             </div>
           </div>
@@ -222,60 +215,81 @@ function myFunction() {
 
     <!-- dynamic price calculation -->
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-          const seats = document.querySelectorAll('input[type="checkbox"]');
-          const amountDisplay = document.querySelector(".amount");
-          const countDisplay = document.querySelector(".count");
-          let totalAmount = 0;
-          let selectedSeats = 0;
-  
-          seats.forEach((seat) => {
-            seat.addEventListener("change", () => {
-              const basePrice = 200;
-              const dynamicPrice = calculateDynamicPrice(basePrice);
-              if (seat.checked) {
+document.addEventListener("DOMContentLoaded", function () {
+    const seats = document.querySelectorAll('input[type="checkbox"]');
+    const amountDisplay = document.querySelector(".amount");
+    const countDisplay = document.querySelector(".count");
+    let totalAmount = 0;
+    let selectedSeats = 0;
+
+    seats.forEach((seat) => {
+        seat.addEventListener("change", () => {
+            const basePrice = 200;
+            const dynamicPrice = calculateDynamicPrice(basePrice);
+            if (seat.checked) {
                 totalAmount += dynamicPrice;
                 selectedSeats++;
-              } else {
+            } else {
                 totalAmount -= dynamicPrice;
                 selectedSeats--;
-              }
-              amountDisplay.textContent = totalAmount.toFixed(2);
-              countDisplay.textContent = selectedSeats;
-              const finalAmount = calculateFinalAmount(totalAmount);
-            });
-          });
-  
-          function calculateDynamicPrice(basePrice) {
-            const selectedTimeInput = document.querySelector(
-              'input[name="time"]:checked'
-            );
-            if (!selectedTimeInput) {
-              return basePrice;
             }
-            const selectedTime = selectedTimeInput.value;
-            const selectedHours = parseInt(selectedTime.split(":")[0]);
-  
-            if (selectedHours >= 18 && selectedHours <= 23) {
-              return basePrice * 1.2;
-            } else {
-              return basePrice;
-            }
-          }
-  
-          function calculateFinalAmount(totalAmount) {
-            return totalAmount;
-          }
-          // Update amount display
             amountDisplay.textContent = totalAmount.toFixed(2);
-
-          // Update value of hidden input field
-          document.getElementById("amountField").value = totalAmount.toFixed(2);
-
+            countDisplay.textContent = selectedSeats;
+            // Update value of hidden input field
+            document.getElementById("amountField").value = totalAmount.toFixed(2);
         });
-  
-      
-      </script>
+    });
+
+    function calculateDynamicPrice(basePrice) {
+        const selectedTimeInput = document.querySelector('input[name="time"]:checked');
+        if (!selectedTimeInput) {
+            return basePrice;
+        }
+        const selectedTime = selectedTimeInput.value;
+        const selectedHours = parseInt(selectedTime.split(":")[0]);
+
+        if (selectedHours >= 18 && selectedHours <= 23) {
+            return basePrice * 1.2;
+        } else {
+            return basePrice;
+        }
+    }
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const dateInput = document.getElementById('restrict1');
+  const timeInputs = document.querySelectorAll('input[name="time"]');
+
+  function fetchReservedSeats() {
+    const selectedDate = dateInput.value;
+    const selectedTimeInput = document.querySelector('input[name="time"]:checked');
+    const selectedTime = selectedTimeInput ? selectedTimeInput.value : '';
+
+    // AJAX request to fetch reserved seats
+    $.ajax({
+      url: 'fetch_reserved_seats.php', // Update this with the path to your PHP script
+      method: 'POST',
+      data: { date: selectedDate, time: selectedTime },
+      success: function (response) {
+        // Update reserved seats UI
+        document.getElementById('reservedSeats').innerHTML = response;
+      },
+      error: function (xhr, status, error) {
+        console.error('Error fetching reserved seats:', error);
+      }
+    });
+  }
+
+  // Event listener for date input change
+  dateInput.addEventListener('change', fetchReservedSeats);
+
+  // Event listener for time input change
+  timeInputs.forEach(input => {
+    input.addEventListener('change', fetchReservedSeats);
+  });
+});
+</script>
 <!---------------------------Footer------------------------------->
 <div class="footer"></div>
 </body>

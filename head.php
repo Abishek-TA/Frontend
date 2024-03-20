@@ -22,13 +22,13 @@
             <a href="./about.html">About</a>
           </li>
           <li>
-            <a href="./addrest.html">Add restaurant</a>
+            <a href="tel:9488526319">Contact</a>
           </li>
           <?php
           session_start();
           if(isset($_SESSION['username'])) {
               echo '<li><a href="./orders.php">Orders</a></li>';
-              echo '<li><div class="well"><h3>WELCOME, ' . $_SESSION['username'] . '</h3></div></li>';
+              echo '<li><div class="welll"><h3>Welcome, ' . $_SESSION['username'] . '</h3></div></li>';
               echo '<li><div class="btnclass3"><a href="./logout.php"><button>Logout</button></a></div></li>';
           } else {
               echo '<div class="btnclass1">
