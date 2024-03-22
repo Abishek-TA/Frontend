@@ -15,6 +15,7 @@
           <?php
           session_start();
           if(isset($_SESSION['username'])) {
+            echo '<li><a href="./absmenu.php">Menus</a></li>';
               echo '<li><div class="adminwel"><h3>Welcome, ' . $_SESSION['username'] . '</h3></div></li>';
               echo '<li><div class="btnclass3"><a href="./logout.php"><button>Logout</button></a></div></li>';
          } 

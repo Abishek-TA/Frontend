@@ -18,10 +18,9 @@ if (!$conn) {
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-    
     <script src="./Asset/js/index.js" async></script>
      <title>ABS ADMIN PAGE</title>
     <style>
@@ -62,11 +61,11 @@ if (!$conn) {
                 <th width="15%">Total Amount</th>
             </tr>
             <?php
-            $query = "SELECT r.username, o.item_name, r.tickets, r.date, r.times, o.order_id, o.total_price
-                      FROM reserved r
-                      JOIN `orders` o ON r.username = o.username
-                      WHERE o.status = 'upcoming'
-                      ORDER BY r.created_at DESC";
+           $query = "SELECT r.username, o.item_name, r.tickets, r.date, r.times, o.order_id, o.total_price
+           FROM reserved r
+           JOIN `orders` o ON r.username = o.username
+           WHERE o.status = 'upcoming'
+           ORDER BY r.created_at DESC";
 
             $result = mysqli_query($conn, $query);
             if(mysqli_num_rows($result) > 0) {
@@ -108,10 +107,10 @@ if (!$conn) {
             </tr>
             <?php
             $query = "SELECT r.username, o.item_name, r.tickets, r.date, r.times, o.order_id, o.total_price
-                      FROM reserved r
-                      JOIN `orders` o ON r.username = o.username
-                      WHERE o.status = 'completed'
-                      ORDER BY r.created_at DESC";
+            FROM reserved r
+            JOIN `orders` o ON r.username = o.username
+            WHERE o.status = 'completed'
+            ORDER BY r.created_at DESC";
 
             $result = mysqli_query($conn, $query);
             if(mysqli_num_rows($result) > 0) {
