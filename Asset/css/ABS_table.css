@@ -318,3 +318,39 @@ background-size: cover;
     padding: 1%;
     font-size: 18px;
 }
+/*row4*/
+.r4{
+    display: inline-flex;
+    flex-direction: row;
+}
+/*Washroom*/
+.wash{
+    border-top: 10px dashed #000;
+    width: 400px;
+}
+.washroom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    justify-content: center;
+    border-top: 1px solid #000;
+    border-right: 3px solid #171616;
+    border-bottom: 3px solid #000;
+    width: 120px;
+    height: 215px;
+}
+.kit1{
+    margin-left: 370px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    background-color: #b47f0e;
+    padding-top: 4%;
+    padding-left: 4%;
+       
+}

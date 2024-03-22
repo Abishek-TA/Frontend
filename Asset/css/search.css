@@ -15,6 +15,7 @@
     box-sizing: border-box;
     padding: 0% 4%;
     padding-left: 40px;
+    border-radius: 25px;
   }
   .search::before {
     position: absolute;
