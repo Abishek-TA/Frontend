@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2024 at 04:48 AM
+-- Generation Time: Mar 23, 2024 at 08:07 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -39,7 +39,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`ID`, `Username`, `Email`, `Password`) VALUES
-(0, '[ABS ADMIN]', '[absadmin@gmail.com]', '[admin]');
+(5, 'admin', 'admin@gmail.com', '1234');
 
 -- --------------------------------------------------------
 
@@ -70,6 +70,17 @@ CREATE TABLE `orders` (
   `order_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`order_id`, `username`, `item_name`, `item_quantity`, `item_price`, `total_price`, `status`, `order_date`) VALUES
+(76, 'Abishek', 'Vegroll', 1, 150.00, 150.00, 'upcoming', '2024-03-15 04:38:54'),
+(77, 'Abishek', 'Veg Sandwich', 1, 150.00, 150.00, 'upcoming', '2024-03-15 04:38:54'),
+(78, 'Abishek', 'Mushroom Pizza', 1, 100.00, 100.00, 'upcoming', '2024-03-21 15:59:46'),
+(79, 'Abishek', 'jtx', 1, 150.00, 150.00, 'upcoming', '2024-03-22 10:42:21'),
+(80, 'Abishek', 'Vegroll', 1, 150.00, 150.00, 'upcoming', '2024-03-23 05:57:44');
+
 -- --------------------------------------------------------
 
 --
@@ -85,6 +96,26 @@ CREATE TABLE `reserved` (
   `tickets` varchar(255) DEFAULT NULL,
   `amount` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `reserved`
+--
+
+INSERT INTO `reserved` (`id`, `username`, `date`, `times`, `created_at`, `tickets`, `amount`) VALUES
+(144, 'Abishek', '2024-03-20', '17:00 PM', '2024-03-15 04:10:36', 't1s1, t1s2', 0),
+(145, 'Abishek', '2024-03-16', '18:00 PM', '2024-03-15 04:35:35', 't1s3, t1s4, t2s2, t2s3', 0),
+(146, 'Abishek', '2024-03-23', '17:00 PM', '2024-03-16 16:24:16', 't1s1, t1s2', 0),
+(147, 'Abishek', '2024-03-23', '17:00 PM', '2024-03-16 18:25:57', 't1s2', 0),
+(148, 'Abishek', '2024-03-23', '18:00 PM', '2024-03-21 15:10:45', 't1s2', 0),
+(149, '', '2024-03-22', '17:00 PM', '2024-03-21 15:12:09', 't1s2, t3s2', 0),
+(150, 'Abishek', '2024-03-23', '17:00 PM', '2024-03-21 15:59:33', 't3s4', 0),
+(151, 'Abishek', '2024-03-23', '19:00 PM', '2024-03-21 16:10:43', 't1s2', 240),
+(152, 'Abishek', '2024-03-23', '18:00 PM', '2024-03-22 10:41:51', 't3s2', 0),
+(153, 'Abishek', '2024-03-23', '18:00 PM', '2024-03-23 05:57:25', 't2s3', 0),
+(154, 'Abishek', '2024-03-30', '18:00 PM', '2024-03-23 06:57:13', 't1s1, t1s2', 0),
+(155, 'Abishek', '2024-03-30', '18:00 PM', '2024-03-23 06:58:26', 't2s1, t2s2', 480),
+(156, 'Abishek', '2024-03-30', '19:00 PM', '2024-03-23 07:01:20', 't1s2', 240),
+(157, 'Abishek', '2024-03-30', '19:00 PM', '2024-03-23 07:02:27', 't3s4', 240);
 
 -- --------------------------------------------------------
 
@@ -197,13 +228,13 @@ ALTER TABLE `customer_reviews`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=76;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=81;
 
 --
 -- AUTO_INCREMENT for table `reserved`
 --
 ALTER TABLE `reserved`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT for table `signup`
@@ -215,7 +246,7 @@ ALTER TABLE `signup`
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
