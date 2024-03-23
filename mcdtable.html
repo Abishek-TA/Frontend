@@ -194,7 +194,7 @@
   
           seats.forEach((seat) => {
             seat.addEventListener("change", () => {
-              const basePrice = 200;
+              const basePrice = 20;
               const dynamicPrice = calculateDynamicPrice(basePrice);
               if (seat.checked) {
                 totalAmount += dynamicPrice;
@@ -219,9 +219,9 @@
             }
             const selectedTime = selectedTimeInput.value;
             const selectedHours = parseInt(selectedTime.split(":")[0]);
-            let peekprice = 40;
+            let extra_charge = 20;
             if (selectedHours >= 18 && selectedHours <= 23) {
-              return basePrice + peekprice;
+              return basePrice + extra_charge;
             } else {
               return basePrice;
             }
