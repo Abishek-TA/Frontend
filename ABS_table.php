@@ -92,6 +92,14 @@ document.addEventListener("DOMContentLoaded", function () {
         option.disabled = true;
       });
     }
+
+    // Disable reserved seats
+    reservedSeats.forEach(seat => {
+      const reservedCheckbox = timeContainer.querySelector('input[value="' + seat + '"]');
+      if (reservedCheckbox) {
+        reservedCheckbox.disabled = true;
+      }
+    });
   }
 
   // Initial update of time slots
@@ -191,13 +199,15 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="price">
             <div class="total">
-        <input type="hidden" id="amountField" name="amountform" value="0" />
+                <input type="hidden" id="amountField" name="amountform" value="0" />
                 <span>Total Amount: ₹ <span class="amount">0.00</span></span>
                 <span>Total Seats: <span class="count">0</span></span>
             </div>
-        </div>
-        <button onclick="myFunction(); document.getElementById('submit').click()"></button>
-        <button id="submit" class="bookre1" type="submit" name="submit">Book Table</button>
+              </div>
+              <button onclick="myFunction(); document.getElementById('submit','amount').click()"></button>
+                <button id="submit" class="bookre1" type="submit" name="submit">
+                    Book Table
+                </button>
 
             </div>
           </div>
@@ -256,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 </script>
-<script>
+      <script>
 document.addEventListener("DOMContentLoaded", function () {
   const dateInput = document.getElementById('restrict1');
   const timeInputs = document.querySelectorAll('input[name="time"]');
@@ -264,7 +274,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function fetchReservedSeats() {
     const selectedDate = dateInput.value;
     const selectedTimeInput = document.querySelector('input[name="time"]:checked');
-    const selectedTime = selectedTimeInput ? selectedTimeInput.value : '';
+const selectedTime = selectedTimeInput ? selectedTimeInput.value : '';
 
     // AJAX request to fetch reserved seats
     $.ajax({
