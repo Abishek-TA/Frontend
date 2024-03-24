@@ -36,6 +36,20 @@ function deleteProduct($id, $conn) {
     $sql = "DELETE FROM `tbl_product` WHERE `id`=$id";
     return $conn->query($sql);
 }
+// Function to update table price where username is 'admin'
+function tablePrice($table_price, $conn) {
+    $table_price = (float)$table_price;
+    $sql = "UPDATE `admin` SET `base_price`='$table_price' WHERE `username`='admin'";
+    return $conn->query($sql);
+}
+
+// Function to update peak price where username is 'admin'
+function peakPrice($peak_price, $conn) {
+    $peak_price = (float)$peak_price;
+    $sql = "UPDATE `admin` SET `peak_price`='$peak_price' WHERE `username`='admin'";
+    return $conn->query($sql);
+}
+
 
 // Check if form is submitted for adding or updating a product
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -57,6 +71,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             updateProduct($id, $name, $_FILES["image"]["name"], $price, $conn);
         }
     }
+    elseif (isset($_POST["action"]) && $_POST["action"] == "update_table_price") {
+        // Update table price
+        $table_price = $_POST["table_price"];
+        if (tablePrice($table_price, $conn)) {
+            echo "Table price updated successfully";
+        } else {
+            echo "Error updating table price";
+        }
+    } elseif (isset($_POST["action"]) && $_POST["action"] == "update_peak_price") {
+        // Update peak price
+        $peak_price = $_POST["peak_price"];
+        if (peakPrice($peak_price, $conn)) {
+            echo "Peak price updated successfully";
+        } else {
+            echo "Error updating peak price";
+        }
+}
 }
 
 // Function to handle image upload
@@ -212,7 +243,7 @@ $result = $conn->query($sql);
         Name: <input type="text" name="name"><br>
         Image: <input type="file" name="image"><br>
         Price: <input type="text" name="price"><br>
-        <input type="submit" value="Add Product">
+        <input type="submit" value="Add Menu">
     </form>
 
     <center><h2>Update Menu</h2></center>
@@ -222,15 +253,28 @@ $result = $conn->query($sql);
         Name: <input type="text" name="name"><br>
         Image: <input type="file" name="image"><br>
         Price: <input type="text" name="price"><br>
-        <input type="submit" value="Update Product">
+        <input type="submit" value="Update Menu">
     </form>
 
     <center><h2>Delete Menu</h2></center>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <input type="hidden" name="action" value="delete">
         Product ID to Delete: <input type="text" name="id"><br>
-        <input type="submit" value="Delete Product">
+        <input type="submit" value="Delete Menu">
     </form>
+    <center><h2>Table Price Updation</h2></center>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+        <input type="hidden" name="action" value="update_table_price">
+        Table Price: <input type="text" name="table_price"><br>
+        <input type="submit" value="Update Table Price">
+    </form>
+    <center><h2>Peak Time Price Updation </h2></center>
+    <!-- Form to update peak price -->
+        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+            <input type="hidden" name="action" value="update_peak_price">
+            Peak Price: <input type="text" name="peak_price"><br>
+            <input type="submit" value="Update Peak Price">
+        </form>
 
     <center><h2> Available Menus</h2></center>
     <table border="1">

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2024 at 08:07 AM
+-- Generation Time: Mar 24, 2024 at 05:40 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,15 +31,18 @@ CREATE TABLE `admin` (
   `ID` int(11) NOT NULL DEFAULT 0,
   `Username` varchar(255) NOT NULL,
   `Email` varchar(255) NOT NULL,
-  `Password` varchar(255) NOT NULL
+  `Password` varchar(255) NOT NULL,
+  `base_price` decimal(10,2) NOT NULL,
+  `peak_price` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`ID`, `Username`, `Email`, `Password`) VALUES
-(5, 'admin', 'admin@gmail.com', '1234');
+INSERT INTO `admin` (`ID`, `Username`, `Email`, `Password`, `base_price`, `peak_price`) VALUES
+(0, '', '', '', 220.00, 0.00),
+(5, 'admin', 'admin@gmail.com', '1234', 120.00, 30.00);
 
 -- --------------------------------------------------------
 
@@ -115,7 +118,8 @@ INSERT INTO `reserved` (`id`, `username`, `date`, `times`, `created_at`, `ticket
 (154, 'Abishek', '2024-03-30', '18:00 PM', '2024-03-23 06:57:13', 't1s1, t1s2', 0),
 (155, 'Abishek', '2024-03-30', '18:00 PM', '2024-03-23 06:58:26', 't2s1, t2s2', 480),
 (156, 'Abishek', '2024-03-30', '19:00 PM', '2024-03-23 07:01:20', 't1s2', 240),
-(157, 'Abishek', '2024-03-30', '19:00 PM', '2024-03-23 07:02:27', 't3s4', 240);
+(157, 'Abishek', '2024-03-30', '19:00 PM', '2024-03-23 07:02:27', 't3s4', 240),
+(158, 'Abishek', '2024-03-30', '19:00 PM', '2024-03-24 15:52:09', 't1s3', 240);
 
 -- --------------------------------------------------------
 
@@ -234,7 +238,7 @@ ALTER TABLE `orders`
 -- AUTO_INCREMENT for table `reserved`
 --
 ALTER TABLE `reserved`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT for table `signup`

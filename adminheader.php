@@ -12,6 +12,9 @@
       <div class="logo">ARROWGRUB</div>
       <nav>
         <ul>
+        <li>
+            <a href="./index.html" class="active">Home</a>
+          </li>
           <?php
           session_start();
           if(isset($_SESSION['username'])) {

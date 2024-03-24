@@ -38,7 +38,6 @@ if(isset($_POST['date']) && isset($_POST['time'])) {
     $html = '<p>Reserved Seats:</p><ul>';
     foreach ($reservedSeats as $seat) {
         $html .= '<li>' . $seat . '</li>';
-       // var_dump($reservedSeats); // Check the entire  array
     }
     $html .= '</ul>';
 
