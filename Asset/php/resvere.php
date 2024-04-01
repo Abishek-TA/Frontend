@@ -243,13 +243,16 @@ if(isset($_POST["place_order"])) {
                     </tr>
                     <?php
                     $total = $total+ ($values["item_quantity"] * $values["item_price"]);
-                    
-                }
-                if(isset($amount)) {
-                    $total = $total + $amount;
-                } else {
-                    // Handle the case where $amount is not set (optional)
-                }
+            }
+            $current_username = $_SESSION['username']; // Assuming username is stored in session
+            $query_reserved = "SELECT * FROM reserved WHERE username = '$current_username' ORDER BY created_at DESC LIMIT 1";
+            $result_reserved = mysqli_query($conn, $query_reserved);
+            if (mysqli_num_rows($result_reserved) > 0) {
+                $row_reserved = mysqli_fetch_assoc($result_reserved);
+                
+                // Add the amount from reservation to the total
+                $total += $row_reserved["amount"];
+            }
                 ?>
                         <tr>
             <th width="20%">Username</th>

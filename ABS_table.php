@@ -197,6 +197,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             </div>
+            <div class="r4">
+              <div class="wash">
+                <div class="washroom">WASHROOM</div>
+              </div>
+              <div class="kitchen1">
+                <div class="kit1">KITCHEN</div>
+              </div>
+            </div>
             <div class="price">
             <div class="total">
                 <input type="hidden" id="amountField" name="amountform" value="0" />

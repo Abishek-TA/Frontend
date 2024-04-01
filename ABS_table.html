@@ -17,12 +17,15 @@
 <div id="head1"></div>
 <!--Text-->
 <center><h1>Select your Table</h1></center>
-
-<form id="reserveForm" action="./Asset/php/resvere.php" method="POST">
-
-
+<!-- <div class="status">
+    <div class="item1">Available</div>
+    <div class="item1">Booked</div>
+    <div class="item1">Selected</div>
+          </div> -->
+<form action="./Asset/php/resvere.php" method="POST">
   <!--Calennder slot-->
   <div class="abst1" data-restaurent = "abs">
+    
     <div class="date1">
         <span>Select Date</span>
         <input type="date" class="restrict1" id="restrict1" name="datefrom"/>
@@ -62,57 +65,46 @@
     </div>
      <!-- dynamic time slot -->
      <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const timeContainer = document.querySelector('.times');
-  const dateInput = document.getElementById('restrict1');
-
-  // Array to store reserved seats (update this array with actual reserved seats)
-  const reservedSeats = [];
-
-  function updateTimeSlots() {
-    const currentTime = new Date().getHours(); // Get current hour
-    const selectedDate = new Date(dateInput.value);
-    const currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
-    selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
-
-    if (selectedDate > currentDate) { // Check if selected date is after current date
-      // Enable all time slots
-      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-        option.disabled = false;
-      });
-    } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
-      // Enable future time slots and disable past time slots
-      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-        const hour = parseInt(option.value.split(":")[0]);
-        option.disabled = hour < currentTime;
-      });
-    } else { // Selected date is before current date
-      // Disable all time slots
-      timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
-        option.disabled = true;
-      });
-    }
-
-    // Disable reserved seats
-    reservedSeats.forEach(seat => {
-      const reservedCheckbox = timeContainer.querySelector('input[value="' + seat + '"]');
-      if (reservedCheckbox) {
-        reservedCheckbox.disabled = true;
-      }
-    });
-  }
-
-  // Initial update of time slots
-  updateTimeSlots();
-
-  // Add event listener to date input
-  dateInput.addEventListener('change', updateTimeSlots);
-});
-
+        document.addEventListener("DOMContentLoaded", function () {
+          const timeContainer = document.querySelector('.times');
+          const dateInput = document.getElementById('restrict1');
+      
+          function updateTimeSlots() {
+            const currentTime = new Date().getHours(); // Get current hour
+            const selectedDate = new Date(dateInput.value);
+            const currentDate = new Date();
+            currentDate.setHours(0, 0, 0, 0); // Clear time for comparison
+            selectedDate.setHours(0, 0, 0, 0); // Clear time for comparison
+      
+            if (selectedDate > currentDate) { // Check if selected date is after current date
+              timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+                option.disabled = false; // Enable all time slots
+              });
+            } else if (selectedDate.getTime() === currentDate.getTime()) { // Check if selected date is current date
+              timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+                const hour = parseInt(option.value.split(":")[0]);
+                if (hour < currentTime) {
+                  option.disabled = true; // Disable past time slots for current date
+                } else {
+                  option.disabled = false; // Enable future time slots for current date
+                }
+              });
+            } else { // Selected date is before current date
+              timeContainer.querySelectorAll('input[type="radio"]').forEach(option => {
+                option.disabled = true; // Disable all time slots
+              });
+            }
+          }
+      
+          // Initial update of time slots
+          updateTimeSlots();
+      
+          // Add event listener to date input
+          dateInput.addEventListener('change', updateTimeSlots);
+        }); 
       </script>
-  <!-----------------------Table section---------------------------->
-  <div class="table-container">
+<!-----------------------Table section---------------------------->
+<div class="table-container">
         <!-----------------------Table1 content------------------->    
         <div class="entry_or_exit">
             <h1 class="ent">Entrance</h1>
@@ -121,16 +113,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <!--Row1c1-->
                 <div class="r1c1">
                     <div class="r1c1s">
-                        <input type="checkbox" name="tickets[]" id="r1c1s1" value="t1s1"/>
+                        <input type="checkbox" name="T1_1" id="r1c1s1" value="t1s1"/>
                         <label for="r1c1s1" class="seatr1">s1</label>
-                        <input type="checkbox" name="tickets[]" id="r1c1s2" value="t1s2"/>
+                        <input type="checkbox" name="T1_2" id="r1c1s2" value="t1s2"/>
                         <label for="r1c1s2" class="seatr1">s2</label>
                     </div>
                     <h1 class="r1table1">Table 1</h1>
                     <div class="r1c1s">
-                        <input type="checkbox" name="tickets[]" id="r1c1s3" value="t1s3"/>
+                        <input type="checkbox" name="T1_3" id="r1c1s3" value="t1s3"/>
                         <label for="r1c1s3" class="seatr1">s3</label>
-                        <input type="checkbox" name="tickets[]" id="r1c1s4" value="t1s4"/>
+                        <input type="checkbox" name="T1_4" id="r1c1s4" value="t1s4"/>
                         <label for="r1c1s4" class="seatr1">s4</label>
                     </div>
                 </div>
@@ -146,28 +138,28 @@ document.addEventListener("DOMContentLoaded", function () {
                     <!--Table2 row1 content-->
                         <div class="r2c1">
                             <div class="r2c1s">
-                                <input type="checkbox" name="tickets[]" id="r2c1s1" value="t2s1"/>
+                                <input type="checkbox" name="T2_1" id="r2c1s1" value="t2s1"/>
                                 <label for="r2c1s1" class="seatr2">s1</label>
-                                <input type="checkbox" name="tickets[]" id="r2c1s2" value="t2s2"/>
+                                <input type="checkbox" name="T2_2" id="r2c1s2" value="t2s2"/>
                                 <label for="r2c1s2" class="seatr2">s2</label>
                             </div>
                             <h1 class="r2table1">Table 2</h1>
                             <div class="r2c1s">
-                                <input type="checkbox" name="tickets[]" id="r2c1s3" value="t2s3"/>
+                                <input type="checkbox" name="T2_3" id="r2c1s3" value="t2s3"/>
                                 <label for="r2c1s3" class="seatr2">s3</label>
-                                <input type="checkbox" name="tickets[]" id="r2c1s4" value="t2s4"/>
+                                <input type="checkbox" name="T2_4" id="r2c1s4" value="t2s4"/>
                                 <label for="r2c1s4" class="seatr2">s4</label>
                             </div>
                         </div>
                     <!--Table2 row2 content-->
                         <div class="r2c2">
                             <div class="r2c2s">
-                                <input type="checkbox" name="tickets[]" id="r2c2s1" value="t4s1"/>
+                                <input type="checkbox" name="T4_1" id="r2c2s1" value="t4s1"/>
                                 <label for="r2c2s1" class="seatr22">s1</label>
                             </div>
                             <h1 class="r2table2">Table 4</h1>
                             <div class="r2c2s">
-                                <input type="checkbox" name="tickets[]" id="r2c2s2" value="t4s2"/>
+                                <input type="checkbox" name="T4_2" id="r2c2s2" value="t4s2"/>
                                 <label for="r2c2s2" class="seatr22">s2</label>
                             </div>
                         </div>
@@ -176,16 +168,16 @@ document.addEventListener("DOMContentLoaded", function () {
             <div class="r3">
                 <div class="r3c1">
                     <div class="r3c1s">
-                        <input type="checkbox" name="tickets[]" id="r3c1s1" value="t3s1"/>
+                        <input type="checkbox" name="T3_1" id="r3c1s1" value="t3s1"/>
                         <label for="r3c1s1" class="seatr3">s1</label>
-                        <input type="checkbox" name="tickets[]" id="r3c1s2" value="t3s2"/>
+                        <input type="checkbox" name="T3_2" id="r3c1s2" value="t3s2"/>
                         <label for="r3c1s2" class="seatr3">s2</label>
                     </div>
                     <h1 class="r3table1">Table 3</h1>
                     <div class="r3c1s">
-                        <input type="checkbox" name="tickets[]" id="r3c1s3" value="t3s3"/>
-                        <label for="r3c1s3" class="seatr3">s3</label>
-                        <input type="checkbox" name="tickets[]" id="r3c1s4" value="t3s4"/>
+                      <input type="checkbox" name="T3_3" id="r3c1s3" value="t3s3"/>
+                      <label for="r3c1s3" class="seatr3">s3</label>
+                        <input type="checkbox" name="T3_4" id="r3c1s4" value="t3s4"/>
                         <label for="r3c1s4" class="seatr3">s4</label>
                     </div>
                 </div>
@@ -195,33 +187,30 @@ document.addEventListener("DOMContentLoaded", function () {
                     </div>
                 </div>
             </div>
+            <div class="r4">
+              <div class="wash">
+                <div class="washroom">WASHROOM</div>
+              </div>
+              <div class="kitchen1">
+                <div class="kit1">KITCHEN</div>
+              </div>
+            </div>
             <div class="price">
                 <div class="total">
-                  <span> <span class="count">0</span> SEATS </span>
-                  <div class="amount" name="amountform">0</div>
+                  <span>No.of.seat selected: <span class="count">0</span></span><br>
+                  <span>Total price : <span class="amount">0</span></span>
                 </div>
               </div>
-              <button onclick="myFunction(); document.getElementById('submit','amount').click()"></button>
-                <button id="submit" class="bookre1" type="submit" name="submit">
-                    Book Table
-                </button>
-
+              <button  id="submit" class="bookre1" type="submit" name="submit">
+                Book Table
+              </button>
             </div>
           </div>
     </form>
 </div>
 <br><br>
+<!-- dynamic price calculation -->
 <script>
-function myFunction() {
-    var checkboxes = document.querySelectorAll('input[name="tickets"]:checked');
-    var selectedSeats = Array.from(checkboxes).map(checkbox => checkbox.value).join(', ');
-    document.getElementById("demo").innerHTML = selectedSeats;
-    
-}
-  </script>
-
-    <!-- dynamic price calculation -->
-    <script>
         document.addEventListener("DOMContentLoaded", function () {
           const seats = document.querySelectorAll('input[type="checkbox"]');
           const amountDisplay = document.querySelector(".amount");
@@ -231,7 +220,7 @@ function myFunction() {
   
           seats.forEach((seat) => {
             seat.addEventListener("change", () => {
-              const basePrice = 200;
+              const basePrice = 20;
               const dynamicPrice = calculateDynamicPrice(basePrice);
               if (seat.checked) {
                 totalAmount += dynamicPrice;
@@ -243,6 +232,7 @@ function myFunction() {
               amountDisplay.textContent = totalAmount.toFixed(2);
               countDisplay.textContent = selectedSeats;
               const finalAmount = calculateFinalAmount(totalAmount);
+              console.log("Final Amount:", finalAmount);
             });
           });
   
@@ -255,9 +245,9 @@ function myFunction() {
             }
             const selectedTime = selectedTimeInput.value;
             const selectedHours = parseInt(selectedTime.split(":")[0]);
-  
+            let extra_charge = 20;
             if (selectedHours >= 18 && selectedHours <= 23) {
-              return basePrice * 1.2;
+              return basePrice + extra_charge;
             } else {
               return basePrice;
             }
@@ -266,16 +256,9 @@ function myFunction() {
           function calculateFinalAmount(totalAmount) {
             return totalAmount;
           }
-          // Update amount display
-            amountDisplay.textContent = totalAmount.toFixed(2);
-
-          // Update value of hidden input field
-          document.getElementById("amountField").value = totalAmount.toFixed(2);
-
-        });
-  
-      
-      </script>
+        });      
+</script>
 <!---------------------------Footer------------------------------->
 <div class="footer"></div>
 </body>
+</html>
